@@ -11,8 +11,10 @@
 \author{Philip Smith - 624002014 (Sec. 511)}
 
 \begin{document}
-    \maketitle
+    \clearpage\maketitle
+    \thispagestyle{empty}
     \newpage
+    \setcounter{page}{1}
 
     {\noindent\Huge Introduction\\\\}
         \noindent The focus of Lab 1 was to set up the Xiling FPGA development environment and test it out with several simple programming excercises:
@@ -40,11 +42,11 @@
     \newpage
     
     {\noindent\Huge Results\\\\}
-        \noindent All three programs ran as intended with minimal need to debug. The XDC file was created based on a repository by Digilent detailing the Zybo board's I/O connections, which can be found at \url{https://github.com/Digilent/digilent-xdc/blob/master/Zybo-Z7-Master.xdc}.
+        \noindent All three programs ran as intended with minimal need to debug. The XDC file was created based on a repository by Digilent detailing the Zybo board's I/O connections\footnote{\url{https://github.com/Digilent/digilent-xdc/blob/master/Zybo-Z7-Master.xdc}}.
     \newpage
     
     {\noindent\Huge Conclusions\\\\}
-        \noindent This lab offered much in the way of learning how to set up and use the Vivado design suite. In addition I learned the specifics of constraint files in regards to their use in FPGA development.
+        \noindent This lab offered much in the way of learning how to set up and use the Vivado design suite. In addition I learned the specifics of constraint files in regards to their use in FPGA development. I did not run into many issues with this particular lab other than having to refresh myself on Verilog. In addition I discovered that accessing Verilog over the TAMU VPN is not a viable option. Ultimately my roommate and I who are both in the same lab section have decided to purchase a Zybo board so that we can work on it at home and not feel rushed during the lab period. 
     \newpage
         
     {\noindent\Huge Questions\\\\}
