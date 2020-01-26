@@ -1,0 +1,69 @@
+\documentclass[border=5pt, 10pt]{article}
+\usepackage{amsmath,amssymb,listings,fancyvrb,rotating,graphicx,hyperref}
+\usepackage[a4paper,margin=0.5in,footskip=0.25in]{geometry}
+\setcounter{secnumdepth}{0}
+\lstset{numbersep=5pt,xleftmargin=0.10in, xrightmargin=.15in} 
+\usepackage[activate={true,nocompatibility},final,tracking=true,kerning=true,spacing=true,factor=1200,stretch=10,shrink=10]{microtype}
+\graphicspath{ {.} }
+
+\title{ECEN 449 Lab Report 1}
+\date{\today}
+\author{Philip Smith - 624002014 (Sec. 511)}
+
+\begin{document}
+    \maketitle
+    \newpage
+
+    {\noindent\Huge Introduction\\\\}
+        \noindent The focus of Lab 1 was to set up the Xiling FPGA development environment and test it out with several simple programming excercises:
+        
+        \begin{enumerate}
+            \item LED Switcher - Take DIP switches and display their state on the onboard LEDs
+            \item LED Counter - Divide the system clock and display a counter on the onbaord LEDs with the option to count up, count down, and reset
+            \item Simple jackpot game
+        \end{enumerate}
+    \newpage
+    
+    {\noindent\Huge Procedure\\\\}
+        \noindent After setting up the development environment, I set up the constraints file (.xdc) which defined the pins to use in the verilog code. The first problem was to run a demonstration module which took user input at the DIP switches (defined as an input array) and displayed their logical status on the on-board LEDs (defined as an output array). \\
+        
+        \noindent The second problem was to create a verilog module that would allow a user to count up or down (and reset the count) in a binary fashion. My approach was to use a register in the module (32 bits wide) to divide the clock frequency into something reasonable. This would increment the internal counter at a human speed. The inputs were constantly polled to see if the user wanted to count up, down, or reset the counter. It should be noted that for an $n$ bit counter being used as a clock divider, the output frequency of bit $n$ follows:
+        
+        $$f_{n} = \frac{f_{clock}}{2^{n}}$$
+        
+        
+        \noindent The third problem was to create a "jackpot" style game. Using the same logic to divide the clock, though this time faster, I used a binary shift algorithm to create a one-hot display mode for the 4 on-board LEDs. The switches were again constantly polled at their rising edge to see if switch $n$ was triggered at the same time LED $n$ was. If this was the case the internal "won" state register would be set to HIGH and all 4 LEDs would be turned on until the user reset the game. 
+    \newpage
+    
+    {\noindent\Huge Results\\\\}
+        \noindent All three programs ran as intended with minimal need to debug. The XDC file was created based on a repository by Digilent detailing the Zybo board's I/O connections, which can be found at \url{https://github.com/Digilent/digilent-xdc/blob/master/Zybo-Z7-Master.xdc}.
+    \newpage
+    
+    {\noindent\Huge Conclusions\\\\}
+        \noindent This lab offered much in the way of learning how to set up and use the Vivado design suite. In addition I learned the specifics of constraint files in regards to their use in FPGA development.
+    \newpage
+        
+    {\noindent\Huge Questions\\\\}
+        \begin{enumerate}
+            \item The following table shows which pins are mapped to which input buttons on the development board:
+            
+            \begin{center}
+                \begin{tabular}{||c c||} 
+                    \hline
+                        Button & Pin \\ [0.5ex]
+                    \hline\hline
+                        BTN0 & K18 \\
+                    \hline
+                        BTN1 & P16 \\
+                    \hline
+                        BTN2 & K19 \\
+                    \hline
+                        BTN3 & Y16 \\
+                    \hline
+                \end{tabular}
+            \end{center}
+            
+            \item The purpose of an edge detection circuit is to specify on which edge the program should react. There are two options available, rising and falling, which translate to the Verilog directives \textbf{posedge} and \textbf{negedge}, respectively. 
+        \end{enumerate}
+    \newpage
+\end{document}
