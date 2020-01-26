@@ -32,7 +32,11 @@
         $$f_{n} = \frac{f_{clock}}{2^{n}}$$
         
         
-        \noindent The third problem was to create a "jackpot" style game. Using the same logic to divide the clock, though this time faster, I used a binary shift algorithm to create a one-hot display mode for the 4 on-board LEDs. The switches were again constantly polled at their rising edge to see if switch $n$ was triggered at the same time LED $n$ was. If this was the case the internal "won" state register would be set to HIGH and all 4 LEDs would be turned on until the user reset the game. 
+        \noindent The third problem was to create a ``jackpot'' style game. Using the same logic to divide the clock, though this time faster, I used a binary shift algorithm to create a one-hot display mode for the 4 on-board LEDs. The switches were again constantly polled at their rising edge to see if switch $n$ was triggered at the same time LED $n$ was. If this was the case the internal ``won'' state register would be set to HIGH and all 4 LEDs would be turned on until the user reset the game. The logic used to determine if a win condition has been met is as follows:
+        
+        $$W = S \wedge L > 0$$
+        
+        \noindent Where $W$ is the win condition, $S$ is the 4 bit array set by the DIP switch positions, and $L$ is the current LED output array.
     \newpage
     
     {\noindent\Huge Results\\\\}
