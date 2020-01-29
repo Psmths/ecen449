@@ -3,44 +3,70 @@ module jackpot(
     input [3:0] SWITCHES,
     output [3:0] LEDS,
     input CLOCK,
-    input RESET
+    input BTN0
     );
+    
+    parameter x = 64;
 
-    reg [23:0] divider;        //Clock division reg
+    reg [32:0] divider;        //Clock division reg
     reg[3:0] outs;            //LED output reg
-    reg won = 1'b0;            //True if player has won
+    reg won;            //True if player has won
+    reg internal_clock;
     
     
     
-    always@(posedge CLOCK or posedge RESET) begin
-    
+    always@(posedge CLOCK) begin
         divider <= divider + 1; //Increment the clock divider
         
-        //One hot fashion logic using LSL
-        if (won == 1'b0 & divider == 3'hFFF) begin
-            outs <= outs << 1;
-        end
-        //Reset one hot logic
-        if(won == 1'b0 & outs == 4'b0000) begin
-            outs <= 4'b0001;
-        end
-        //Manual reset
-        if(RESET == 1) begin
-            outs <= 4'b0001;
-        end
-        
-        if(won == 1'b1) begin
-            outs <= 4'b1111;
-        end
+        internal_clock <= divider[24];
         
     end
     
-    always@(posedge SWITCHES or posedge RESET) begin
-        if(SWITCHES[3:0] == outs[3:0]) begin
-            won <= 1'b1;
+    
+    always@(posedge internal_clock) 
+    begin
+    
+        if (BTN0 == 1'b1) 
+            begin
+                outs <= 4'b0001;
+            end
+        
         else
-            won <= 1'b0;    //Triggered during RESET as well!
+        
+            if (won) 
+                begin
+                    if(divider >= 4'h00FF)
+                        begin
+                            outs <= 4'b1111;
+                        end
+                    else
+                        begin
+                            outs <=4'b0000;
+                        end
+                end
+            
+            else 
+                begin
+                    case(outs)
+                        4'b0001:outs<=4'b0010;
+                        4'b0010:outs<=4'b0100;
+                        4'b0100:outs<=4'b1000;
+                        4'b1000:outs<=4'b0001;
+                    endcase
+                end
     end
+    
+    always@(SWITCHES or BTN0) 
+        begin
+            if(SWITCHES[3:0] == outs[3:0]) 
+                begin
+                    won <= 1'b1;
+                end
+            if(BTN0)
+                begin
+                    won <= 1'b0;
+                end
+        end
     
     //Display one hot LEDs
     assign LEDS[3:0] = outs[3:0];
