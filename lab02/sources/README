@@ -1,1 +1,6 @@
 All sources edited or added are in the sources directory!
+
+mitigation: had to add tcl_pre file to bitstream generation parameters:
+
+set_property SEVERITY {Warning} [get_drc_checks NSTD-1]
+set_property SEVERITY {Warning} [get_drc_checks UCIO-1]

@@ -1,0 +1,21 @@
+21:51:36 **** Auto Build of configuration Debug for project counter_sw ****
+make all 
+Building file: ../src/lab2a.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab2a.o" -I../../counter_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/lab2a.d" -MT"src/lab2a.d" -o "src/lab2a.o" "../src/lab2a.c"
+Finished building: ../src/lab2a.c
+ 
+Building target: counter_sw.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../counter_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -o "counter_sw.elf"  ./src/lab2a.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: counter_sw.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size counter_sw.elf  |tee "counter_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7433	    308	   2107	   9848	   2678	counter_sw.elf
+Finished building: counter_sw.elf.size
+ 
+
+21:51:36 Build Finished (took 228ms)
+
