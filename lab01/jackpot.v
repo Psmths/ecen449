@@ -8,31 +8,29 @@ module jackpot(
     
     parameter x = 64;
 
-    reg [32:0] divider;        //Clock division reg
-    reg[3:0] outs;            //LED output reg
-    reg won;            //True if player has won
+    reg [32:0] divider;         //Clock division reg
+    reg[3:0] outs;              //LED output reg
+    reg won;                    //True if player has won
     reg internal_clock;
     
     
     
     always@(posedge CLOCK) begin
-        divider <= divider + 1; //Increment the clock divider
-        
-        internal_clock <= divider[24];
-        
+        divider <= divider + 1;         //Increment the clock divider
+        internal_clock <= divider[24];  //Use higher bit as new clock
     end
     
     
     always@(posedge internal_clock) 
     begin
-    
+        //If RESET is triggered, reset display
         if (BTN0 == 1'b1) 
             begin
                 outs <= 4'b0001;
             end
         
         else
-        
+            //Win condition
             if (won) 
                 begin
                     if(divider >= 4'h00FF)
@@ -44,7 +42,7 @@ module jackpot(
                             outs <=4'b0000;
                         end
                 end
-            
+            //One-hot mode logic
             else 
                 begin
                     case(outs)
@@ -57,11 +55,13 @@ module jackpot(
     end
     
     always@(SWITCHES or BTN0) 
+        //Check if switches are in correct position for a win
         begin
             if(SWITCHES[3:0] == outs[3:0]) 
                 begin
                     won <= 1'b1;
                 end
+            //Reset win state
             if(BTN0)
                 begin
                     won <= 1'b0;
