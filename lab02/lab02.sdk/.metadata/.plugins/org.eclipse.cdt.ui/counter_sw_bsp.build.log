@@ -1,4 +1,4 @@
-21:47:35 **** Build of project counter_sw_bsp ****
+22:05:34 **** Build of project counter_sw_bsp ****
 make -k all 
 Running Make include in microblaze_0/libsrc/standalone_v5_1/src
 make -C microblaze_0/libsrc/standalone_v5_1/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
@@ -13,7 +13,6 @@ make -C microblaze_0/libsrc/gpio_v4_0/src -s include  "SHELL=/bin/sh" "COMPILER=
 Running Make libs in microblaze_0/libsrc/standalone_v5_1/src
 make -C microblaze_0/libsrc/standalone_v5_1/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
 Compiling standalone
-mb-ar: creating ../../../lib/libxil.a
 Running Make libs in microblaze_0/libsrc/cpu_v2_3/src
 make -C microblaze_0/libsrc/cpu_v2_3/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
 Compiling cpu
@@ -28,5 +27,5 @@ make -C microblaze_0/libsrc/gpio_v4_0/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-
 Compiling gpio
 Finished building libraries
 
-21:47:37 Build Finished (took 2s.443ms)
+22:05:36 Build Finished (took 1s.522ms)
 

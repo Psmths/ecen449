@@ -1,7 +1,7 @@
 //Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2015.2 (lin64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-//Date        : Tue Jan 28 21:38:29 2020
+//Date        : Wed Jan 29 13:05:25 2020
 //Host        : mobile running 64-bit Ubuntu 18.04.3 LTS
 //Command     : generate_target led_sw_wrapper.bd
 //Design      : led_sw_wrapper

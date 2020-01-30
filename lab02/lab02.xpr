@@ -24,26 +24,26 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="led_sw.bd" FileRelPathName="ip/led_sw_microblaze_0_0/led_sw_microblaze_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="led_sw.bd" FileRelPathName="ip/led_sw_ilmb_bram_if_cntlr_0/led_sw_ilmb_bram_if_cntlr_0.xci"/>
-        <CompFileExtendedInfo CompFileName="led_sw.bd" FileRelPathName="ip/led_sw_dlmb_bram_if_cntlr_0/led_sw_dlmb_bram_if_cntlr_0.xci"/>
-        <CompFileExtendedInfo CompFileName="led_sw.bd" FileRelPathName="ip/led_sw_microblaze_0_axi_periph_0/led_sw_microblaze_0_axi_periph_0.xci"/>
-        <CompFileExtendedInfo CompFileName="led_sw.bd" FileRelPathName="ip/led_sw_ilmb_v10_0/led_sw_ilmb_v10_0.xci"/>
-        <CompFileExtendedInfo CompFileName="led_sw.bd" FileRelPathName="ip/led_sw_dlmb_v10_0/led_sw_dlmb_v10_0.xci"/>
-        <CompFileExtendedInfo CompFileName="led_sw.bd" FileRelPathName="ip/led_sw_lmb_bram_0/led_sw_lmb_bram_0.xci"/>
-        <CompFileExtendedInfo CompFileName="led_sw.bd" FileRelPathName="ip/led_sw_rst_clk_wiz_1_100M_0/led_sw_rst_clk_wiz_1_100M_0.xci"/>
-        <CompFileExtendedInfo CompFileName="led_sw.bd" FileRelPathName="ip/led_sw_clk_wiz_1_0/led_sw_clk_wiz_1_0.xci"/>
-        <CompFileExtendedInfo CompFileName="led_sw.bd" FileRelPathName="ip/led_sw_mdm_1_0/led_sw_mdm_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="led_sw.bd" FileRelPathName="hdl/led_sw.v"/>
         <CompFileExtendedInfo CompFileName="led_sw.bd" FileRelPathName="ip/led_sw_xbar_0/led_sw_xbar_0.xci"/>
         <CompFileExtendedInfo CompFileName="led_sw.bd" FileRelPathName="ip/led_sw_xlconstant_1_0/led_sw_xlconstant_1_0.xci"/>
         <CompFileExtendedInfo CompFileName="led_sw.bd" FileRelPathName="ip/led_sw_xlconstant_0_0/led_sw_xlconstant_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="led_sw.bd" FileRelPathName="ip/led_sw_axi_gpio_0_0/led_sw_axi_gpio_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="led_sw.bd" FileRelPathName="led_sw.bmm"/>
-        <CompFileExtendedInfo CompFileName="led_sw.bd" FileRelPathName="led_sw_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="led_sw.bd" FileRelPathName="ip/led_sw_rst_clk_wiz_1_100M_0/led_sw_rst_clk_wiz_1_100M_0.xci"/>
+        <CompFileExtendedInfo CompFileName="led_sw.bd" FileRelPathName="ip/led_sw_clk_wiz_1_0/led_sw_clk_wiz_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="led_sw.bd" FileRelPathName="ip/led_sw_mdm_1_0/led_sw_mdm_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="led_sw.bd" FileRelPathName="ip/led_sw_microblaze_0_axi_periph_0/led_sw_microblaze_0_axi_periph_0.xci"/>
+        <CompFileExtendedInfo CompFileName="led_sw.bd" FileRelPathName="ip/led_sw_lmb_bram_0/led_sw_lmb_bram_0.xci"/>
+        <CompFileExtendedInfo CompFileName="led_sw.bd" FileRelPathName="ip/led_sw_ilmb_v10_0/led_sw_ilmb_v10_0.xci"/>
+        <CompFileExtendedInfo CompFileName="led_sw.bd" FileRelPathName="ip/led_sw_ilmb_bram_if_cntlr_0/led_sw_ilmb_bram_if_cntlr_0.xci"/>
+        <CompFileExtendedInfo CompFileName="led_sw.bd" FileRelPathName="ip/led_sw_dlmb_bram_if_cntlr_0/led_sw_dlmb_bram_if_cntlr_0.xci"/>
+        <CompFileExtendedInfo CompFileName="led_sw.bd" FileRelPathName="ip/led_sw_microblaze_0_0/led_sw_microblaze_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="led_sw.bd" FileRelPathName="ip/led_sw_dlmb_v10_0/led_sw_dlmb_v10_0.xci"/>
+        <CompFileExtendedInfo CompFileName="led_sw.bd" FileRelPathName="hdl/led_sw.hwdef"/>
         <CompFileExtendedInfo CompFileName="led_sw.bd" FileRelPathName="hw_handoff/led_sw.hwh"/>
         <CompFileExtendedInfo CompFileName="led_sw.bd" FileRelPathName="hw_handoff/led_sw_bd.tcl"/>
-        <CompFileExtendedInfo CompFileName="led_sw.bd" FileRelPathName="hdl/led_sw.hwdef"/>
-        <CompFileExtendedInfo CompFileName="led_sw.bd" FileRelPathName="hdl/led_sw.v"/>
+        <CompFileExtendedInfo CompFileName="led_sw.bd" FileRelPathName="led_sw.bmm"/>
+        <CompFileExtendedInfo CompFileName="led_sw.bd" FileRelPathName="led_sw_ooc.xdc"/>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/led_sw/hdl/led_sw_wrapper.v">
         <FileInfo>
@@ -71,6 +71,7 @@
       </Config>
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
+      <Filter Type="Srcs"/>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="led_sw_wrapper"/>
@@ -104,18 +105,14 @@
   <Runs Version="1" Minor="9">
     <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7z010clg400-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" State="current" Dir="$PRUNDIR/synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
     <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="constrs_1" Description="Vivado Implementation Defaults" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
-          <Desc>Vivado Implementation Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

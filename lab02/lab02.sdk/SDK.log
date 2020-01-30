@@ -1,3 +1,33 @@
 21:46:51 INFO  : Processing command line option -hwspec /home/clvrpny/ecen449/lab02/lab02.sdk/led_sw_wrapper.hdf.
 21:46:56 INFO  : Launching XSDB server: xsdb -n -s /home/clvrpny/xilinx/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
 21:46:58 INFO  : XSDB server has started successfully.
+22:00:21 INFO  : Launching XSDB server: xsdb -n -s /home/clvrpny/xilinx/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+22:00:22 INFO  : XSDB server has started successfully.
+22:00:22 INFO  : Processing command line option -hwspec /home/clvrpny/ecen449/lab02/lab02.sdk/led_sw_wrapper.hdf.
+22:00:24 INFO  : Checking for hwspec changes in the project led_sw_wrapper_hw_platform_0.
+22:04:51 INFO  : Launching XSDB server: xsdb -n -s /home/clvrpny/xilinx/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+22:04:52 INFO  : XSDB server has started successfully.
+22:04:54 INFO  : Processing command line option -hwspec /home/clvrpny/ecen449/lab02/lab02.sdk/led_sw_wrapper.hdf.
+22:04:55 INFO  : Checking for hwspec changes in the project led_sw_wrapper_hw_platform_0.
+22:05:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:05:32 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A780C4A" && level==0} -index 1' command is executed.
+22:05:33 INFO  : FPGA configured successfully with bitstream "/home/clvrpny/ecen449/lab02/lab02.sdk/led_sw_wrapper_hw_platform_0/download.bit"
+22:06:12 ERROR :  [Hsi 55-1546] Processor Instance ps7_cortexa9_0 doesn't exist in Xml/HwDb
+22:07:10 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Error in Resetting Target
+MicroBlaze is not being clocked. Check if the Clock input to MicroBlaze and its Bus Interfaces are connected properly
+    
+
+	at com.xilinx.sdk.targetmanager.internal.TM.doProcessorReset(TM.java:995)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runTargetSetup(XilinxAppLaunchConfigurationDelegate.java:506)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:588)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:296)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+13:09:34 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1580324959000,  Project:1580269295000
+13:09:34 INFO  : Project led_sw_wrapper_hw_platform_0's source hardware specification located at /home/clvrpny/ecen449/lab02/lab02.sdk/led_sw_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.

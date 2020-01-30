@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.2 (lin64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date         : Tue Jan 28 21:41:21 2020
+| Date         : Wed Jan 29 13:09:01 2020
 | Host         : mobile running 64-bit Ubuntu 18.04.3 LTS
 | Command      : report_timing_summary -warn_on_violation -max_paths 10 -file led_sw_wrapper_timing_summary_routed.rpt -rpx led_sw_wrapper_timing_summary_routed.rpx
 | Design       : led_sw_wrapper
@@ -155,7 +155,7 @@ clock_rtl                                                                       
   clk_out1_led_sw_clk_wiz_1_0                    2.322        0.000                      0                 4557        0.064        0.000                      0                 4557        3.750        0.000                       0                  1595  
   clkfbout_led_sw_clk_wiz_1_0                                                                                                                                                                7.845        0.000                       0                     3  
 led_sw_i/mdm_1/U0/Use_E2.BSCANE2_I/DRCK         12.964        0.000                      0                  247        0.122        0.000                      0                  247       15.686        0.000                       0                   283  
-led_sw_i/mdm_1/U0/Use_E2.BSCANE2_I/UPDATE       10.940        0.000                      0                   48        0.263        0.000                      0                   48       16.166        0.000                       0                    41  
+led_sw_i/mdm_1/U0/Use_E2.BSCANE2_I/UPDATE       10.940        0.000                      0                   48        0.263        0.000                      0                   48       16.167        0.000                       0                    41  
 
 
 ------------------------------------------------------------------------------------------------
@@ -2664,7 +2664,7 @@ From Clock:  led_sw_i/mdm_1/U0/Use_E2.BSCANE2_I/UPDATE
 
 Setup :            0  Failing Endpoints,  Worst Slack       10.940ns,  Total Violation        0.000ns
 Hold  :            0  Failing Endpoints,  Worst Slack        0.263ns,  Total Violation        0.000ns
-PW    :            0  Failing Endpoints,  Worst Slack       16.166ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack       16.167ns,  Total Violation        0.000ns
 ---------------------------------------------------------------------------------------------------
 
 
