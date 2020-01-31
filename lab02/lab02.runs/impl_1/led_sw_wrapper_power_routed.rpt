@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2015.2 (lin64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date             : Wed Jan 29 13:09:02 2020
+| Date             : Thu Jan 30 18:41:14 2020
 | Host             : mobile running 64-bit Ubuntu 18.04.3 LTS
 | Command          : report_power -file led_sw_wrapper_power_routed.rpt -pb led_sw_wrapper_power_summary_routed.pb
 | Design           : led_sw_wrapper
@@ -30,12 +30,12 @@ Table of Contents
 ----------
 
 +--------------------------+-------+
-| Total On-Chip Power (W)  | 0.247 |
-| Dynamic (W)              | 0.140 |
+| Total On-Chip Power (W)  | 0.238 |
+| Dynamic (W)              | 0.131 |
 | Device Static (W)        | 0.107 |
 | Effective TJA (C/W)      | 11.5  |
-| Max Ambient (C)          | 82.2  |
-| Junction Temperature (C) | 27.8  |
+| Max Ambient (C)          | 82.3  |
+| Junction Temperature (C) | 27.7  |
 | Confidence Level         | Low   |
 | Setting File             | ---   |
 | Simulation Activity File | ---   |
@@ -49,21 +49,21 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.010 |        7 |       --- |             --- |
-| Slice Logic              |     0.004 |     4178 |       --- |             --- |
-|   LUT as Logic           |     0.003 |     1391 |     17600 |            7.90 |
+| Clocks                   |     0.009 |        7 |       --- |             --- |
+| Slice Logic              |     0.004 |     3847 |       --- |             --- |
+|   LUT as Logic           |     0.003 |     1351 |     17600 |            7.68 |
 |   LUT as Distributed RAM |    <0.001 |       64 |      6000 |            1.07 |
-|   Register               |    <0.001 |     1635 |     35200 |            4.64 |
+|   Register               |    <0.001 |     1337 |     35200 |            3.80 |
 |   CARRY4                 |    <0.001 |       40 |      4400 |            0.91 |
 |   F7/F8 Muxes            |    <0.001 |      112 |     17600 |            0.64 |
 |   LUT as Shift Register  |    <0.001 |       73 |      6000 |            1.22 |
-|   Others                 |    <0.001 |      504 |       --- |             --- |
-| Signals                  |     0.007 |     2915 |       --- |             --- |
+|   Others                 |    <0.001 |      510 |       --- |             --- |
+| Signals                  |     0.007 |     2603 |       --- |             --- |
 | Block RAM                |     0.005 |       16 |        60 |           26.67 |
 | MMCM                     |     0.106 |        1 |         2 |           50.00 |
-| I/O                      |     0.007 |       33 |       100 |           33.00 |
+| I/O                      |    <0.001 |       13 |       100 |           13.00 |
 | Static Power             |     0.107 |          |           |                 |
-| Total                    |     0.247 |          |           |                 |
+| Total                    |     0.238 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,11 +73,11 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.031 |       0.027 |      0.004 |
+| Vccint    |       1.000 |     0.029 |       0.025 |      0.004 |
 | Vccaux    |       1.800 |     0.070 |       0.059 |      0.011 |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
-| Vcco18    |       1.800 |     0.004 |       0.003 |      0.001 |
+| Vcco18    |       1.800 |     0.001 |       0.000 |      0.001 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
@@ -153,18 +153,24 @@ Table of Contents
 +---------------------------------------------------------------------------------+-----------+
 | Name                                                                            | Power (W) |
 +---------------------------------------------------------------------------------+-----------+
-| led_sw_wrapper                                                                  |     0.140 |
-|   led_sw_i                                                                      |     0.132 |
+| led_sw_wrapper                                                                  |     0.131 |
+|   led_sw_i                                                                      |     0.131 |
 |     GND                                                                         |     0.000 |
-|     clk_wiz_1                                                                   |     0.106 |
-|       inst                                                                      |     0.106 |
-|     led                                                                         |     0.002 |
-|       U0                                                                        |     0.002 |
+|     axi_gpio_0                                                                  |    <0.001 |
+|       U0                                                                        |    <0.001 |
 |         AXI_LITE_IPIF_I                                                         |    <0.001 |
 |           I_SLAVE_ATTACHMENT                                                    |    <0.001 |
 |             I_DECODER                                                           |    <0.001 |
-|         gpio_core_1                                                             |     0.002 |
+|         gpio_core_1                                                             |    <0.001 |
+|     axi_gpio_1                                                                  |    <0.001 |
+|       U0                                                                        |    <0.001 |
+|         AXI_LITE_IPIF_I                                                         |    <0.001 |
+|           I_SLAVE_ATTACHMENT                                                    |    <0.001 |
+|             I_DECODER                                                           |    <0.001 |
+|         gpio_core_1                                                             |    <0.001 |
 |           Not_Dual.INPUT_DOUBLE_REGS3                                           |    <0.001 |
+|     clk_wiz_1                                                                   |     0.106 |
+|       inst                                                                      |     0.106 |
 |     mdm_1                                                                       |     0.001 |
 |       U0                                                                        |     0.001 |
 |         MDM_Core_I1                                                             |    <0.001 |
@@ -974,38 +980,6 @@ Table of Contents
 |           ACTIVE_LOW_EXT.ACT_LO_EXT                                             |    <0.001 |
 |         SEQ                                                                     |    <0.001 |
 |           SEQ_COUNTER                                                           |    <0.001 |
-|   led_tri_iobuf_0                                                               |    <0.001 |
-|   led_tri_iobuf_1                                                               |    <0.001 |
-|   led_tri_iobuf_10                                                              |    <0.001 |
-|   led_tri_iobuf_11                                                              |    <0.001 |
-|   led_tri_iobuf_12                                                              |    <0.001 |
-|   led_tri_iobuf_13                                                              |    <0.001 |
-|   led_tri_iobuf_14                                                              |    <0.001 |
-|   led_tri_iobuf_15                                                              |    <0.001 |
-|   led_tri_iobuf_16                                                              |    <0.001 |
-|   led_tri_iobuf_17                                                              |    <0.001 |
-|   led_tri_iobuf_18                                                              |    <0.001 |
-|   led_tri_iobuf_19                                                              |    <0.001 |
-|   led_tri_iobuf_2                                                               |    <0.001 |
-|   led_tri_iobuf_20                                                              |    <0.001 |
-|   led_tri_iobuf_21                                                              |    <0.001 |
-|   led_tri_iobuf_22                                                              |    <0.001 |
-|   led_tri_iobuf_23                                                              |    <0.001 |
-|   led_tri_iobuf_24                                                              |    <0.001 |
-|   led_tri_iobuf_25                                                              |    <0.001 |
-|   led_tri_iobuf_26                                                              |    <0.001 |
-|   led_tri_iobuf_27                                                              |    <0.001 |
-|   led_tri_iobuf_28                                                              |    <0.001 |
-|   led_tri_iobuf_29                                                              |    <0.001 |
-|   led_tri_iobuf_3                                                               |    <0.001 |
-|   led_tri_iobuf_30                                                              |    <0.001 |
-|   led_tri_iobuf_31                                                              |    <0.001 |
-|   led_tri_iobuf_4                                                               |    <0.001 |
-|   led_tri_iobuf_5                                                               |    <0.001 |
-|   led_tri_iobuf_6                                                               |    <0.001 |
-|   led_tri_iobuf_7                                                               |    <0.001 |
-|   led_tri_iobuf_8                                                               |    <0.001 |
-|   led_tri_iobuf_9                                                               |    <0.001 |
 +---------------------------------------------------------------------------------+-----------+
 
 

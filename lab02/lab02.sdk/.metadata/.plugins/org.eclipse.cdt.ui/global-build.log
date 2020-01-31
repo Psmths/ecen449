@@ -102,3 +102,6 @@ Finished building: counter_sw.elf.size
 22:07:07 **** Incremental Build of configuration Debug for project counter_sw ****
 make all 
 make: Nothing to be done for 'all'.
+15:57:01 **** Incremental Build of configuration Debug for project counter_sw ****
+make all 
+make: Nothing to be done for 'all'.

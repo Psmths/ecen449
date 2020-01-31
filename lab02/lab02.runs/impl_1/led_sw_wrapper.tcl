@@ -77,10 +77,14 @@ set rc [catch {
   set_property processing_order EARLY [get_files /home/clvrpny/ecen449/lab02/lab02.srcs/sources_1/bd/led_sw/ip/led_sw_rst_clk_wiz_1_100M_0/led_sw_rst_clk_wiz_1_100M_0_board.xdc]
   read_xdc -ref led_sw_rst_clk_wiz_1_100M_0 /home/clvrpny/ecen449/lab02/lab02.srcs/sources_1/bd/led_sw/ip/led_sw_rst_clk_wiz_1_100M_0/led_sw_rst_clk_wiz_1_100M_0.xdc
   set_property processing_order EARLY [get_files /home/clvrpny/ecen449/lab02/lab02.srcs/sources_1/bd/led_sw/ip/led_sw_rst_clk_wiz_1_100M_0/led_sw_rst_clk_wiz_1_100M_0.xdc]
-  read_xdc -prop_thru_buffers -ref led_sw_axi_gpio_0_0 -cells U0 /home/clvrpny/ecen449/lab02/lab02.srcs/sources_1/bd/led_sw/ip/led_sw_axi_gpio_0_0/led_sw_axi_gpio_0_0_board.xdc
-  set_property processing_order EARLY [get_files /home/clvrpny/ecen449/lab02/lab02.srcs/sources_1/bd/led_sw/ip/led_sw_axi_gpio_0_0/led_sw_axi_gpio_0_0_board.xdc]
-  read_xdc -ref led_sw_axi_gpio_0_0 -cells U0 /home/clvrpny/ecen449/lab02/lab02.srcs/sources_1/bd/led_sw/ip/led_sw_axi_gpio_0_0/led_sw_axi_gpio_0_0.xdc
-  set_property processing_order EARLY [get_files /home/clvrpny/ecen449/lab02/lab02.srcs/sources_1/bd/led_sw/ip/led_sw_axi_gpio_0_0/led_sw_axi_gpio_0_0.xdc]
+  read_xdc -prop_thru_buffers -ref led_sw_axi_gpio_1_0 -cells U0 /home/clvrpny/ecen449/lab02/lab02.srcs/sources_1/bd/led_sw/ip/led_sw_axi_gpio_1_0/led_sw_axi_gpio_1_0_board.xdc
+  set_property processing_order EARLY [get_files /home/clvrpny/ecen449/lab02/lab02.srcs/sources_1/bd/led_sw/ip/led_sw_axi_gpio_1_0/led_sw_axi_gpio_1_0_board.xdc]
+  read_xdc -ref led_sw_axi_gpio_1_0 -cells U0 /home/clvrpny/ecen449/lab02/lab02.srcs/sources_1/bd/led_sw/ip/led_sw_axi_gpio_1_0/led_sw_axi_gpio_1_0.xdc
+  set_property processing_order EARLY [get_files /home/clvrpny/ecen449/lab02/lab02.srcs/sources_1/bd/led_sw/ip/led_sw_axi_gpio_1_0/led_sw_axi_gpio_1_0.xdc]
+  read_xdc -prop_thru_buffers -ref led_sw_axi_gpio_0_2 -cells U0 /home/clvrpny/ecen449/lab02/lab02.srcs/sources_1/bd/led_sw/ip/led_sw_axi_gpio_0_2/led_sw_axi_gpio_0_2_board.xdc
+  set_property processing_order EARLY [get_files /home/clvrpny/ecen449/lab02/lab02.srcs/sources_1/bd/led_sw/ip/led_sw_axi_gpio_0_2/led_sw_axi_gpio_0_2_board.xdc]
+  read_xdc -ref led_sw_axi_gpio_0_2 -cells U0 /home/clvrpny/ecen449/lab02/lab02.srcs/sources_1/bd/led_sw/ip/led_sw_axi_gpio_0_2/led_sw_axi_gpio_0_2.xdc
+  set_property processing_order EARLY [get_files /home/clvrpny/ecen449/lab02/lab02.srcs/sources_1/bd/led_sw/ip/led_sw_axi_gpio_0_2/led_sw_axi_gpio_0_2.xdc]
   read_xdc /home/clvrpny/ecen449/lab02/lab02.srcs/constrs_1/new/led.xdc
   link_design -top led_sw_wrapper -part xc7z010clg400-1
   close_msg_db -file init_design.pb

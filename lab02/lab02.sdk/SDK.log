@@ -31,3 +31,65 @@ MicroBlaze is not being clocked. Check if the Clock input to MicroBlaze and its 
 13:09:34 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1580324959000,  Project:1580269295000
 13:09:34 INFO  : Project led_sw_wrapper_hw_platform_0's source hardware specification located at /home/clvrpny/ecen449/lab02/lab02.sdk/led_sw_wrapper.hdf is now different from the local copy.
 		 The local copy will be replaced with the source specification and your workspace will be updated.
+15:42:43 INFO  : Launching XSDB server: xsdb -n -s /home/clvrpny/xilinx/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+15:42:47 INFO  : XSDB server has started successfully.
+15:42:50 INFO  : Processing command line option -hwspec /home/clvrpny/ecen449/lab02/lab02.sdk/led_sw_wrapper.hdf.
+15:42:51 INFO  : Checking for hwspec changes in the project led_sw_wrapper_hw_platform_0.
+15:42:51 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1580420521000,  Project:1580269295000
+15:42:51 INFO  : The hardware specification for project 'led_sw_wrapper_hw_platform_0' is different from /home/clvrpny/ecen449/lab02/lab02.sdk/led_sw_wrapper.hdf.
+15:42:51 INFO  : Copied contents of /home/clvrpny/ecen449/lab02/lab02.sdk/led_sw_wrapper.hdf into /led_sw_wrapper_hw_platform_0/system.hdf.
+15:42:51 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+15:42:52 INFO  : 
+15:42:53 INFO  : Updating hardware inferred compiler options for counter_sw.
+15:42:53 INFO  : Clearing existing target manager status.
+15:42:56 INFO  : Closing and re-opening the MSS file of ther project counter_sw_bsp
+15:42:57 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+15:42:57 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+15:44:11 ERROR :  [Hsi 55-1546] Processor Instance ps7_cortexa9_0 doesn't exist in Xml/HwDb
+15:45:04 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:45:04 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A780B6A" && level==0} -index 1' command is executed.
+15:45:06 INFO  : FPGA configured successfully with bitstream "/home/clvrpny/ecen449/lab02/lab02.sdk/led_sw_wrapper_hw_platform_0/download.bit"
+15:45:23 INFO  : Processor reset is completed for microblaze_0
+15:54:41 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1580421263000,  Project:1580420521000
+15:54:41 INFO  : Project led_sw_wrapper_hw_platform_0's source hardware specification located at /home/clvrpny/ecen449/lab02/lab02.sdk/led_sw_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+15:54:48 INFO  : Copied contents of /home/clvrpny/ecen449/lab02/lab02.sdk/led_sw_wrapper.hdf into /led_sw_wrapper_hw_platform_0/system.hdf.
+15:54:49 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+15:54:49 INFO  : 
+15:54:50 INFO  : Updating hardware inferred compiler options for counter_sw.
+15:54:50 INFO  : Clearing existing target manager status.
+15:54:50 INFO  : Closing and re-opening the MSS file of ther project counter_sw_bsp
+15:54:50 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+15:54:51 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+15:55:06 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:55:06 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A780B6A" && level==0} -index 1' command is executed.
+15:55:08 INFO  : FPGA configured successfully with bitstream "/home/clvrpny/ecen449/lab02/lab02.sdk/led_sw_wrapper_hw_platform_0/download.bit"
+15:55:12 ERROR :  [Hsi 55-1546] Processor Instance ps7_cortexa9_0 doesn't exist in Xml/HwDb
+15:55:15 INFO  : Processor reset is completed for microblaze_0
+15:55:15 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Cannot perform the Debug Command, Current Processor State is "Running"
+
+	at com.xilinx.sdk.targetmanager.internal.TM.downloadELF(TM.java:670)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(AppRunner.java:129)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:609)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:296)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+15:56:05 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:56:06 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A780B6A" && level==0} -index 1' command is executed.
+15:56:07 INFO  : FPGA configured successfully with bitstream "/home/clvrpny/ecen449/lab02/lab02.sdk/led_sw_wrapper_hw_platform_0/download.bit"
+15:56:40 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+15:56:50 INFO  : Launching XSDB server: xsdb -n -s /home/clvrpny/xilinx/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+15:56:52 INFO  : XSDB server has started successfully.
+15:56:53 INFO  : Processing command line option -hwspec /home/clvrpny/ecen449/lab02/lab02.sdk/led_sw_wrapper.hdf.
+15:56:54 INFO  : Checking for hwspec changes in the project led_sw_wrapper_hw_platform_0.
+15:56:59 ERROR :  [Hsi 55-1546] Processor Instance ps7_cortexa9_0 doesn't exist in Xml/HwDb
+15:57:04 INFO  : Processor reset is completed for microblaze_0
+18:14:27 INFO  : Launching XSDB server: xsdb -n -s /home/clvrpny/xilinx/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+18:14:30 INFO  : XSDB server has started successfully.
+18:14:35 INFO  : Processing command line option -hwspec /home/clvrpny/ecen449/lab02/lab02.sdk/led_sw_wrapper.hdf.
+18:14:36 INFO  : Checking for hwspec changes in the project led_sw_wrapper_hw_platform_0.

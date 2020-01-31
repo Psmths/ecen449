@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.2 (lin64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date         : Wed Jan 29 13:08:02 2020
+| Date         : Thu Jan 30 18:40:17 2020
 | Host         : mobile running 64-bit Ubuntu 18.04.3 LTS
 | Command      : report_utilization -file led_sw_wrapper_utilization_synth.rpt -pb led_sw_wrapper_utilization_synth.pb
 | Design       : led_sw_wrapper
@@ -30,13 +30,13 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                | 1698 |     0 |     17600 |  9.65 |
-|   LUT as Logic             | 1513 |     0 |     17600 |  8.60 |
+| Slice LUTs*                | 1703 |     0 |     17600 |  9.68 |
+|   LUT as Logic             | 1518 |     0 |     17600 |  8.63 |
 |   LUT as Memory            |  185 |     0 |      6000 |  3.08 |
 |     LUT as Distributed RAM |   64 |     0 |           |       |
 |     LUT as Shift Register  |  121 |     0 |           |       |
-| Slice Registers            | 5990 |     0 |     35200 | 17.02 |
-|   Register as Flip Flop    | 5989 |     0 |     35200 | 17.01 |
+| Slice Registers            | 5812 |     0 |     35200 | 16.51 |
+|   Register as Flip Flop    | 5811 |     0 |     35200 | 16.51 |
 |   Register as Latch        |    0 |     0 |     35200 |  0.00 |
 |   Register as AND/OR       |    1 |     0 |     35200 | <0.01 |
 | F7 Muxes                   |  112 |     0 |      8800 |  1.27 |
@@ -59,8 +59,8 @@ Table of Contents
 | 0     |          Yes |           - |            - |
 | 5     |          Yes |           - |          Set |
 | 292   |          Yes |           - |        Reset |
-| 76    |          Yes |         Set |            - |
-| 5616  |          Yes |       Reset |            - |
+| 56    |          Yes |         Set |            - |
+| 5458  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -94,7 +94,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |   33 |     0 |       100 | 33.00 |
+| Bonded IOB                  |   13 |     0 |       100 | 13.00 |
 | Bonded IPADs                |    0 |     0 |         2 |  0.00 |
 | Bonded IOPADs               |    0 |     0 |       130 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |         2 |  0.00 |
@@ -150,25 +150,25 @@ Table of Contents
 +------------+------+---------------------+
 |  Ref Name  | Used | Functional Category |
 +------------+------+---------------------+
-| FDRE       | 5616 |        Flop & Latch |
-| LUT6       |  645 |                 LUT |
-| LUT3       |  361 |                 LUT |
-| LUT5       |  320 |                 LUT |
+| FDRE       | 5458 |        Flop & Latch |
+| LUT6       |  600 |                 LUT |
+| LUT3       |  403 |                 LUT |
+| LUT5       |  371 |                 LUT |
 | FDCE       |  292 |        Flop & Latch |
-| LUT4       |  288 |                 LUT |
-| LUT2       |  134 |                 LUT |
+| LUT4       |  267 |                 LUT |
+| LUT2       |  140 |                 LUT |
 | SRL16E     |  114 |  Distributed Memory |
 | MUXF7      |  112 |               MuxFx |
 | RAMD32     |   96 |  Distributed Memory |
-| FDSE       |   76 |        Flop & Latch |
+| FDSE       |   56 |        Flop & Latch |
 | CARRY4     |   40 |          CarryLogic |
-| IBUF       |   33 |                  IO |
 | RAMS32     |   32 |  Distributed Memory |
-| OBUFT      |   32 |                  IO |
-| LUT1       |   30 |                 LUT |
+| LUT1       |   32 |                 LUT |
 | RAMB36E1   |   16 |        Block Memory |
+| IBUF       |    9 |                  IO |
 | SRLC16E    |    7 |  Distributed Memory |
 | FDPE       |    5 |        Flop & Latch |
+| OBUF       |    4 |                  IO |
 | BUFG       |    4 |               Clock |
 | MMCME2_ADV |    1 |               Clock |
 | BSCANE2    |    1 |              Others |

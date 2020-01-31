@@ -6,5 +6,5 @@
 	<item value="led_sw_wrapper.bit" key="led_sw_wrapper_hw_platform_0-bitFile"/>
 	<item value="false" key="led_sw_wrapper_hw_platform_0-partial_bit"/>
 	<item value="bootloop" key="led_sw_wrapper_hw_platform_0-led_sw_i/microblaze_0-initElf"/>
-	<item value="Auto Detect" key="led_sw_wrapper_hw_platform_0-device"/>
+	<item value="Digilent Zybo Z7 210351A780B6A/2-xc7z010" key="led_sw_wrapper_hw_platform_0-device"/>
 </section>

@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Thu Jan 30 15:31:59 2020
+# Process ID: 9006
+# Log file: /home/clvrpny/ecen449/lab01/vivado.log
+# Journal file: /home/clvrpny/ecen449/lab01/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/clvrpny/Downloads/project_1/project_1.xpr
+open_hw
+connect_hw_server -url localhost:3121

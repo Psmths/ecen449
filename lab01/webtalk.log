@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Webtalk v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Thu Jan 30 15:26:30 2020
+# Process ID: 8785
+# Log file: /home/clvrpny/ecen449/lab01/webtalk.log
+# Journal file: /home/clvrpny/ecen449/lab01/webtalk.jou
+#-----------------------------------------------------------
+source /home/clvrpny/Downloads/project_1/project_1.hw/webtalk/labtool_webtalk.tcl -notrace
+
+    while executing
+"webtalk_transmit -clientid 3537680810 -regid "" -xml /home/clvrpny/Downloads/project_1/project_1.hw/webtalk/usage_statistics_ext_labtool.xml -html /ho..."
+    (file "/home/clvrpny/Downloads/project_1/project_1.hw/webtalk/labtool_webtalk.tcl" line 28)
+INFO: [Common 17-206] Exiting Webtalk at Thu Jan 30 15:26:31 2020...
