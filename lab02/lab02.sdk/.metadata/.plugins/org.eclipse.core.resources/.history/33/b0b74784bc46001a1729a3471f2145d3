@@ -6,31 +6,31 @@
 //Definitions
 #define GPIO_DEVICE_ID_LED XPAR_LED_DEVICE_ID //From xparams.h include
 #define GPIO_DEVICE_ID_SWS XPAR_SWS_DEVICE_ID // ^
-#define WAIT_VAL 10000000 //clock division param
+#define WAIT_VAL 10000000 //wait value used to divide the clock
 
 int delay (void);
 
 int main(){
 
-	int count; //loop counter
-	int count_masked; //lowest nib of counter
-	XGpio leds; //LED GPIO
-	XGpio sws; //Switches GPIO
-	int status; //GPIO binding status
-	int switches; //status of switches as integer
+	int count; //how many times we go through the while loop in total
+	int count_masked; //the first 4 bits (what is shown on the LEDs)
+	XGpio leds; //GPIO output led port
+	XGpio sws;
+	int status; //tells us if we successfully initialize the GPIO device
+	int switches;
 
-	//Init LED GPIO as OUTPUT
+	//Init LED GPIO
 	status = XGpio_Initialize(&leds, GPIO_DEVICE_ID_LED);
-	XGpio_SetDataDirection(&leds, 1, 0x00);
+	XGpio_SetDataDirection(&leds, 1, 0x00); //data direction (1 for input, 0 for output)
 	if (status != XST_SUCCESS) { xil_printf("Initialization failed for LEDs\n\r"); }
 
-	//Init SWITCHES and BUTTONS GPIO and INPUT
+	//Init SWITCHES and BUTTONS GPIO
 	status = XGpio_Initialize(&sws, GPIO_DEVICE_ID_SWS);
-	XGpio_SetDataDirection(&sws, 1, 0x00);
+	XGpio_SetDataDirection(&sws, 1, 0x00); //data direction (1 for input, 0 for output)
 	if (status != XST_SUCCESS) { xil_printf("Initialization failed for INPUT\n\r"); }
 
 
-	count = 0;
+	count = 0; //counter variable set to 0 before program begins looping
 
 	while(1){
 		//GPIO map:
@@ -72,9 +72,8 @@ int main(){
 }
 
 int delay(void) {
-	//Loop for WAIT_VAL cycles as a delay...
-	volatile int delay_count = 0;
+	volatile int delay_count = 0; //volatile prevents compiler from applying optimizations
 	while(delay_count < WAIT_VAL)
-		delay_count++;
+		delay_count++; //keep looping until we reach WAIT_VAL (10,000,000 cycles define above)
 	return (0);
 }
