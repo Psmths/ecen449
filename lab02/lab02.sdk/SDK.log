@@ -105,3 +105,26 @@ java.lang.RuntimeException: Cannot perform the Debug Command, Current Processor 
 10:45:19 INFO  : Updating hardware inferred compiler options for counter_sw.
 10:45:20 INFO  : Clearing existing target manager status.
 10:50:34 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+10:57:21 INFO  : Launching XSDB server: xsdb -n -s /home/clvrpny/xilinx/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+10:57:22 INFO  : XSDB server has started successfully.
+10:57:22 INFO  : Processing command line option -hwspec /home/clvrpny/ecen449/lab02/lab02.sdk/led_sw_wrapper.hdf.
+10:57:24 INFO  : Checking for hwspec changes in the project led_sw_wrapper_hw_platform_0.
+10:57:24 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1580748816000,  Project:1580431288000
+10:57:24 INFO  : The hardware specification for project 'led_sw_wrapper_hw_platform_0' is different from /home/clvrpny/ecen449/lab02/lab02.sdk/led_sw_wrapper.hdf.
+10:57:24 INFO  : Copied contents of /home/clvrpny/ecen449/lab02/lab02.sdk/led_sw_wrapper.hdf into /led_sw_wrapper_hw_platform_0/system.hdf.
+10:57:24 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+10:57:25 INFO  : 
+10:57:26 INFO  : Updating hardware inferred compiler options for counter_sw.
+10:57:26 INFO  : Clearing existing target manager status.
+10:59:18 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+11:07:29 INFO  : Launching XSDB server: xsdb -n -s /home/clvrpny/xilinx/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+11:07:30 INFO  : XSDB server has started successfully.
+11:07:31 INFO  : Processing command line option -hwspec /home/clvrpny/ecen449/lab02/lab02.sdk/led_sw_wrapper.hdf.
+11:07:33 INFO  : Checking for hwspec changes in the project led_sw_wrapper_hw_platform_0.
+11:07:33 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1580749599000,  Project:1580748816000
+11:07:33 INFO  : The hardware specification for project 'led_sw_wrapper_hw_platform_0' is different from /home/clvrpny/ecen449/lab02/lab02.sdk/led_sw_wrapper.hdf.
+11:07:34 INFO  : Copied contents of /home/clvrpny/ecen449/lab02/lab02.sdk/led_sw_wrapper.hdf into /led_sw_wrapper_hw_platform_0/system.hdf.
+11:07:34 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+11:07:35 INFO  : 
+11:07:36 INFO  : Updating hardware inferred compiler options for counter_sw.
+11:07:36 INFO  : Clearing existing target manager status.

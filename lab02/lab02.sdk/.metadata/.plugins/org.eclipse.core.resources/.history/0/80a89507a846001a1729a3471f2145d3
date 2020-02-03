@@ -1,0 +1,8 @@
+#include <xparameters.h>
+#include <xgpio.h>
+#include <xstatus.h>
+#include <xil_printf.h>
+
+//Definitions
+#define GPIO_DEVICE_ID XPAR_LED_DEVICE_ID //GPIO device that LEDs are connected to
+#define WAIT_VAL 10000000 //wait value used to divide the clock

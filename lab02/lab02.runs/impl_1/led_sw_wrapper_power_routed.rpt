@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2015.2 (lin64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date             : Mon Feb  3 10:53:22 2020
+| Date             : Mon Feb  3 11:06:25 2020
 | Host             : mobile running 64-bit Ubuntu 18.04.3 LTS
 | Command          : report_power -file led_sw_wrapper_power_routed.rpt -pb led_sw_wrapper_power_summary_routed.pb
 | Design           : led_sw_wrapper
@@ -30,12 +30,12 @@ Table of Contents
 ----------
 
 +--------------------------+-------+
-| Total On-Chip Power (W)  | 0.239 |
-| Dynamic (W)              | 0.132 |
-| Device Static (W)        | 0.107 |
+| Total On-Chip Power (W)  | 0.235 |
+| Dynamic (W)              | 0.130 |
+| Device Static (W)        | 0.105 |
 | Effective TJA (C/W)      | 11.5  |
-| Max Ambient (C)          | 82.2  |
-| Junction Temperature (C) | 27.8  |
+| Max Ambient (C)          | 82.3  |
+| Junction Temperature (C) | 27.7  |
 | Confidence Level         | Low   |
 | Setting File             | ---   |
 | Simulation Activity File | ---   |
@@ -49,21 +49,21 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.010 |        7 |       --- |             --- |
+| Clocks                   |     0.008 |        7 |       --- |             --- |
 | Slice Logic              |     0.004 |     3847 |       --- |             --- |
-|   LUT as Logic           |     0.003 |     1350 |     17600 |            7.67 |
+|   LUT as Logic           |     0.003 |     1352 |     17600 |            7.68 |
 |   LUT as Distributed RAM |    <0.001 |       64 |      6000 |            1.07 |
 |   Register               |    <0.001 |     1337 |     35200 |            3.80 |
 |   CARRY4                 |    <0.001 |       40 |      4400 |            0.91 |
 |   F7/F8 Muxes            |    <0.001 |      112 |     17600 |            0.64 |
 |   LUT as Shift Register  |    <0.001 |       73 |      6000 |            1.22 |
 |   Others                 |    <0.001 |      510 |       --- |             --- |
-| Signals                  |     0.006 |     2605 |       --- |             --- |
+| Signals                  |     0.007 |     2607 |       --- |             --- |
 | Block RAM                |     0.005 |       16 |        60 |           26.67 |
 | MMCM                     |     0.106 |        1 |         2 |           50.00 |
 | I/O                      |    <0.001 |       13 |       100 |           13.00 |
-| Static Power             |     0.107 |          |           |                 |
-| Total                    |     0.239 |          |           |                 |
+| Static Power             |     0.105 |          |           |                 |
+| Total                    |     0.235 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,11 +73,11 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.030 |       0.026 |      0.004 |
+| Vccint    |       1.000 |     0.028 |       0.024 |      0.004 |
 | Vccaux    |       1.800 |     0.070 |       0.059 |      0.011 |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
-| Vcco18    |       1.800 |     0.001 |       0.000 |      0.001 |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
@@ -153,8 +153,8 @@ Table of Contents
 +---------------------------------------------------------------------------------+-----------+
 | Name                                                                            | Power (W) |
 +---------------------------------------------------------------------------------+-----------+
-| led_sw_wrapper                                                                  |     0.132 |
-|   led_sw_i                                                                      |     0.131 |
+| led_sw_wrapper                                                                  |     0.130 |
+|   led_sw_i                                                                      |     0.130 |
 |     GND                                                                         |     0.000 |
 |     clk_wiz_1                                                                   |     0.106 |
 |       inst                                                                      |     0.106 |
@@ -166,18 +166,18 @@ Table of Contents
 |         gpio_core_1                                                             |    <0.001 |
 |     mdm_1                                                                       |     0.001 |
 |       U0                                                                        |     0.001 |
-|         MDM_Core_I1                                                             |     0.001 |
+|         MDM_Core_I1                                                             |    <0.001 |
 |           JTAG_CONTROL_I                                                        |    <0.001 |
 |             Use_UART.RX_FIFO_I                                                  |    <0.001 |
 |             Use_UART.TX_FIFO_I                                                  |    <0.001 |
 |         Use_AXI_IPIF.AXI_LITE_IPIF_I                                            |    <0.001 |
 |           I_SLAVE_ATTACHMENT                                                    |    <0.001 |
 |             I_DECODER                                                           |    <0.001 |
-|     microblaze_0                                                                |     0.016 |
-|       U0                                                                        |     0.016 |
-|         MicroBlaze_Core_I                                                       |     0.016 |
-|           Performance.Core                                                      |     0.016 |
-|             Data_Flow_I                                                         |     0.007 |
+|     microblaze_0                                                                |     0.015 |
+|       U0                                                                        |     0.015 |
+|         MicroBlaze_Core_I                                                       |     0.015 |
+|           Performance.Core                                                      |     0.015 |
+|             Data_Flow_I                                                         |     0.006 |
 |               ALU_I                                                             |     0.001 |
 |                 ALL_Bits[0].ALU_Bit_I1                                          |     0.001 |
 |                   Last_Bit.I_ALU_LUT_2                                          |    <0.001 |
@@ -811,7 +811,7 @@ Table of Contents
 |                 MUXCY_I                                                         |     0.000 |
 |             Use_DBUS.DAXI_Interface_I1                                          |    <0.001 |
 |             Use_DLMB.Using_Latch_AS_Logic.AND2B1L_I1                            |    <0.001 |
-|             Use_Debug_Logic.Master_Core.Debug_Perf                              |     0.002 |
+|             Use_Debug_Logic.Master_Core.Debug_Perf                              |     0.001 |
 |               SRL16E_1                                                          |    <0.001 |
 |               SRL16E_2                                                          |    <0.001 |
 |               SRL16E_3                                                          |    <0.001 |

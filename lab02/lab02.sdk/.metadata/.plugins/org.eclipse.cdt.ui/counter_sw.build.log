@@ -1,4 +1,4 @@
-10:46:35 **** Auto Build of configuration Debug for project counter_sw ****
+11:07:34 **** Auto Build of configuration Debug for project counter_sw ****
 make all 
 Building file: ../src/lab2a.c
 Invoking: MicroBlaze gcc compiler
@@ -19,5 +19,5 @@ src/subdir.mk:21: recipe for target 'src/lab2a.o' failed
                                    ^
 make: *** [src/lab2a.o] Error 1
 
-10:46:35 Build Finished (took 76ms)
+11:07:34 Build Finished (took 67ms)
 

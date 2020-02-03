@@ -18,7 +18,7 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1021.469 ; gain = 187.832 ; free physical = 2062 ; free virtual = 5784
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1021.469 ; gain = 187.832 ; free physical = 2045 ; free virtual = 5775
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'led_sw_wrapper' [/home/clvrpny/ecen449/lab02/lab02.srcs/sources_1/bd/led_sw/hdl/led_sw_wrapper.v:12]
 INFO: [Synth 8-638] synthesizing module 'led_sw' [/home/clvrpny/ecen449/lab02/lab02.srcs/sources_1/bd/led_sw/hdl/led_sw.v:13]
@@ -10552,7 +10552,7 @@ INFO: [Synth 8-256] done synthesizing module 'led_sw_axi_gpio_1_0' (119#1) [/hom
 INFO: [Synth 8-256] done synthesizing module 'led_sw' (120#1) [/home/clvrpny/ecen449/lab02/lab02.srcs/sources_1/bd/led_sw/hdl/led_sw.v:13]
 INFO: [Synth 8-256] done synthesizing module 'led_sw_wrapper' (121#1) [/home/clvrpny/ecen449/lab02/lab02.srcs/sources_1/bd/led_sw/hdl/led_sw_wrapper.v:12]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:01:12 ; elapsed = 00:01:13 . Memory (MB): peak = 1327.562 ; gain = 493.926 ; free physical = 1750 ; free virtual = 5477
+Finished RTL Elaboration : Time (s): cpu = 00:01:14 ; elapsed = 00:01:15 . Memory (MB): peak = 1327.562 ; gain = 493.926 ; free physical = 1730 ; free virtual = 5465
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -10562,7 +10562,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:13 ; elapsed = 00:01:14 . Memory (MB): peak = 1327.562 ; gain = 493.926 ; free physical = 1750 ; free virtual = 5477
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:15 ; elapsed = 00:01:16 . Memory (MB): peak = 1327.562 ; gain = 493.926 ; free physical = 1729 ; free virtual = 5465
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 626 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -10600,38 +10600,6 @@ Parsing XDC File [/home/clvrpny/ecen449/lab02/lab02.srcs/sources_1/bd/led_sw/ip/
 Finished Parsing XDC File [/home/clvrpny/ecen449/lab02/lab02.srcs/sources_1/bd/led_sw/ip/led_sw_axi_gpio_0_2/led_sw_axi_gpio_0_2.xdc] for cell 'led_sw_i/led/U0'
 Parsing XDC File [/home/clvrpny/ecen449/lab02/lab02.srcs/constrs_1/new/led.xdc]
 CRITICAL WARNING: [Common 17-165] Too many positional options when parsing 'clock_rtl', please type 'create_clock -help' for usage info. [/home/clvrpny/ecen449/lab02/lab02.srcs/constrs_1/new/led.xdc:4]
-wrong # args: should be "set varName ?newValue?"
-CRITICAL WARNING: [Designutils 20-964] Command failed: wrong # args: should be "set varName ?newValue?". [/home/clvrpny/ecen449/lab02/lab02.srcs/constrs_1/new/led.xdc:17]
-wrong # args: should be "set varName ?newValue?"
-CRITICAL WARNING: [Designutils 20-964] Command failed: wrong # args: should be "set varName ?newValue?". [/home/clvrpny/ecen449/lab02/lab02.srcs/constrs_1/new/led.xdc:18]
-wrong # args: should be "set varName ?newValue?"
-CRITICAL WARNING: [Designutils 20-964] Command failed: wrong # args: should be "set varName ?newValue?". [/home/clvrpny/ecen449/lab02/lab02.srcs/constrs_1/new/led.xdc:20]
-wrong # args: should be "set varName ?newValue?"
-CRITICAL WARNING: [Designutils 20-964] Command failed: wrong # args: should be "set varName ?newValue?". [/home/clvrpny/ecen449/lab02/lab02.srcs/constrs_1/new/led.xdc:21]
-wrong # args: should be "set varName ?newValue?"
-CRITICAL WARNING: [Designutils 20-964] Command failed: wrong # args: should be "set varName ?newValue?". [/home/clvrpny/ecen449/lab02/lab02.srcs/constrs_1/new/led.xdc:23]
-wrong # args: should be "set varName ?newValue?"
-CRITICAL WARNING: [Designutils 20-964] Command failed: wrong # args: should be "set varName ?newValue?". [/home/clvrpny/ecen449/lab02/lab02.srcs/constrs_1/new/led.xdc:24]
-wrong # args: should be "set varName ?newValue?"
-CRITICAL WARNING: [Designutils 20-964] Command failed: wrong # args: should be "set varName ?newValue?". [/home/clvrpny/ecen449/lab02/lab02.srcs/constrs_1/new/led.xdc:26]
-wrong # args: should be "set varName ?newValue?"
-CRITICAL WARNING: [Designutils 20-964] Command failed: wrong # args: should be "set varName ?newValue?". [/home/clvrpny/ecen449/lab02/lab02.srcs/constrs_1/new/led.xdc:27]
-wrong # args: should be "set varName ?newValue?"
-CRITICAL WARNING: [Designutils 20-964] Command failed: wrong # args: should be "set varName ?newValue?". [/home/clvrpny/ecen449/lab02/lab02.srcs/constrs_1/new/led.xdc:31]
-wrong # args: should be "set varName ?newValue?"
-CRITICAL WARNING: [Designutils 20-964] Command failed: wrong # args: should be "set varName ?newValue?". [/home/clvrpny/ecen449/lab02/lab02.srcs/constrs_1/new/led.xdc:32]
-wrong # args: should be "set varName ?newValue?"
-CRITICAL WARNING: [Designutils 20-964] Command failed: wrong # args: should be "set varName ?newValue?". [/home/clvrpny/ecen449/lab02/lab02.srcs/constrs_1/new/led.xdc:34]
-wrong # args: should be "set varName ?newValue?"
-CRITICAL WARNING: [Designutils 20-964] Command failed: wrong # args: should be "set varName ?newValue?". [/home/clvrpny/ecen449/lab02/lab02.srcs/constrs_1/new/led.xdc:35]
-wrong # args: should be "set varName ?newValue?"
-CRITICAL WARNING: [Designutils 20-964] Command failed: wrong # args: should be "set varName ?newValue?". [/home/clvrpny/ecen449/lab02/lab02.srcs/constrs_1/new/led.xdc:37]
-wrong # args: should be "set varName ?newValue?"
-CRITICAL WARNING: [Designutils 20-964] Command failed: wrong # args: should be "set varName ?newValue?". [/home/clvrpny/ecen449/lab02/lab02.srcs/constrs_1/new/led.xdc:38]
-wrong # args: should be "set varName ?newValue?"
-CRITICAL WARNING: [Designutils 20-964] Command failed: wrong # args: should be "set varName ?newValue?". [/home/clvrpny/ecen449/lab02/lab02.srcs/constrs_1/new/led.xdc:40]
-wrong # args: should be "set varName ?newValue?"
-CRITICAL WARNING: [Designutils 20-964] Command failed: wrong # args: should be "set varName ?newValue?". [/home/clvrpny/ecen449/lab02/lab02.srcs/constrs_1/new/led.xdc:41]
 Finished Parsing XDC File [/home/clvrpny/ecen449/lab02/lab02.srcs/constrs_1/new/led.xdc]
 Parsing XDC File [/home/clvrpny/ecen449/lab02/lab02.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [/home/clvrpny/ecen449/lab02/lab02.runs/synth_1/dont_touch.xdc]
@@ -10653,16 +10621,16 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM32M => RAM32M (RAMS32, RAMS32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32): 16 instances
   SRL16 => SRL16E: 1 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1451.578 ; gain = 0.000 ; free physical = 1733 ; free virtual = 5460
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1451.578 ; gain = 0.000 ; free physical = 1711 ; free virtual = 5447
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:01:24 ; elapsed = 00:01:24 . Memory (MB): peak = 1451.578 ; gain = 617.941 ; free physical = 1732 ; free virtual = 5460
+Finished Constraint Validation : Time (s): cpu = 00:01:26 ; elapsed = 00:01:26 . Memory (MB): peak = 1451.578 ; gain = 617.941 ; free physical = 1711 ; free virtual = 5447
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:24 ; elapsed = 00:01:24 . Memory (MB): peak = 1451.578 ; gain = 617.941 ; free physical = 1732 ; free virtual = 5460
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:26 ; elapsed = 00:01:26 . Memory (MB): peak = 1451.578 ; gain = 617.941 ; free physical = 1711 ; free virtual = 5447
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -10691,7 +10659,7 @@ Applied set_property DONT_TOUCH = true for led_sw_i/microblaze_0_local_memory/lm
 Applied set_property DONT_TOUCH = true for led_sw_i/rst_clk_wiz_1_100M. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for led_sw_i/sws. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:24 ; elapsed = 00:01:24 . Memory (MB): peak = 1451.578 ; gain = 617.941 ; free physical = 1732 ; free virtual = 5460
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:26 ; elapsed = 00:01:27 . Memory (MB): peak = 1451.578 ; gain = 617.941 ; free physical = 1711 ; free virtual = 5447
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5544] ROM "s_axi_rresp_i" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "s_axi_rresp_i" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
@@ -10766,7 +10734,7 @@ WARNING: [Synth 8-115] binding instance 'i_5' in module 'PC_Module_gti' to refer
 WARNING: [Synth 8-115] binding instance 'i_21' in module 'jump_logic' to reference 'keep__121' which has no pins
 WARNING: [Synth 8-115] binding instance 'i_22' in module 'jump_logic' to reference 'keep__123' which has no pins
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:30 ; elapsed = 00:01:30 . Memory (MB): peak = 1451.578 ; gain = 617.941 ; free physical = 1707 ; free virtual = 5434
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:32 ; elapsed = 00:01:32 . Memory (MB): peak = 1451.578 ; gain = 617.941 ; free physical = 1694 ; free virtual = 5430
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -11379,7 +11347,7 @@ BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:01:30 ; elapsed = 00:01:30 . Memory (MB): peak = 1451.578 ; gain = 617.941 ; free physical = 1707 ; free virtual = 5434
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:01:32 ; elapsed = 00:01:33 . Memory (MB): peak = 1451.578 ; gain = 617.941 ; free physical = 1693 ; free virtual = 5429
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
@@ -11403,9 +11371,9 @@ INFO: [Synth 8-5546] ROM "Command_Reg_En" won't be mapped to RAM because it is t
 INFO: [Synth 8-3936] Found unconnected internal register 'inst/gen_sasd.crossbar_sasd_0/reg_slice_r/m_payload_i_reg' and it is trimmed from '36' to '35' bits. [/home/clvrpny/ecen449/lab02/lab02.srcs/sources_1/ipshared/xilinx.com/axi_register_slice_v2_1/03a8e0ba/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:121]
 INFO: [Synth 8-4471] merging register 'bus2ip_reset_reg' into 'AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/rst_reg' [/home/clvrpny/ecen449/lab02/lab02.srcs/sources_1/ipshared/xilinx.com/axi_gpio_v2_0/e416c384/hdl/src/vhdl/axi_gpio.vhd:608]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:01:32 ; elapsed = 00:01:33 . Memory (MB): peak = 1451.578 ; gain = 617.941 ; free physical = 1707 ; free virtual = 5434
+Finished Cross Boundary Optimization : Time (s): cpu = 00:01:34 ; elapsed = 00:01:35 . Memory (MB): peak = 1451.578 ; gain = 617.941 ; free physical = 1693 ; free virtual = 5429
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:01:32 ; elapsed = 00:01:33 . Memory (MB): peak = 1451.578 ; gain = 617.941 ; free physical = 1707 ; free virtual = 5434
+Finished Parallel Reinference  : Time (s): cpu = 00:01:34 ; elapsed = 00:01:35 . Memory (MB): peak = 1451.578 ; gain = 617.941 ; free physical = 1693 ; free virtual = 5429
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -11416,16 +11384,16 @@ Report RTL Partitions:
 Start Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:01:36 ; elapsed = 00:01:36 . Memory (MB): peak = 1451.578 ; gain = 617.941 ; free physical = 1701 ; free virtual = 5429
+Finished Area Optimization : Time (s): cpu = 00:01:38 ; elapsed = 00:01:39 . Memory (MB): peak = 1451.578 ; gain = 617.941 ; free physical = 1681 ; free virtual = 5417
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:01:36 ; elapsed = 00:01:36 . Memory (MB): peak = 1451.578 ; gain = 617.941 ; free physical = 1701 ; free virtual = 5429
+Finished Parallel Area Optimization  : Time (s): cpu = 00:01:38 ; elapsed = 00:01:39 . Memory (MB): peak = 1451.578 ; gain = 617.941 ; free physical = 1681 ; free virtual = 5417
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:01:36 ; elapsed = 00:01:36 . Memory (MB): peak = 1451.578 ; gain = 617.941 ; free physical = 1701 ; free virtual = 5429
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:01:38 ; elapsed = 00:01:39 . Memory (MB): peak = 1451.578 ; gain = 617.941 ; free physical = 1681 ; free virtual = 5417
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
@@ -11433,10 +11401,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:44 ; elapsed = 00:01:45 . Memory (MB): peak = 1451.578 ; gain = 617.941 ; free physical = 1693 ; free virtual = 5421
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:46 ; elapsed = 00:01:46 . Memory (MB): peak = 1451.578 ; gain = 617.941 ; free physical = 1672 ; free virtual = 5408
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:45 ; elapsed = 00:01:46 . Memory (MB): peak = 1451.578 ; gain = 617.941 ; free physical = 1690 ; free virtual = 5418
+Finished Timing Optimization : Time (s): cpu = 00:01:46 ; elapsed = 00:01:47 . Memory (MB): peak = 1451.578 ; gain = 617.941 ; free physical = 1671 ; free virtual = 5407
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -11549,7 +11517,7 @@ INFO: [Synth 8-3332] Sequential element (\MicroBlaze_Core_I/Performance.Core/Dat
 INFO: [Synth 8-3332] Sequential element (\MicroBlaze_Core_I/Performance.Core/Data_Flow_I/msr_reg_i/MEM_MSR_Bits[18].Using_FDR.MSR_I/Using_FPGA.Native ) is unused and will be removed from module MicroBlaze.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:48 ; elapsed = 00:01:49 . Memory (MB): peak = 1456.578 ; gain = 622.941 ; free physical = 1653 ; free virtual = 5380
+Finished Technology Mapping : Time (s): cpu = 00:01:49 ; elapsed = 00:01:50 . Memory (MB): peak = 1456.578 ; gain = 622.941 ; free physical = 1631 ; free virtual = 5368
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -11569,7 +11537,7 @@ Finished Final Netlist Cleanup
 WARNING: [Synth 8-3295] tying undriven pin \MicroBlaze_Core_I/Performance.Core/Data_Flow_I/Shift_Logic_Module_I/mask_0_15_inferred :in0 to constant 0
 WARNING: [Synth 8-3295] tying undriven pin \MicroBlaze_Core_I/Performance.Core/Data_Flow_I/Shift_Logic_Module_I/mask_16_23_inferred :in0 to constant 0
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:49 ; elapsed = 00:01:49 . Memory (MB): peak = 1456.578 ; gain = 622.941 ; free physical = 1653 ; free virtual = 5380
+Finished IO Insertion : Time (s): cpu = 00:01:50 ; elapsed = 00:01:51 . Memory (MB): peak = 1456.578 ; gain = 622.941 ; free physical = 1631 ; free virtual = 5368
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -11582,7 +11550,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:49 ; elapsed = 00:01:49 . Memory (MB): peak = 1456.578 ; gain = 622.941 ; free physical = 1653 ; free virtual = 5380
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:50 ; elapsed = 00:01:51 . Memory (MB): peak = 1456.578 ; gain = 622.941 ; free physical = 1631 ; free virtual = 5368
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -11594,13 +11562,13 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:49 ; elapsed = 00:01:50 . Memory (MB): peak = 1456.578 ; gain = 622.941 ; free physical = 1653 ; free virtual = 5380
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:50 ; elapsed = 00:01:51 . Memory (MB): peak = 1456.578 ; gain = 622.941 ; free physical = 1631 ; free virtual = 5368
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start Renaming Generated Ports : Time (s): cpu = 00:01:49 ; elapsed = 00:01:50 . Memory (MB): peak = 1456.578 ; gain = 622.941 ; free physical = 1653 ; free virtual = 5380
+Start Renaming Generated Ports : Time (s): cpu = 00:01:50 ; elapsed = 00:01:51 . Memory (MB): peak = 1456.578 ; gain = 622.941 ; free physical = 1631 ; free virtual = 5368
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:49 ; elapsed = 00:01:50 . Memory (MB): peak = 1456.578 ; gain = 622.941 ; free physical = 1653 ; free virtual = 5380
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:51 ; elapsed = 00:01:51 . Memory (MB): peak = 1456.578 ; gain = 622.941 ; free physical = 1632 ; free virtual = 5368
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -12430,11 +12398,11 @@ Report Instance Areas:
 |748   |                  \prim_noinit.ram                                                |blk_mem_gen_prim_wrapper__parameterized8    |     1|
 +------+----------------------------------------------------------------------------------+--------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:49 ; elapsed = 00:01:50 . Memory (MB): peak = 1456.578 ; gain = 622.941 ; free physical = 1652 ; free virtual = 5380
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:51 ; elapsed = 00:01:52 . Memory (MB): peak = 1456.578 ; gain = 622.941 ; free physical = 1631 ; free virtual = 5368
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 9 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:38 ; elapsed = 00:01:39 . Memory (MB): peak = 1456.578 ; gain = 361.094 ; free physical = 1652 ; free virtual = 5380
-Synthesis Optimization Complete : Time (s): cpu = 00:01:49 ; elapsed = 00:01:50 . Memory (MB): peak = 1456.578 ; gain = 622.941 ; free physical = 1652 ; free virtual = 5380
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:39 ; elapsed = 00:01:40 . Memory (MB): peak = 1456.578 ; gain = 361.094 ; free physical = 1631 ; free virtual = 5368
+Synthesis Optimization Complete : Time (s): cpu = 00:01:51 ; elapsed = 00:01:52 . Memory (MB): peak = 1456.578 ; gain = 622.941 ; free physical = 1631 ; free virtual = 5368
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 547 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -12455,8 +12423,8 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   SRLC16E => SRL16E: 1 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-1117 Infos, 119 Warnings, 17 Critical Warnings and 0 Errors encountered.
+1117 Infos, 119 Warnings, 1 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:49 ; elapsed = 00:01:50 . Memory (MB): peak = 1456.578 ; gain = 493.113 ; free physical = 1652 ; free virtual = 5380
-report_utilization: Time (s): cpu = 00:00:00.15 ; elapsed = 00:00:00.17 . Memory (MB): peak = 1488.594 ; gain = 0.000 ; free physical = 1649 ; free virtual = 5379
-INFO: [Common 17-206] Exiting Vivado at Mon Feb  3 10:52:29 2020...
+synth_design: Time (s): cpu = 00:01:51 ; elapsed = 00:01:52 . Memory (MB): peak = 1456.578 ; gain = 493.113 ; free physical = 1630 ; free virtual = 5367
+report_utilization: Time (s): cpu = 00:00:00.15 ; elapsed = 00:00:00.18 . Memory (MB): peak = 1488.594 ; gain = 0.000 ; free physical = 1627 ; free virtual = 5366
+INFO: [Common 17-206] Exiting Vivado at Mon Feb  3 11:05:33 2020...
