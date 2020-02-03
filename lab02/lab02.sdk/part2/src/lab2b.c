@@ -1,0 +1,81 @@
+#include <xparameters.h>
+#include <xgpio.h>
+#include <xstatus.h>
+#include <xil_printf.h>
+
+//Definitions
+#define GPIO_DEVICE_ID_LED XPAR_LED_DEVICE_ID //From xparams.h include
+#define GPIO_DEVICE_ID_SWS XPAR_SWS_DEVICE_ID // ^
+#define WAIT_VAL 10000000 //wait value used to divide the clock
+
+int delay (void);
+
+int main(){
+
+	int count; //how many times we go through the while loop in total
+	int count_masked; //the first 4 bits (what is shown on the LEDs)
+	XGpio leds; //GPIO output led port
+	XGpio sws;
+	int status; //tells us if we successfully initialize the GPIO device
+	int switches;
+
+	//Init LED GPIO
+	status = XGpio_Initialize(&leds, GPIO_DEVICE_ID_LED);
+	XGpio_SetDataDirection(&leds, 1, 0x00); //data direction (1 for input, 0 for output)
+	if (status != XST_SUCCESS) { xil_printf("Initialization failed for LEDs"); }
+
+	//Init SWITCHES and BUTTONS GPIO
+	status = XGpio_Initialize(&sws, GPIO_DEVICE_ID_SWS);
+	XGpio_SetDataDirection(&sws, 1, 0x00); //data direction (1 for input, 0 for output)
+	if (status != XST_SUCCESS) { xil_printf("Initialization failed"); }
+
+
+	count = 0; //counter variable set to 0 before program begins looping
+
+	while(1){
+		//GPIO map:
+		//sw3 sw2 sw1 sw0	b3 b2 b1 b0
+		//7   6   5   4     3  2  1  0
+		_Bool b0 = ( (0x01 & XGpio_DiscreteRead(&sws,1)) == 0x01); //Button 1 status 0001 0x1 INC_COUNT
+		_Bool b1 = ( (0x02 & XGpio_DiscreteRead(&sws,1)) == 0x02); //Button 2 status 0010 0x2 DEC_COUNT
+		_Bool b2 = ( (0x04 & XGpio_DiscreteRead(&sws,1)) == 0x04); //Button 3 status 0100 0x4 DISP_SWTC
+		_Bool b3 = ( (0x08 & XGpio_DiscreteRead(&sws,1)) == 0x08); //Button 4 status 1000 0x8 DISP_CNT
+
+		if (b0) {
+			XGpio_DiscreteWrite(&leds,1,0x00);
+			count++;
+			count_masked = count & 0xF;
+			xil_printf("USER: BUTTON 0 FUNCTION: INCREMENT COUNT LEDS: OFFLINE");
+			delay();
+		}
+
+		if (b1) {
+			XGpio_DiscreteWrite(&leds,1,0x00);
+			count--;
+			count_masked = count & 0xF;
+			xil_printf("USER: BUTTON 1 FUNCTION: DECREMENT COUNT LEDS: OFFLINE");
+			delay();
+		}
+
+		if(b2){
+			switches = (0xF0 & XGpio_DiscreteRead(&sws,1)) >> 4; //Get switch mask (high nib) and shift
+			XGpio_DiscreteWrite(&leds,1,switches);
+			xil_printf("USER: BUTTON 2 FUNCTION: SHOW SWITCHES   LEDS: 0x%x\n\r", switches);
+			delay();
+		}
+
+		if(b3){
+			count_masked = count & 0xF;
+			XGpio_DiscreteWrite(&leds,1,count_masked);
+			xil_printf("USER: BUTTON 1 FUNCTION: DECREMENT COUNT LEDS: 0x%x\n\r", count_masked);
+			delay();
+		}
+	}
+}
+
+int delay(void) {
+	volatile int delay_count = 0; //volatile prevents compiler from applying optimizations to changing variables
+	while(delay_count < WAIT_VAL)
+		delay_count++; //keep looping until we reach WAIT_VAL (10,000,000 cycles define above)
+	return (0);
+}

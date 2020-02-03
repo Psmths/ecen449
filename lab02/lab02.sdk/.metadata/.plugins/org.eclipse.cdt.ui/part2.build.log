@@ -1,4 +1,21 @@
+11:44:51 **** Auto Build of configuration Debug for project part2 ****
+make all 
+Building file: ../src/lab2b.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab2b.o" -I../../part2_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/lab2b.d" -MT"src/lab2b.d" -o "src/lab2b.o" "../src/lab2b.c"
+Finished building: ../src/lab2b.c
+ 
+Building target: part2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../part2_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -o "part2.elf"  ./src/lab2b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: part2.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size part2.elf  |tee "part2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8785	    324	   2107	  11216	   2bd0	part2.elf
+Finished building: part2.elf.size
+ 
 
-****  of configuration Debug for project part2 ****
+11:44:51 Build Finished (took 125ms)
 
-Nothing to build for project part2

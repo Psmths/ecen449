@@ -601,3 +601,141 @@ Finished building libraries
 ****  of configuration Debug for project part2 ****
 
 Nothing to build for project part2
+11:43:20 **** Auto Build of project part2_bsp ****
+make -k all 
+Running Make include in microblaze_0/libsrc/standalone_v5_1/src
+make -C microblaze_0/libsrc/standalone_v5_1/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in microblaze_0/libsrc/cpu_v2_3/src
+make -C microblaze_0/libsrc/cpu_v2_3/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in microblaze_0/libsrc/uartlite_v3_0/src
+make -C microblaze_0/libsrc/uartlite_v3_0/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in microblaze_0/libsrc/bram_v4_0/src
+make -C microblaze_0/libsrc/bram_v4_0/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in microblaze_0/libsrc/gpio_v4_0/src
+make -C microblaze_0/libsrc/gpio_v4_0/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Running Make libs in microblaze_0/libsrc/standalone_v5_1/src
+make -C microblaze_0/libsrc/standalone_v5_1/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Compiling standalone
+Running Make libs in microblaze_0/libsrc/cpu_v2_3/src
+make -C microblaze_0/libsrc/cpu_v2_3/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Compiling cpu
+Running Make libs in microblaze_0/libsrc/uartlite_v3_0/src
+make -C microblaze_0/libsrc/uartlite_v3_0/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Compiling uartlite
+Running Make libs in microblaze_0/libsrc/bram_v4_0/src
+make -C microblaze_0/libsrc/bram_v4_0/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Compiling bram
+Running Make libs in microblaze_0/libsrc/gpio_v4_0/src
+make -C microblaze_0/libsrc/gpio_v4_0/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Compiling gpio
+Finished building libraries
+11:43:22 **** Auto Build of configuration Debug for project part2 ****
+make all 
+Building file: ../src/lab2b.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab2b.o" -I../../part2_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/lab2b.d" -MT"src/lab2b.d" -o "src/lab2b.o" "../src/lab2b.c"
+../src/lab2b.c: In function 'main':
+../src/lab2b.c:39:3: warning: implicit declaration of function 'XGpioDiscreteRead' [-Wimplicit-function-declaration]
+   _Bool b0 = ( 0x01 & XGpioDiscreteRead(&sws,1) == 0x01); //Button 1 status 0001 0x1 INC_COUNT
+   ^
+../src/lab2b.c:39:49: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+src/subdir.mk:21: recipe for target 'src/lab2b.o' failed
+   _Bool b0 = ( 0x01 & XGpioDiscreteRead(&sws,1) == 0x01); //Button 1 status 0001 0x1 INC_COUNT
+                                                 ^
+../src/lab2b.c:40:49: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+   _Bool b1 = ( 0x02 & XGpioDiscreteRead(&sws,1) == 0x02); //Button 2 status 0010 0x2 DEC_COUNT
+                                                 ^
+../src/lab2b.c:41:49: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+   _Bool b2 = ( 0x04 & XGpioDiscreteRead(&sws,1) == 0x04); //Button 3 status 0100 0x4 DISP_SWTC
+                                                 ^
+../src/lab2b.c:42:49: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+   _Bool b3 = ( 0x08 & XGpioDiscreteRead(&sws,1) == 0x08); //Button 4 status 1000 0x8 DISP_CNT
+                                                 ^
+../src/lab2b.c:61:43: error: 'swb' undeclared (first use in this function)
+    switches = (0xF0 & XGpio_DiscreteRead(&swb,1)) >> 4; //Get switch mask (high nib) and shift
+                                           ^
+../src/lab2b.c:61:43: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/lab2b.o] Error 1
+11:43:52 **** Auto Build of configuration Debug for project part2 ****
+make all 
+Building file: ../src/lab2b.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab2b.o" -I../../part2_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/lab2b.d" -MT"src/lab2b.d" -o "src/lab2b.o" "../src/lab2b.c"
+../src/lab2b.c: In function 'main':
+../src/lab2b.c:39:3: warning: implicit declaration of function 'XGpioDiscreteRead' [-Wimplicit-function-declaration]
+   _Bool b0 = ( 0x01 & XGpioDiscreteRead(&sws,1) == 0x01); //Button 1 status 0001 0x1 INC_COUNT
+   ^
+../src/lab2b.c:39:49: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+   _Bool b0 = ( 0x01 & XGpioDiscreteRead(&sws,1) == 0x01); //Button 1 status 0001 0x1 INC_COUNT
+                                                 ^
+../src/lab2b.c:40:49: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+   _Bool b1 = ( 0x02 & XGpioDiscreteRead(&sws,1) == 0x02); //Button 2 status 0010 0x2 DEC_COUNT
+                                                 ^
+../src/lab2b.c:41:49: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+   _Bool b2 = ( 0x04 & XGpioDiscreteRead(&sws,1) == 0x04); //Button 3 status 0100 0x4 DISP_SWTC
+                                                 ^
+../src/lab2b.c:42:49: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+   _Bool b3 = ( 0x08 & XGpioDiscreteRead(&sws,1) == 0x08); //Button 4 status 1000 0x8 DISP_CNT
+                                                 ^
+Finished building: ../src/lab2b.c
+ 
+Building target: part2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../part2_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -o "part2.elf"  ./src/lab2b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/lab2b.o: In function `main':
+/home/clvrpny/ecen449/lab02/lab02.sdk/part2/Debug/../src/lab2b.c:39: undefined reference to `XGpioDiscreteRead'
+/home/clvrpny/ecen449/lab02/lab02.sdk/part2/Debug/../src/lab2b.c:40: undefined reference to `XGpioDiscreteRead'
+/home/clvrpny/ecen449/lab02/lab02.sdk/part2/Debug/../src/lab2b.c:41: undefined reference to `XGpioDiscreteRead'
+makefile:36: recipe for target 'part2.elf' failed
+/home/clvrpny/ecen449/lab02/lab02.sdk/part2/Debug/../src/lab2b.c:42: undefined reference to `XGpioDiscreteRead'
+collect2: error: ld returned 1 exit status
+make: *** [part2.elf] Error 1
+11:44:27 **** Auto Build of configuration Debug for project part2 ****
+make all 
+Building file: ../src/lab2b.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab2b.o" -I../../part2_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/lab2b.d" -MT"src/lab2b.d" -o "src/lab2b.o" "../src/lab2b.c"
+../src/lab2b.c: In function 'main':
+../src/lab2b.c:39:50: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+   _Bool b0 = ( 0x01 & XGpio_DiscreteRead(&sws,1) == 0x01); //Button 1 status 0001 0x1 INC_COUNT
+                                                  ^
+../src/lab2b.c:40:50: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+   _Bool b1 = ( 0x02 & XGpio_DiscreteRead(&sws,1) == 0x02); //Button 2 status 0010 0x2 DEC_COUNT
+                                                  ^
+../src/lab2b.c:41:50: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+   _Bool b2 = ( 0x04 & XGpio_DiscreteRead(&sws,1) == 0x04); //Button 3 status 0100 0x4 DISP_SWTC
+                                                  ^
+../src/lab2b.c:42:50: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+   _Bool b3 = ( 0x08 & XGpio_DiscreteRead(&sws,1) == 0x08); //Button 4 status 1000 0x8 DISP_CNT
+                                                  ^
+Finished building: ../src/lab2b.c
+ 
+Building target: part2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../part2_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -o "part2.elf"  ./src/lab2b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: part2.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size part2.elf  |tee "part2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8369	    324	   2107	  10800	   2a30	part2.elf
+Finished building: part2.elf.size
+ 
+11:44:51 **** Auto Build of configuration Debug for project part2 ****
+make all 
+Building file: ../src/lab2b.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab2b.o" -I../../part2_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/lab2b.d" -MT"src/lab2b.d" -o "src/lab2b.o" "../src/lab2b.c"
+Finished building: ../src/lab2b.c
+ 
+Building target: part2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../part2_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -o "part2.elf"  ./src/lab2b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: part2.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size part2.elf  |tee "part2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8785	    324	   2107	  11216	   2bd0	part2.elf
+Finished building: part2.elf.size
+ 
