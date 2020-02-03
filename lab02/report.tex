@@ -1,0 +1,81 @@
+\documentclass[border=5pt, 10pt]{article}
+\usepackage{amsmath,amssymb,listings,fancyvrb,rotating,graphicx,hyperref}
+\usepackage[a4paper,margin=0.5in,footskip=0.25in]{geometry}
+\setcounter{secnumdepth}{0}
+\lstset{numbersep=5pt,xleftmargin=0.10in, xrightmargin=.15in} 
+
+\graphicspath{ {.} }
+
+\title{ECEN 449 Lab Report 2}
+\date{\today}
+\author{Philip Smith - 624002014 (Sec. 511)}
+
+\begin{document}
+    \clearpage\maketitle
+    \thispagestyle{empty}
+    \newpage
+    \setcounter{page}{1}
+
+    {\noindent\Huge Introduction\\\\}
+        \noindent The focus of Lab 2 was to become familiar with several new concepts included in Vivado. The Lab focuses around burning the MicroBlaze processor to the FPGA board. MicroBlaze is an open source ``soft microprocessor\footnote{MicroBlaze Architecture: \url{https://www.xilinx.com/products/design-tools/microblaze.html}},'' that is, a CPU architecture designed to be programmed entirely on a FPGA. In addition the lab was designed to introduce us to the concept of IP (Intellectual Property) blocks within Vivado. \\
+        
+        \noindent The lab consisted of two section:
+        
+        \begin{enumerate}
+            \item{Burn the MicroBlaze MCU onto the board and execute a test program}
+            \item{Create a second program with additional functionality}
+        \end{enumerate}
+        
+    \newpage
+    
+    {\noindent\Huge Procedure\\\\}
+        \noindent The first step is to create a block diagram and import all of the IP blocks we need. These are: \\
+        
+        \begin{enumerate}
+            \item{MicroBlaze : The microcontroller used to run the programs}
+            \item{GPIO block : Used to interface with the LEDs, Switches, and Buttons via GPIO bus}
+        \end{enumerate}
+        
+        \noindent After creating this, we synthesize, implement, and generate the bitstream. This is exported and the SDK is opened in the same path. The SDK allows us to use JTAG over serial to debug the program as it is in the process of executing, as well as to compile the program for the MicroBlaze controller.\\
+        
+        \noindent The first program simply uses a counter and displays the count on the 4 on-board LEDs.\\
+        
+        \noindent The second program can take user input and display an up/down count as well as other functionality that I had to program myself based on the source of the first problem that was given to us. \\
+      
+    \newpage
+    
+    {\noindent\Huge Results\\\\}
+        \noindent The only issue I ran into was an incorrect copy of the XDC file which led to pins missing definitions. The logs immediately assisted me in resolving the issue. Also, I had initially forgotten to resize the GPIO bus. This resulted in the LEDs not lighting up despite the program working. My TA assisted me in finding a solution.\\
+        
+        \noindent The second program I wrote was easy and ran correctly the first time with all functions operational. 
+    \newpage
+    
+    {\noindent\Huge Conclusions\\\\}
+        \noindent TODO
+    \newpage
+    
+    {\noindent\Huge Questions\\\\}
+        \begin{enumerate}
+            \item{Lab01 saw a clock division counter of $2^{32}$. This lab uses a counter of only 10 million. The clocking wizard was setup to provide the system with a 100MHz clock. This means the final frequency is approximately $100MHz / 10000000 = 10Hz$, meaning the entire loop takes approximately 10 cycles to complete. }
+            \item{The count variable is instantiated with the volatile directive so as to prevent the compiler from causing issues with it should it optimize it in some manner. In short, it prevents the compiler from optimizing the variable which may have unintended consequences.}
+            \item{The while(1) expression is an implementation of an infinite loop.}
+            \item{I believe that this implementation, while it takes longer to setup and syntheisize, is overall easier for several reaosons. It is easier to debug via JTAG, and it is easier to be more explicit in what you desire from a program. Verilog has a lot of pitfalls and traps as seen in our lecture portion that a higher level language like C can help a programmer avoid. In addition it should be noted that compiling and uploading a program is much faster than synthesizing a program with similar functionality in Verilog, however, I do not know if this scales up or down.}
+        \end{enumerate}
+    \newpage
+    
+    {\noindent\Huge Appendix A - lab2a.c\\\\}
+        \noindent The following is the code for lab2a.c:
+        \VerbatimInput{./lab02.sdk/counter_sw/src/lab2a.c}
+    \newpage
+    
+    {\noindent\Huge Appendix B - lab2b.c\\\\}
+        \noindent The following is the code for lab2b.c:
+        \VerbatimInput{./lab02.sdk/part2/src/lab2b.c}
+    \newpage
+    
+    {\noindent\Huge Appendix C - led.xdc\\\\}
+        \noindent The following is the code for the led.xdc constraints file (for both sections):
+        \VerbatimInput{./lab02.srcs/constrs_1/new/led.xdc}
+    \newpage
+    
+\end{document}
