@@ -22,12 +22,12 @@ int main(){
 	//Init LED GPIO
 	status = XGpio_Initialize(&leds, GPIO_DEVICE_ID_LED);
 	XGpio_SetDataDirection(&leds, 1, 0x00); //data direction (1 for input, 0 for output)
-	if (status != XST_SUCCESS) { xil_printf("Initialization failed for LEDs\n\r"); }
+	if (status != XST_SUCCESS) { xil_printf("Initialization failed for LEDs"); }
 
 	//Init SWITCHES and BUTTONS GPIO
 	status = XGpio_Initialize(&sws, GPIO_DEVICE_ID_SWS);
 	XGpio_SetDataDirection(&sws, 1, 0x00); //data direction (1 for input, 0 for output)
-	if (status != XST_SUCCESS) { xil_printf("Initialization failed for INPUT\n\r"); }
+	if (status != XST_SUCCESS) { xil_printf("Initialization failed for INPUT"); }
 
 
 	count = 0; //counter variable set to 0 before program begins looping
@@ -42,29 +42,31 @@ int main(){
 		_Bool b3 = ( (0x08 & XGpio_DiscreteRead(&sws,1)) == 0x08); //Button 4 status
 
 		if (b0) {
-			XGpio_DiscreteWrite(&leds,1,0x00); //disable LEDs
-			count++; //increment count
-			xil_printf("USER: BUTTON 0 FUNCTION: INCREMENT COUNT LEDS: OFFLINE\n\r");
+			XGpio_DiscreteWrite(&leds,1,0x00);
+			count++;
+			count_masked = count & 0xF;
+			xil_printf("USER: BUTTON 0 FUNCTION: INCREMENT COUNT LEDS: OFFLINE");
 			delay();
 		}
 
 		if (b1) {
-			XGpio_DiscreteWrite(&leds,1,0x00); //disable LEDs
-			count--; //decrement count
-			xil_printf("USER: BUTTON 1 FUNCTION: DECREMENT COUNT LEDS: OFFLINE\n\r");
+			XGpio_DiscreteWrite(&leds,1,0x00);
+			count--;
+			count_masked = count & 0xF;
+			xil_printf("USER: BUTTON 1 FUNCTION: DECREMENT COUNT LEDS: OFFLINE");
 			delay();
 		}
 
 		if(b2){
 			switches = (0xF0 & XGpio_DiscreteRead(&sws,1)) >> 4; //Get switch mask and shift
-			XGpio_DiscreteWrite(&leds,1,switches); //Write switches to LEDs
+			XGpio_DiscreteWrite(&leds,1,switches);
 			xil_printf("USER: BUTTON 2 FUNCTION: SHOW SWITCHES   LEDS: 0x%x\n\r", switches);
 			delay();
 		}
 
 		if(b3){
-			count_masked = count & 0xF; //get low nibble of count
-			XGpio_DiscreteWrite(&leds,1,count_masked); //write count to LEDs
+			count_masked = count & 0xF;
+			XGpio_DiscreteWrite(&leds,1,count_masked);
 			xil_printf("USER: BUTTON 1 FUNCTION: DECREMENT COUNT LEDS: 0x%x\n\r", count_masked);
 			delay();
 		}

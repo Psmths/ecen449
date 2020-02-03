@@ -1,4 +1,4 @@
-11:44:51 **** Auto Build of configuration Debug for project part2 ****
+13:23:22 **** Auto Build of configuration Debug for project part2 ****
 make all 
 Building file: ../src/lab2b.c
 Invoking: MicroBlaze gcc compiler
@@ -17,5 +17,5 @@ mb-size part2.elf  |tee "part2.elf.size"
 Finished building: part2.elf.size
  
 
-11:44:51 Build Finished (took 125ms)
+13:23:22 Build Finished (took 162ms)
 
