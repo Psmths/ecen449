@@ -118,7 +118,7 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip/led_sw_axi_gpio_1_0/led_sw_axi_gpio_1_0.xci" Type="IP">
-        <Instance HierarchyPath="axi_gpio_1"/>
+        <Instance HierarchyPath="sws"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -126,7 +126,7 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip/led_sw_axi_gpio_0_2/led_sw_axi_gpio_0_2.xci" Type="IP">
-        <Instance HierarchyPath="axi_gpio_0"/>
+        <Instance HierarchyPath="led"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

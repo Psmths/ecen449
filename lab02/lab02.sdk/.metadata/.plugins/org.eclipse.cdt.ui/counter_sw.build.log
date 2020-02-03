@@ -1,6 +1,23 @@
-15:57:01 **** Incremental Build of configuration Debug for project counter_sw ****
+10:46:35 **** Auto Build of configuration Debug for project counter_sw ****
 make all 
-make: Nothing to be done for 'all'.
+Building file: ../src/lab2a.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab2a.o" -I../../counter_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/lab2a.d" -MT"src/lab2a.d" -o "src/lab2a.o" "../src/lab2a.c"
+../src/lab2a.c: In function 'main':
+../src/lab2a.c:7:24: error: 'XPAR_LED_DEVICE_ID' undeclared (first use in this function)
+src/subdir.mk:21: recipe for target 'src/lab2a.o' failed
+ #define GPIO_DEVICE_ID XPAR_LED_DEVICE_ID //GPIO device that LEDs are connected to
+                        ^
+../src/lab2a.c:18:35: note: in expansion of macro 'GPIO_DEVICE_ID'
+  status = XGpio_Initialize(&leds, GPIO_DEVICE_ID);
+                                   ^
+../src/lab2a.c:7:24: note: each undeclared identifier is reported only once for each function it appears in
+ #define GPIO_DEVICE_ID XPAR_LED_DEVICE_ID //GPIO device that LEDs are connected to
+                        ^
+../src/lab2a.c:18:35: note: in expansion of macro 'GPIO_DEVICE_ID'
+  status = XGpio_Initialize(&leds, GPIO_DEVICE_ID);
+                                   ^
+make: *** [src/lab2a.o] Error 1
 
-15:57:01 Build Finished (took 82ms)
+10:46:35 Build Finished (took 76ms)
 

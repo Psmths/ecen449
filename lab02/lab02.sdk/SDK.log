@@ -93,3 +93,15 @@ java.lang.RuntimeException: Cannot perform the Debug Command, Current Processor 
 18:14:30 INFO  : XSDB server has started successfully.
 18:14:35 INFO  : Processing command line option -hwspec /home/clvrpny/ecen449/lab02/lab02.sdk/led_sw_wrapper.hdf.
 18:14:36 INFO  : Checking for hwspec changes in the project led_sw_wrapper_hw_platform_0.
+10:45:14 INFO  : Launching XSDB server: xsdb -n -s /home/clvrpny/xilinx/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+10:45:15 INFO  : XSDB server has started successfully.
+10:45:16 INFO  : Processing command line option -hwspec /home/clvrpny/ecen449/lab02/lab02.sdk/led_sw_wrapper.hdf.
+10:45:17 INFO  : Checking for hwspec changes in the project led_sw_wrapper_hw_platform_0.
+10:45:17 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1580431288000,  Project:1580421263000
+10:45:17 INFO  : The hardware specification for project 'led_sw_wrapper_hw_platform_0' is different from /home/clvrpny/ecen449/lab02/lab02.sdk/led_sw_wrapper.hdf.
+10:45:17 INFO  : Copied contents of /home/clvrpny/ecen449/lab02/lab02.sdk/led_sw_wrapper.hdf into /led_sw_wrapper_hw_platform_0/system.hdf.
+10:45:18 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+10:45:18 INFO  : 
+10:45:19 INFO  : Updating hardware inferred compiler options for counter_sw.
+10:45:20 INFO  : Clearing existing target manager status.
+10:50:34 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 

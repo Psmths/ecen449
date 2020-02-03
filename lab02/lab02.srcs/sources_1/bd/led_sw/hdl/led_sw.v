@@ -1,7 +1,7 @@
 //Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2015.2 (lin64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-//Date        : Thu Jan 30 18:37:26 2020
+//Date        : Mon Feb  3 10:50:28 2020
 //Host        : mobile running 64-bit Ubuntu 18.04.3 LTS
 //Command     : generate_target led_sw.bd
 //Design      : led_sw
@@ -141,7 +141,12 @@ module led_sw
        (.P(VCC_1));
   led_sw_xlconstant_0_0 VDD
        (.dout(VDD_dout));
-  led_sw_axi_gpio_0_2 axi_gpio_0
+  led_sw_clk_wiz_1_0 clk_wiz_1
+       (.clk_in1(clock_rtl_1),
+        .clk_out1(microblaze_0_Clk),
+        .locked(clk_wiz_1_locked),
+        .reset(GND_dout));
+  led_sw_axi_gpio_0_2 led
        (.gpio_io_o(axi_gpio_0_GPIO_TRI_O),
         .s_axi_aclk(microblaze_0_Clk),
         .s_axi_araddr(microblaze_0_axi_periph_M01_AXI_ARADDR),
@@ -162,32 +167,6 @@ module led_sw
         .s_axi_wready(microblaze_0_axi_periph_M01_AXI_WREADY),
         .s_axi_wstrb(microblaze_0_axi_periph_M01_AXI_WSTRB),
         .s_axi_wvalid(microblaze_0_axi_periph_M01_AXI_WVALID));
-  led_sw_axi_gpio_1_0 axi_gpio_1
-       (.gpio_io_i(axi_gpio_1_GPIO_TRI_I),
-        .s_axi_aclk(microblaze_0_Clk),
-        .s_axi_araddr(microblaze_0_axi_periph_M02_AXI_ARADDR),
-        .s_axi_aresetn(rst_clk_wiz_1_100M_peripheral_aresetn),
-        .s_axi_arready(microblaze_0_axi_periph_M02_AXI_ARREADY),
-        .s_axi_arvalid(microblaze_0_axi_periph_M02_AXI_ARVALID),
-        .s_axi_awaddr(microblaze_0_axi_periph_M02_AXI_AWADDR),
-        .s_axi_awready(microblaze_0_axi_periph_M02_AXI_AWREADY),
-        .s_axi_awvalid(microblaze_0_axi_periph_M02_AXI_AWVALID),
-        .s_axi_bready(microblaze_0_axi_periph_M02_AXI_BREADY),
-        .s_axi_bresp(microblaze_0_axi_periph_M02_AXI_BRESP),
-        .s_axi_bvalid(microblaze_0_axi_periph_M02_AXI_BVALID),
-        .s_axi_rdata(microblaze_0_axi_periph_M02_AXI_RDATA),
-        .s_axi_rready(microblaze_0_axi_periph_M02_AXI_RREADY),
-        .s_axi_rresp(microblaze_0_axi_periph_M02_AXI_RRESP),
-        .s_axi_rvalid(microblaze_0_axi_periph_M02_AXI_RVALID),
-        .s_axi_wdata(microblaze_0_axi_periph_M02_AXI_WDATA),
-        .s_axi_wready(microblaze_0_axi_periph_M02_AXI_WREADY),
-        .s_axi_wstrb(microblaze_0_axi_periph_M02_AXI_WSTRB),
-        .s_axi_wvalid(microblaze_0_axi_periph_M02_AXI_WVALID));
-  led_sw_clk_wiz_1_0 clk_wiz_1
-       (.clk_in1(clock_rtl_1),
-        .clk_out1(microblaze_0_Clk),
-        .locked(clk_wiz_1_locked),
-        .reset(GND_dout));
   led_sw_mdm_1_0 mdm_1
        (.Dbg_Capture_0(microblaze_0_debug_CAPTURE),
         .Dbg_Clk_0(microblaze_0_debug_CLK),
@@ -383,6 +362,27 @@ module led_sw
         .mb_reset(rst_clk_wiz_1_100M_mb_reset),
         .peripheral_aresetn(rst_clk_wiz_1_100M_peripheral_aresetn),
         .slowest_sync_clk(microblaze_0_Clk));
+  led_sw_axi_gpio_1_0 sws
+       (.gpio_io_i(axi_gpio_1_GPIO_TRI_I),
+        .s_axi_aclk(microblaze_0_Clk),
+        .s_axi_araddr(microblaze_0_axi_periph_M02_AXI_ARADDR),
+        .s_axi_aresetn(rst_clk_wiz_1_100M_peripheral_aresetn),
+        .s_axi_arready(microblaze_0_axi_periph_M02_AXI_ARREADY),
+        .s_axi_arvalid(microblaze_0_axi_periph_M02_AXI_ARVALID),
+        .s_axi_awaddr(microblaze_0_axi_periph_M02_AXI_AWADDR),
+        .s_axi_awready(microblaze_0_axi_periph_M02_AXI_AWREADY),
+        .s_axi_awvalid(microblaze_0_axi_periph_M02_AXI_AWVALID),
+        .s_axi_bready(microblaze_0_axi_periph_M02_AXI_BREADY),
+        .s_axi_bresp(microblaze_0_axi_periph_M02_AXI_BRESP),
+        .s_axi_bvalid(microblaze_0_axi_periph_M02_AXI_BVALID),
+        .s_axi_rdata(microblaze_0_axi_periph_M02_AXI_RDATA),
+        .s_axi_rready(microblaze_0_axi_periph_M02_AXI_RREADY),
+        .s_axi_rresp(microblaze_0_axi_periph_M02_AXI_RRESP),
+        .s_axi_rvalid(microblaze_0_axi_periph_M02_AXI_RVALID),
+        .s_axi_wdata(microblaze_0_axi_periph_M02_AXI_WDATA),
+        .s_axi_wready(microblaze_0_axi_periph_M02_AXI_WREADY),
+        .s_axi_wstrb(microblaze_0_axi_periph_M02_AXI_WSTRB),
+        .s_axi_wvalid(microblaze_0_axi_periph_M02_AXI_WVALID));
 endmodule
 
 module led_sw_microblaze_0_axi_periph_0
