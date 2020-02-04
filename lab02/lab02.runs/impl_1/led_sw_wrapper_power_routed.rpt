@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2015.2 (lin64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date             : Mon Feb  3 11:06:25 2020
+| Date             : Mon Feb  3 20:03:32 2020
 | Host             : mobile running 64-bit Ubuntu 18.04.3 LTS
 | Command          : report_power -file led_sw_wrapper_power_routed.rpt -pb led_sw_wrapper_power_summary_routed.pb
 | Design           : led_sw_wrapper
@@ -51,14 +51,14 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.008 |        7 |       --- |             --- |
 | Slice Logic              |     0.004 |     3847 |       --- |             --- |
-|   LUT as Logic           |     0.003 |     1352 |     17600 |            7.68 |
+|   LUT as Logic           |     0.003 |     1351 |     17600 |            7.68 |
 |   LUT as Distributed RAM |    <0.001 |       64 |      6000 |            1.07 |
 |   Register               |    <0.001 |     1337 |     35200 |            3.80 |
 |   CARRY4                 |    <0.001 |       40 |      4400 |            0.91 |
 |   F7/F8 Muxes            |    <0.001 |      112 |     17600 |            0.64 |
 |   LUT as Shift Register  |    <0.001 |       73 |      6000 |            1.22 |
 |   Others                 |    <0.001 |      510 |       --- |             --- |
-| Signals                  |     0.007 |     2607 |       --- |             --- |
+| Signals                  |     0.006 |     2606 |       --- |             --- |
 | Block RAM                |     0.005 |       16 |        60 |           26.67 |
 | MMCM                     |     0.106 |        1 |         2 |           50.00 |
 | I/O                      |    <0.001 |       13 |       100 |           13.00 |

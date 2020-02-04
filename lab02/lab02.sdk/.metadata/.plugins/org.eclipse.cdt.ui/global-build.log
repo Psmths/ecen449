@@ -829,3 +829,659 @@ mb-size part2.elf  |tee "part2.elf.size"
    8785	    324	   2107	  11216	   2bd0	part2.elf
 Finished building: part2.elf.size
  
+16:45:57 **** Auto Build of configuration Debug for project part2 ****
+make all 
+Building file: ../src/lab2b.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab2b.o" -I../../part2_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/lab2b.d" -MT"src/lab2b.d" -o "src/lab2b.o" "../src/lab2b.c"
+Finished building: ../src/lab2b.c
+ 
+Building target: part2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../part2_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -o "part2.elf"  ./src/lab2b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: part2.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size part2.elf  |tee "part2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8785	    324	   2107	  11216	   2bd0	part2.elf
+Finished building: part2.elf.size
+ 
+16:46:34 **** Auto Build of configuration Debug for project part2 ****
+make all 
+Building file: ../src/lab2b.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab2b.o" -I../../part2_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/lab2b.d" -MT"src/lab2b.d" -o "src/lab2b.o" "../src/lab2b.c"
+Finished building: ../src/lab2b.c
+ 
+Building target: part2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../part2_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -o "part2.elf"  ./src/lab2b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: part2.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size part2.elf  |tee "part2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8785	    324	   2107	  11216	   2bd0	part2.elf
+Finished building: part2.elf.size
+ 
+19:33:16 **** Auto Build of project counter_sw_bsp ****
+make -k all 
+Running Make include in microblaze_0/libsrc/standalone_v5_1/src
+make -C microblaze_0/libsrc/standalone_v5_1/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in microblaze_0/libsrc/cpu_v2_3/src
+make -C microblaze_0/libsrc/cpu_v2_3/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in microblaze_0/libsrc/uartlite_v3_0/src
+make -C microblaze_0/libsrc/uartlite_v3_0/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in microblaze_0/libsrc/bram_v4_0/src
+make -C microblaze_0/libsrc/bram_v4_0/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in microblaze_0/libsrc/gpio_v4_0/src
+make -C microblaze_0/libsrc/gpio_v4_0/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Running Make libs in microblaze_0/libsrc/standalone_v5_1/src
+make -C microblaze_0/libsrc/standalone_v5_1/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Compiling standalone
+Running Make libs in microblaze_0/libsrc/cpu_v2_3/src
+make -C microblaze_0/libsrc/cpu_v2_3/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Compiling cpu
+Running Make libs in microblaze_0/libsrc/uartlite_v3_0/src
+make -C microblaze_0/libsrc/uartlite_v3_0/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Compiling uartlite
+Running Make libs in microblaze_0/libsrc/bram_v4_0/src
+make -C microblaze_0/libsrc/bram_v4_0/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Compiling bram
+Running Make libs in microblaze_0/libsrc/gpio_v4_0/src
+make -C microblaze_0/libsrc/gpio_v4_0/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Compiling gpio
+Finished building libraries
+19:33:20 **** Clean-only build of configuration Debug for project part2 ****
+make clean 
+rm -rf  ./src/lab2b.o  ./src/lab2b.d  part2.elf.size  part2.elf
+ 
+19:33:20 **** Incremental Build of configuration Debug for project part2 ****
+make all 
+Building file: ../src/lab2b.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab2b.o" -I../../part2_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/lab2b.d" -MT"src/lab2b.d" -o "src/lab2b.o" "../src/lab2b.c"
+Finished building: ../src/lab2b.c
+ 
+Building target: part2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../part2_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -o "part2.elf"  ./src/lab2b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: part2.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size part2.elf  |tee "part2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8785	    324	   2107	  11216	   2bd0	part2.elf
+Finished building: part2.elf.size
+ 
+19:34:46 **** Incremental Build of configuration Debug for project part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:35:05 **** Incremental Build of configuration Debug for project part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:38:23 **** Auto Build of configuration Debug for project part2 ****
+make all 
+Building file: ../src/lab2b.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab2b.o" -I../../part2_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/lab2b.d" -MT"src/lab2b.d" -o "src/lab2b.o" "../src/lab2b.c"
+Finished building: ../src/lab2b.c
+ 
+Building target: part2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../part2_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -o "part2.elf"  ./src/lab2b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: part2.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size part2.elf  |tee "part2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8781	    324	   2100	  11205	   2bc5	part2.elf
+Finished building: part2.elf.size
+ 
+19:38:37 **** Incremental Build of configuration Debug for project part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:40:40 **** Incremental Build of configuration Debug for project part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:41:04 **** Incremental Build of configuration Debug for project part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:41:50 **** Auto Build of configuration Debug for project part2 ****
+make all 
+Building file: ../src/lab2b.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab2b.o" -I../../part2_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/lab2b.d" -MT"src/lab2b.d" -o "src/lab2b.o" "../src/lab2b.c"
+Finished building: ../src/lab2b.c
+ 
+Building target: part2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../part2_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -o "part2.elf"  ./src/lab2b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: part2.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size part2.elf  |tee "part2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8785	    324	   2107	  11216	   2bd0	part2.elf
+Finished building: part2.elf.size
+ 
+19:46:48 **** Incremental Build of configuration Debug for project part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:50:45 **** Auto Build of configuration Debug for project part2 ****
+make all 
+Building file: ../src/lab2b.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab2b.o" -I../../part2_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/lab2b.d" -MT"src/lab2b.d" -o "src/lab2b.o" "../src/lab2b.c"
+Finished building: ../src/lab2b.c
+ 
+Building target: part2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../part2_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -o "part2.elf"  ./src/lab2b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: part2.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size part2.elf  |tee "part2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8841	    324	   2107	  11272	   2c08	part2.elf
+Finished building: part2.elf.size
+ 
+19:50:48 **** Incremental Build of configuration Debug for project part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:51:00 **** Incremental Build of configuration Debug for project part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:51:18 **** Auto Build of configuration Debug for project part2 ****
+make all 
+Building file: ../src/lab2b.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab2b.o" -I../../part2_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/lab2b.d" -MT"src/lab2b.d" -o "src/lab2b.o" "../src/lab2b.c"
+Finished building: ../src/lab2b.c
+ 
+Building target: part2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../part2_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -o "part2.elf"  ./src/lab2b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: part2.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size part2.elf  |tee "part2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8845	    324	   2100	  11269	   2c05	part2.elf
+Finished building: part2.elf.size
+ 
+19:51:21 **** Incremental Build of configuration Debug for project part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:51:42 **** Auto Build of configuration Debug for project part2 ****
+make all 
+Building file: ../src/lab2b.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab2b.o" -I../../part2_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/lab2b.d" -MT"src/lab2b.d" -o "src/lab2b.o" "../src/lab2b.c"
+Finished building: ../src/lab2b.c
+ 
+Building target: part2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../part2_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -o "part2.elf"  ./src/lab2b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: part2.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size part2.elf  |tee "part2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8845	    324	   2100	  11269	   2c05	part2.elf
+Finished building: part2.elf.size
+ 
+19:51:45 **** Incremental Build of configuration Debug for project part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:51:57 **** Incremental Build of configuration Debug for project part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:52:05 **** Auto Build of configuration Debug for project part2 ****
+make all 
+Building file: ../src/lab2b.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab2b.o" -I../../part2_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/lab2b.d" -MT"src/lab2b.d" -o "src/lab2b.o" "../src/lab2b.c"
+Finished building: ../src/lab2b.c
+ 
+Building target: part2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../part2_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -o "part2.elf"  ./src/lab2b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: part2.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size part2.elf  |tee "part2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8845	    324	   2100	  11269	   2c05	part2.elf
+Finished building: part2.elf.size
+ 
+19:52:22 **** Auto Build of configuration Debug for project part2 ****
+make all 
+Building file: ../src/lab2b.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab2b.o" -I../../part2_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/lab2b.d" -MT"src/lab2b.d" -o "src/lab2b.o" "../src/lab2b.c"
+../src/lab2b.c: In function 'main':
+../src/lab2b.c:38:51: warning: suggest parentheses around '-' in operand of '&' [-Wparentheses]
+   _Bool b0 = ( (0x01 & XGpio_DiscreteRead(&sws,1) - 1) == 0x01); //Button 1 status
+                                                   ^
+../src/lab2b.c:39:51: warning: suggest parentheses around '-' in operand of '&' [-Wparentheses]
+   _Bool b1 = ( (0x02 & XGpio_DiscreteRead(&sws,1) - 1) == 0x02); //Button 2 status
+                                                   ^
+../src/lab2b.c:40:51: warning: suggest parentheses around '-' in operand of '&' [-Wparentheses]
+   _Bool b2 = ( (0x04 & XGpio_DiscreteRead(&sws,1) - 1) == 0x04); //Button 3 status
+                                                   ^
+../src/lab2b.c:41:51: warning: suggest parentheses around '-' in operand of '&' [-Wparentheses]
+   _Bool b3 = ( (0x08 & XGpio_DiscreteRead(&sws,1) - 1) == 0x08); //Button 4 status
+                                                   ^
+Finished building: ../src/lab2b.c
+ 
+Building target: part2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../part2_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -o "part2.elf"  ./src/lab2b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: part2.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size part2.elf  |tee "part2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8861	    324	   2100	  11285	   2c15	part2.elf
+Finished building: part2.elf.size
+ 
+19:52:26 **** Incremental Build of configuration Debug for project part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:52:41 **** Auto Build of configuration Debug for project part2 ****
+make all 
+Building file: ../src/lab2b.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab2b.o" -I../../part2_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/lab2b.d" -MT"src/lab2b.d" -o "src/lab2b.o" "../src/lab2b.c"
+../src/lab2b.c: In function 'main':
+../src/lab2b.c:38:51: warning: suggest parentheses around '-' in operand of '&' [-Wparentheses]
+   _Bool b0 = ( (0x01 & XGpio_DiscreteRead(&sws,1) - 1) == 0x01); //Button 1 status
+                                                   ^
+../src/lab2b.c:39:51: warning: suggest parentheses around '-' in operand of '&' [-Wparentheses]
+   _Bool b1 = ( (0x02 & XGpio_DiscreteRead(&sws,1) - 1) == 0x02); //Button 2 status
+                                                   ^
+../src/lab2b.c:40:51: warning: suggest parentheses around '-' in operand of '&' [-Wparentheses]
+   _Bool b2 = ( (0x04 & XGpio_DiscreteRead(&sws,1) - 1) == 0x04); //Button 3 status
+                                                   ^
+../src/lab2b.c:41:51: warning: suggest parentheses around '-' in operand of '&' [-Wparentheses]
+   _Bool b3 = ( (0x08 & XGpio_DiscreteRead(&sws,1) - 1) == 0x08); //Button 4 status
+                                                   ^
+Finished building: ../src/lab2b.c
+ 
+Building target: part2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../part2_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -o "part2.elf"  ./src/lab2b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: part2.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size part2.elf  |tee "part2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8801	    324	   2107	  11232	   2be0	part2.elf
+Finished building: part2.elf.size
+ 
+19:52:42 **** Incremental Build of configuration Debug for project part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:53:41 **** Auto Build of configuration Debug for project part2 ****
+make all 
+Building file: ../src/lab2b.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab2b.o" -I../../part2_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/lab2b.d" -MT"src/lab2b.d" -o "src/lab2b.o" "../src/lab2b.c"
+../src/lab2b.c: In function 'main':
+../src/lab2b.c:38:51: warning: suggest parentheses around '-' in operand of '&' [-Wparentheses]
+   _Bool b0 = ( (0x01 & XGpio_DiscreteRead(&sws,1) - 1) == 0x01); //Button 1 status
+                                                   ^
+../src/lab2b.c:39:51: warning: suggest parentheses around '-' in operand of '&' [-Wparentheses]
+   _Bool b1 = ( (0x02 & XGpio_DiscreteRead(&sws,1) - 1) == 0x02); //Button 2 status
+                                                   ^
+../src/lab2b.c:40:51: warning: suggest parentheses around '-' in operand of '&' [-Wparentheses]
+   _Bool b2 = ( (0x04 & XGpio_DiscreteRead(&sws,1) - 1) == 0x04); //Button 3 status
+                                                   ^
+../src/lab2b.c:41:51: warning: suggest parentheses around '-' in operand of '&' [-Wparentheses]
+src/subdir.mk:21: recipe for target 'src/lab2b.o' failed
+   _Bool b3 = ( (0x08 & XGpio_DiscreteRead(&sws,1) - 1) == 0x08); //Button 4 status
+                                                   ^
+../src/lab2b.c:43:3: error: expected ';' before 'if'
+   if (b0) {
+   ^
+../src/lab2b.c:41:9: warning: unused variable 'b3' [-Wunused-variable]
+   _Bool b3 = ( (0x08 & XGpio_DiscreteRead(&sws,1) - 1) == 0x08); //Button 4 status
+         ^
+../src/lab2b.c:40:9: warning: unused variable 'b2' [-Wunused-variable]
+   _Bool b2 = ( (0x04 & XGpio_DiscreteRead(&sws,1) - 1) == 0x04); //Button 3 status
+         ^
+../src/lab2b.c:39:9: warning: unused variable 'b1' [-Wunused-variable]
+   _Bool b1 = ( (0x02 & XGpio_DiscreteRead(&sws,1) - 1) == 0x02); //Button 2 status
+         ^
+../src/lab2b.c:38:9: warning: unused variable 'b0' [-Wunused-variable]
+   _Bool b0 = ( (0x01 & XGpio_DiscreteRead(&sws,1) - 1) == 0x01); //Button 1 status
+         ^
+../src/lab2b.c:20:6: warning: unused variable 'switches' [-Wunused-variable]
+  int switches; //status of switches as integer
+      ^
+../src/lab2b.c:16:6: warning: unused variable 'count_masked' [-Wunused-variable]
+  int count_masked; //lowest nib of counter
+      ^
+../src/lab2b.c:15:6: warning: variable 'count' set but not used [-Wunused-but-set-variable]
+  int count; //loop counter
+      ^
+make: *** [src/lab2b.o] Error 1
+19:53:51 **** Auto Build of configuration Debug for project part2 ****
+make all 
+Building file: ../src/lab2b.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab2b.o" -I../../part2_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/lab2b.d" -MT"src/lab2b.d" -o "src/lab2b.o" "../src/lab2b.c"
+../src/lab2b.c: In function 'main':
+../src/lab2b.c:38:51: warning: suggest parentheses around '-' in operand of '&' [-Wparentheses]
+   _Bool b0 = ( (0x01 & XGpio_DiscreteRead(&sws,1) - 1) == 0x01); //Button 1 status
+                                                   ^
+../src/lab2b.c:39:51: warning: suggest parentheses around '-' in operand of '&' [-Wparentheses]
+   _Bool b1 = ( (0x02 & XGpio_DiscreteRead(&sws,1) - 1) == 0x02); //Button 2 status
+src/subdir.mk:21: recipe for target 'src/lab2b.o' failed
+                                                   ^
+../src/lab2b.c:40:51: warning: suggest parentheses around '-' in operand of '&' [-Wparentheses]
+   _Bool b2 = ( (0x04 & XGpio_DiscreteRead(&sws,1) - 1) == 0x04); //Button 3 status
+                                                   ^
+../src/lab2b.c:41:51: warning: suggest parentheses around '-' in operand of '&' [-Wparentheses]
+   _Bool b3 = ( (0x08 & XGpio_DiscreteRead(&sws,1) - 1) == 0x08); //Button 4 status
+                                                   ^
+../src/lab2b.c:43:3: error: expected ';' before 'if'
+   if (b0) {
+   ^
+../src/lab2b.c:41:9: warning: unused variable 'b3' [-Wunused-variable]
+   _Bool b3 = ( (0x08 & XGpio_DiscreteRead(&sws,1) - 1) == 0x08); //Button 4 status
+         ^
+../src/lab2b.c:40:9: warning: unused variable 'b2' [-Wunused-variable]
+   _Bool b2 = ( (0x04 & XGpio_DiscreteRead(&sws,1) - 1) == 0x04); //Button 3 status
+         ^
+../src/lab2b.c:39:9: warning: unused variable 'b1' [-Wunused-variable]
+   _Bool b1 = ( (0x02 & XGpio_DiscreteRead(&sws,1) - 1) == 0x02); //Button 2 status
+         ^
+../src/lab2b.c:38:9: warning: unused variable 'b0' [-Wunused-variable]
+   _Bool b0 = ( (0x01 & XGpio_DiscreteRead(&sws,1) - 1) == 0x01); //Button 1 status
+         ^
+../src/lab2b.c:20:6: warning: unused variable 'switches' [-Wunused-variable]
+  int switches; //status of switches as integer
+      ^
+../src/lab2b.c:16:6: warning: unused variable 'count_masked' [-Wunused-variable]
+  int count_masked; //lowest nib of counter
+      ^
+../src/lab2b.c:15:6: warning: variable 'count' set but not used [-Wunused-but-set-variable]
+  int count; //loop counter
+      ^
+make: *** [src/lab2b.o] Error 1
+19:54:01 **** Auto Build of configuration Debug for project part2 ****
+make all 
+Building file: ../src/lab2b.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab2b.o" -I../../part2_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/lab2b.d" -MT"src/lab2b.d" -o "src/lab2b.o" "../src/lab2b.c"
+../src/lab2b.c: In function 'main':
+../src/lab2b.c:38:51: warning: suggest parentheses around '-' in operand of '&' [-Wparentheses]
+   _Bool b0 = ( (0x01 & XGpio_DiscreteRead(&sws,1) - 1) == 0x01); //Button 1 status
+                                                   ^
+../src/lab2b.c:39:51: warning: suggest parentheses around '-' in operand of '&' [-Wparentheses]
+   _Bool b1 = ( (0x02 & XGpio_DiscreteRead(&sws,1) - 1) == 0x02); //Button 2 status
+                                                   ^
+../src/lab2b.c:40:51: warning: suggest parentheses around '-' in operand of '&' [-Wparentheses]
+   _Bool b2 = ( (0x04 & XGpio_DiscreteRead(&sws,1) - 1) == 0x04); //Button 3 status
+                                                   ^
+../src/lab2b.c:41:51: warning: suggest parentheses around '-' in operand of '&' [-Wparentheses]
+   _Bool b3 = ( (0x08 & XGpio_DiscreteRead(&sws,1) - 1) == 0x08); //Button 4 status
+                                                   ^
+Finished building: ../src/lab2b.c
+ 
+Building target: part2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../part2_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -o "part2.elf"  ./src/lab2b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: part2.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size part2.elf  |tee "part2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8861	    324	   2100	  11285	   2c15	part2.elf
+Finished building: part2.elf.size
+ 
+19:54:14 **** Auto Build of configuration Debug for project part2 ****
+make all 
+Building file: ../src/lab2b.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab2b.o" -I../../part2_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/lab2b.d" -MT"src/lab2b.d" -o "src/lab2b.o" "../src/lab2b.c"
+Finished building: ../src/lab2b.c
+ 
+Building target: part2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../part2_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -o "part2.elf"  ./src/lab2b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: part2.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size part2.elf  |tee "part2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8861	    324	   2100	  11285	   2c15	part2.elf
+Finished building: part2.elf.size
+ 
+19:54:16 **** Incremental Build of configuration Debug for project part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:55:01 **** Auto Build of configuration Debug for project part2 ****
+make all 
+Building file: ../src/lab2b.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab2b.o" -I../../part2_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/lab2b.d" -MT"src/lab2b.d" -o "src/lab2b.o" "../src/lab2b.c"
+Finished building: ../src/lab2b.c
+ 
+Building target: part2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../part2_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -o "part2.elf"  ./src/lab2b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: part2.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size part2.elf  |tee "part2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8889	    324	   2107	  11320	   2c38	part2.elf
+Finished building: part2.elf.size
+ 
+19:55:03 **** Incremental Build of configuration Debug for project part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:55:15 **** Incremental Build of configuration Debug for project part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:55:22 **** Incremental Build of configuration Debug for project part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:56:04 **** Incremental Build of configuration Debug for project part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:56:08 **** Incremental Build of configuration Debug for project part2 ****
+make all 
+make: Nothing to be done for 'all'.
+20:04:05 **** Auto Build of project counter_sw_bsp ****
+make -k all 
+Running Make include in microblaze_0/libsrc/standalone_v5_1/src
+make -C microblaze_0/libsrc/standalone_v5_1/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in microblaze_0/libsrc/cpu_v2_3/src
+make -C microblaze_0/libsrc/cpu_v2_3/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in microblaze_0/libsrc/uartlite_v3_0/src
+make -C microblaze_0/libsrc/uartlite_v3_0/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in microblaze_0/libsrc/bram_v4_0/src
+make -C microblaze_0/libsrc/bram_v4_0/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in microblaze_0/libsrc/gpio_v4_0/src
+make -C microblaze_0/libsrc/gpio_v4_0/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Running Make libs in microblaze_0/libsrc/standalone_v5_1/src
+make -C microblaze_0/libsrc/standalone_v5_1/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Compiling standalone
+Running Make libs in microblaze_0/libsrc/cpu_v2_3/src
+make -C microblaze_0/libsrc/cpu_v2_3/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Compiling cpu
+Running Make libs in microblaze_0/libsrc/uartlite_v3_0/src
+make -C microblaze_0/libsrc/uartlite_v3_0/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Compiling uartlite
+Running Make libs in microblaze_0/libsrc/bram_v4_0/src
+make -C microblaze_0/libsrc/bram_v4_0/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Compiling bram
+Running Make libs in microblaze_0/libsrc/gpio_v4_0/src
+make -C microblaze_0/libsrc/gpio_v4_0/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Compiling gpio
+Finished building libraries
+20:04:09 **** Auto Build of project part2_bsp ****
+make -k all 
+Running Make include in microblaze_0/libsrc/standalone_v5_1/src
+make -C microblaze_0/libsrc/standalone_v5_1/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in microblaze_0/libsrc/cpu_v2_3/src
+make -C microblaze_0/libsrc/cpu_v2_3/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in microblaze_0/libsrc/uartlite_v3_0/src
+make -C microblaze_0/libsrc/uartlite_v3_0/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in microblaze_0/libsrc/bram_v4_0/src
+make -C microblaze_0/libsrc/bram_v4_0/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in microblaze_0/libsrc/gpio_v4_0/src
+make -C microblaze_0/libsrc/gpio_v4_0/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Running Make libs in microblaze_0/libsrc/standalone_v5_1/src
+make -C microblaze_0/libsrc/standalone_v5_1/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Compiling standalone
+Running Make libs in microblaze_0/libsrc/cpu_v2_3/src
+make -C microblaze_0/libsrc/cpu_v2_3/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Compiling cpu
+Running Make libs in microblaze_0/libsrc/uartlite_v3_0/src
+make -C microblaze_0/libsrc/uartlite_v3_0/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Compiling uartlite
+Running Make libs in microblaze_0/libsrc/bram_v4_0/src
+make -C microblaze_0/libsrc/bram_v4_0/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Compiling bram
+Running Make libs in microblaze_0/libsrc/gpio_v4_0/src
+make -C microblaze_0/libsrc/gpio_v4_0/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Compiling gpio
+Finished building libraries
+20:04:11 **** Auto Build of configuration Debug for project part2 ****
+make all 
+Building file: ../src/lab2b.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab2b.o" -I../../part2_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/lab2b.d" -MT"src/lab2b.d" -o "src/lab2b.o" "../src/lab2b.c"
+Finished building: ../src/lab2b.c
+ 
+Building target: part2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../part2_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -o "part2.elf"  ./src/lab2b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: part2.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size part2.elf  |tee "part2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8889	    324	   2107	  11320	   2c38	part2.elf
+Finished building: part2.elf.size
+ 
+20:04:32 **** Incremental Build of configuration Debug for project part2 ****
+make all 
+make: Nothing to be done for 'all'.
+20:05:29 **** Auto Build of configuration Debug for project part2 ****
+make all 
+Building file: ../src/lab2b.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab2b.o" -I../../part2_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/lab2b.d" -MT"src/lab2b.d" -o "src/lab2b.o" "../src/lab2b.c"
+Finished building: ../src/lab2b.c
+ 
+Building target: part2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../part2_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -o "part2.elf"  ./src/lab2b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: part2.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size part2.elf  |tee "part2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8869	    324	   2100	  11293	   2c1d	part2.elf
+Finished building: part2.elf.size
+ 
+20:05:33 **** Incremental Build of configuration Debug for project part2 ****
+make all 
+make: Nothing to be done for 'all'.
+20:06:17 **** Auto Build of configuration Debug for project part2 ****
+make all 
+Building file: ../src/lab2b.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab2b.o" -I../../part2_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/lab2b.d" -MT"src/lab2b.d" -o "src/lab2b.o" "../src/lab2b.c"
+Finished building: ../src/lab2b.c
+ 
+Building target: part2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../part2_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -o "part2.elf"  ./src/lab2b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: part2.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size part2.elf  |tee "part2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8853	    324	   2100	  11277	   2c0d	part2.elf
+Finished building: part2.elf.size
+ 
+20:06:24 **** Auto Build of configuration Debug for project part2 ****
+make all 
+Building file: ../src/lab2b.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab2b.o" -I../../part2_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/lab2b.d" -MT"src/lab2b.d" -o "src/lab2b.o" "../src/lab2b.c"
+Finished building: ../src/lab2b.c
+ 
+Building target: part2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../part2_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -o "part2.elf"  ./src/lab2b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: part2.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size part2.elf  |tee "part2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8797	    324	   2100	  11221	   2bd5	part2.elf
+Finished building: part2.elf.size
+ 
+20:06:25 **** Incremental Build of configuration Debug for project part2 ****
+make all 
+make: Nothing to be done for 'all'.
+20:07:14 **** Auto Build of configuration Debug for project part2 ****
+make all 
+Building file: ../src/lab2b.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab2b.o" -I../../part2_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/lab2b.d" -MT"src/lab2b.d" -o "src/lab2b.o" "../src/lab2b.c"
+Finished building: ../src/lab2b.c
+ 
+Building target: part2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../part2_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -o "part2.elf"  ./src/lab2b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: part2.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size part2.elf  |tee "part2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8477	    324	   2100	  10901	   2a95	part2.elf
+Finished building: part2.elf.size
+ 
+20:07:16 **** Incremental Build of configuration Debug for project part2 ****
+make all 
+make: Nothing to be done for 'all'.
+20:07:21 **** Incremental Build of configuration Debug for project part2 ****
+make all 
+make: Nothing to be done for 'all'.
+20:08:01 **** Auto Build of configuration Debug for project part2 ****
+make all 
+Building file: ../src/lab2b.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab2b.o" -I../../part2_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/lab2b.d" -MT"src/lab2b.d" -o "src/lab2b.o" "../src/lab2b.c"
+Finished building: ../src/lab2b.c
+ 
+Building target: part2.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../part2_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -o "part2.elf"  ./src/lab2b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: part2.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size part2.elf  |tee "part2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8797	    324	   2100	  11221	   2bd5	part2.elf
+Finished building: part2.elf.size
+ 
+20:08:03 **** Incremental Build of configuration Debug for project part2 ****
+make all 
+make: Nothing to be done for 'all'.
+20:10:03 **** Auto Build of configuration Debug for project part2 ****
+make all 
+make: Nothing to be done for 'all'.
+20:10:06 **** Auto Build of configuration Debug for project part2 ****
+make all 
+make: Nothing to be done for 'all'.

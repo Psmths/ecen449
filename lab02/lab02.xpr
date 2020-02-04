@@ -24,6 +24,11 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
+        <CompFileExtendedInfo CompFileName="led_sw.bd" FileRelPathName="hdl/led_sw.hwdef"/>
+        <CompFileExtendedInfo CompFileName="led_sw.bd" FileRelPathName="hw_handoff/led_sw_bd.tcl"/>
+        <CompFileExtendedInfo CompFileName="led_sw.bd" FileRelPathName="hw_handoff/led_sw.hwh"/>
+        <CompFileExtendedInfo CompFileName="led_sw.bd" FileRelPathName="led_sw_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="led_sw.bd" FileRelPathName="led_sw.bmm"/>
         <CompFileExtendedInfo CompFileName="led_sw.bd" FileRelPathName="ip/led_sw_axi_gpio_0_2/led_sw_axi_gpio_0_2.xci"/>
         <CompFileExtendedInfo CompFileName="led_sw.bd" FileRelPathName="ip/led_sw_axi_gpio_1_0/led_sw_axi_gpio_1_0.xci"/>
         <CompFileExtendedInfo CompFileName="led_sw.bd" FileRelPathName="hdl/led_sw.v"/>
@@ -40,11 +45,6 @@
         <CompFileExtendedInfo CompFileName="led_sw.bd" FileRelPathName="ip/led_sw_dlmb_bram_if_cntlr_0/led_sw_dlmb_bram_if_cntlr_0.xci"/>
         <CompFileExtendedInfo CompFileName="led_sw.bd" FileRelPathName="ip/led_sw_microblaze_0_0/led_sw_microblaze_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="led_sw.bd" FileRelPathName="ip/led_sw_dlmb_v10_0/led_sw_dlmb_v10_0.xci"/>
-        <CompFileExtendedInfo CompFileName="led_sw.bd" FileRelPathName="hw_handoff/led_sw_bd.tcl"/>
-        <CompFileExtendedInfo CompFileName="led_sw.bd" FileRelPathName="hdl/led_sw.hwdef"/>
-        <CompFileExtendedInfo CompFileName="led_sw.bd" FileRelPathName="hw_handoff/led_sw.hwh"/>
-        <CompFileExtendedInfo CompFileName="led_sw.bd" FileRelPathName="led_sw_ooc.xdc"/>
-        <CompFileExtendedInfo CompFileName="led_sw.bd" FileRelPathName="led_sw.bmm"/>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/led_sw/hdl/led_sw_wrapper.v">
         <FileInfo>

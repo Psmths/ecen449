@@ -128,3 +128,121 @@ java.lang.RuntimeException: Cannot perform the Debug Command, Current Processor 
 11:07:35 INFO  : 
 11:07:36 INFO  : Updating hardware inferred compiler options for counter_sw.
 11:07:36 INFO  : Clearing existing target manager status.
+19:32:34 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+19:33:13 INFO  : Launching XSDB server: xsdb -n -s /home/clvrpny/xilinx/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+19:33:14 INFO  : XSDB server has started successfully.
+19:33:15 INFO  : Processing command line option -hwspec /home/clvrpny/ecen449/lab02/lab02.sdk/led_sw_wrapper.hdf.
+19:33:17 INFO  : Checking for hwspec changes in the project led_sw_wrapper_hw_platform_0.
+19:33:23 ERROR :  [Hsi 55-1546] Processor Instance ps7_cortexa9_0 doesn't exist in Xml/HwDb
+19:33:35 INFO  : Device 'Digilent Zybo Z7 210351A780B6A/2-xc7z010' not found in the selected target configuration 'Local'
+19:33:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:33:48 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351AD6988A" && level==0} -index 1' command is executed.
+19:33:49 ERROR : bitstream is not compatible with the target
+19:34:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:34:27 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A780C4A" && level==0} -index 1' command is executed.
+19:34:28 INFO  : FPGA configured successfully with bitstream "/home/clvrpny/ecen449/lab02/lab02.sdk/led_sw_wrapper_hw_platform_0/download.bit"
+19:34:46 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Project counter_sw does not exist. Please check that your launch configuration specifies a valid project in your workspace.
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:552)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:296)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+19:35:06 INFO  : Processor reset is completed for microblaze_0
+19:38:38 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+19:39:39 INFO  : FPGA Cable Disconnected. All active launches will be terminated.
+19:40:31 ERROR : Unexpected error while launching program.
+java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.TM.terminateCurrentLaunch(TM.java:803)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:568)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:296)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+19:40:58 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:40:58 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A780C4A" && level==0} -index 1' command is executed.
+19:40:59 INFO  : FPGA configured successfully with bitstream "/home/clvrpny/ecen449/lab02/lab02.sdk/led_sw_wrapper_hw_platform_0/download.bit"
+19:41:05 INFO  : Processor reset is completed for microblaze_0
+19:42:16 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+19:46:08 INFO  : Launching XSDB server: xsdb -n -s /home/clvrpny/xilinx/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+19:46:09 INFO  : XSDB server has started successfully.
+19:46:10 INFO  : Processing command line option -hwspec /home/clvrpny/ecen449/lab02/lab02.sdk/led_sw_wrapper.hdf.
+19:46:11 INFO  : Checking for hwspec changes in the project led_sw_wrapper_hw_platform_0.
+19:46:11 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1580780747000,  Project:1580749599000
+19:46:11 INFO  : The hardware specification for project 'led_sw_wrapper_hw_platform_0' is different from /home/clvrpny/ecen449/lab02/lab02.sdk/led_sw_wrapper.hdf.
+19:46:11 INFO  : Copied contents of /home/clvrpny/ecen449/lab02/lab02.sdk/led_sw_wrapper.hdf into /led_sw_wrapper_hw_platform_0/system.hdf.
+19:46:12 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+19:46:12 INFO  : 
+19:46:13 INFO  : 
+19:46:14 INFO  : Updating hardware inferred compiler options for part2.
+19:46:14 INFO  : Clearing existing target manager status.
+19:46:42 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:46:42 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A780C4A" && level==0} -index 1' command is executed.
+19:46:44 INFO  : FPGA configured successfully with bitstream "/home/clvrpny/ecen449/lab02/lab02.sdk/led_sw_wrapper_hw_platform_0/download.bit"
+19:46:49 ERROR :  [Hsi 55-1546] Processor Instance ps7_cortexa9_0 doesn't exist in Xml/HwDb
+19:46:49 INFO  : Processor reset is completed for microblaze_0
+19:50:48 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+19:51:01 INFO  : Processor reset is completed for microblaze_0
+19:51:22 INFO  : Processor reset is completed for microblaze_0
+19:51:46 INFO  : Processor reset is completed for microblaze_0
+19:51:57 INFO  : Processor reset is completed for microblaze_0
+19:52:26 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+19:52:29 INFO  : Processor reset is completed for microblaze_0
+19:52:43 INFO  : Processor reset is completed for microblaze_0
+19:54:16 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+19:54:18 INFO  : Processor reset is completed for microblaze_0
+19:55:03 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+19:55:39 INFO  : FPGA Cable Disconnected. All active launches will be terminated.
+19:55:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:55:59 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A780C4A" && level==0} -index 1' command is executed.
+19:56:00 INFO  : FPGA configured successfully with bitstream "/home/clvrpny/ecen449/lab02/lab02.sdk/led_sw_wrapper_hw_platform_0/download.bit"
+19:56:05 INFO  : Time out for XMD transaction is 60000
+If you want to increase the timeout value, goto Windows-> Preferences -> Xilinx SDK -> XMD Startup
+19:56:05 ERROR : Timeout occured while waiting to get reply for command "xreset 0 0x80"
+19:56:05 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: 
+	at com.xilinx.sdk.targetmanager.internal.TM.doProcessorReset(TM.java:995)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runTargetSetup(XilinxAppLaunchConfigurationDelegate.java:506)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:588)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:296)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+19:56:09 INFO  : Processor reset is completed for microblaze_0
+19:57:25 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+20:04:03 INFO  : Launching XSDB server: xsdb -n -s /home/clvrpny/xilinx/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+20:04:04 INFO  : XSDB server has started successfully.
+20:04:05 INFO  : Processing command line option -hwspec /home/clvrpny/ecen449/lab02/lab02.sdk/led_sw_wrapper.hdf.
+20:04:06 INFO  : Checking for hwspec changes in the project led_sw_wrapper_hw_platform_0.
+20:04:06 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1580781827000,  Project:1580780747000
+20:04:06 INFO  : The hardware specification for project 'led_sw_wrapper_hw_platform_0' is different from /home/clvrpny/ecen449/lab02/lab02.sdk/led_sw_wrapper.hdf.
+20:04:07 INFO  : Copied contents of /home/clvrpny/ecen449/lab02/lab02.sdk/led_sw_wrapper.hdf into /led_sw_wrapper_hw_platform_0/system.hdf.
+20:04:07 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+20:04:08 INFO  : 
+20:04:09 INFO  : 
+20:04:11 INFO  : Updating hardware inferred compiler options for part2.
+20:04:11 INFO  : Clearing existing target manager status.
+20:04:28 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:04:28 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A780C4A" && level==0} -index 1' command is executed.
+20:04:29 INFO  : FPGA configured successfully with bitstream "/home/clvrpny/ecen449/lab02/lab02.sdk/led_sw_wrapper_hw_platform_0/download.bit"
+20:04:32 ERROR :  [Hsi 55-1546] Processor Instance ps7_cortexa9_0 doesn't exist in Xml/HwDb
+20:04:33 INFO  : Processor reset is completed for microblaze_0
+20:05:33 INFO  : Processor reset is completed for microblaze_0
+20:06:26 INFO  : Processor reset is completed for microblaze_0
+20:07:16 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+20:07:22 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+20:07:23 INFO  : Processor reset is completed for microblaze_0
+20:08:03 INFO  : Processor reset is completed for microblaze_0
+20:08:23 INFO  : Time out for XMD transaction is 60000
+If you want to increase the timeout value, goto Windows-> Preferences -> Xilinx SDK -> XMD Startup
+20:08:23 ERROR : Timeout occured while waiting to get reply for command "close_terminal"
+20:08:23 ERROR : Error while closing JTAG UART server: 

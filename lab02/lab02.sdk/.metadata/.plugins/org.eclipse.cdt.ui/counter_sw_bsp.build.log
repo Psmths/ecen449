@@ -1,4 +1,4 @@
-11:07:32 **** Auto Build of project counter_sw_bsp ****
+20:04:05 **** Auto Build of project counter_sw_bsp ****
 make -k all 
 Running Make include in microblaze_0/libsrc/standalone_v5_1/src
 make -C microblaze_0/libsrc/standalone_v5_1/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
@@ -27,5 +27,5 @@ make -C microblaze_0/libsrc/gpio_v4_0/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-
 Compiling gpio
 Finished building libraries
 
-11:07:34 Build Finished (took 1s.685ms)
+20:04:07 Build Finished (took 1s.578ms)
 
