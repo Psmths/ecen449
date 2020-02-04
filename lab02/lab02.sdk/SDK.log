@@ -246,3 +246,5 @@ java.lang.RuntimeException:
 If you want to increase the timeout value, goto Windows-> Preferences -> Xilinx SDK -> XMD Startup
 20:08:23 ERROR : Timeout occured while waiting to get reply for command "close_terminal"
 20:08:23 ERROR : Error while closing JTAG UART server: 
+20:18:44 INFO  : FPGA Cable Disconnected. All active launches will be terminated.
+20:21:08 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
