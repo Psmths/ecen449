@@ -248,3 +248,38 @@ If you want to increase the timeout value, goto Windows-> Preferences -> Xilinx 
 20:08:23 ERROR : Error while closing JTAG UART server: 
 20:18:44 INFO  : FPGA Cable Disconnected. All active launches will be terminated.
 20:21:08 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+14:14:07 INFO  : Launching XSDB server: xsdb -n -s /home/clvrpny/xilinx/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+14:14:12 INFO  : Processing command line option -hwspec /home/clvrpny/ecen449/lab02/lab02.sdk/led_sw_wrapper.hdf.
+14:14:12 INFO  : XSDB server has started successfully.
+14:14:14 INFO  : Checking for hwspec changes in the project led_sw_wrapper_hw_platform_0.
+14:14:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:14:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77F4AA" && level==0} -index 1' command is executed.
+14:14:46 INFO  : FPGA configured successfully with bitstream "/home/clvrpny/ecen449/lab02/lab02.sdk/led_sw_wrapper_hw_platform_0/download.bit"
+14:14:50 ERROR :  [Hsi 55-1546] Processor Instance ps7_cortexa9_0 doesn't exist in Xml/HwDb
+14:15:01 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Error in Resetting Target
+
+    Failed to lock the JTAG Cable for exclusive access
+
+
+	at com.xilinx.sdk.targetmanager.internal.TM.doProcessorReset(TM.java:995)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runTargetSetup(XilinxAppLaunchConfigurationDelegate.java:506)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:588)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:296)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+14:16:03 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:16:03 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77F4AA" && level==0} -index 1' command is executed.
+14:16:04 INFO  : FPGA configured successfully with bitstream "/home/clvrpny/ecen449/lab02/lab02.sdk/led_sw_wrapper_hw_platform_0/download.bit"
+14:16:15 INFO  : Processor reset is completed for microblaze_0
+14:18:14 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+14:18:16 INFO  : Processor reset is completed for microblaze_0
+14:19:19 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+14:19:20 INFO  : Processor reset is completed for microblaze_0
+14:21:32 INFO  : Processor reset is completed for microblaze_0
+14:22:02 INFO  : Processor reset is completed for microblaze_0
+23:20:48 INFO  : FPGA Cable Disconnected. All active launches will be terminated.
