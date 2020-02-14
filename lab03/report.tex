@@ -1,0 +1,68 @@
+\documentclass[border=5pt, 10pt]{article}
+\usepackage{amsmath,amssymb,listings,fancyvrb,rotating,graphicx,hyperref}
+\usepackage[a4paper,margin=0.5in,footskip=0.25in]{geometry}
+\setcounter{secnumdepth}{0}
+\lstset{numbersep=5pt,xleftmargin=0.10in, xrightmargin=.15in} 
+\usepackage[activate={true,nocompatibility},final,tracking=true,kerning=true,spacing=true,factor=1200,stretch=10,shrink=10]{microtype}
+\usepackage{lscape}
+\graphicspath{ {.} }
+
+\title{ECEN 449 Lab Report 3}
+\date{\today}
+\author{Philip Smith - 624002014 (Sec. 511)}
+
+\begin{document}
+    \clearpage\maketitle
+    \thispagestyle{empty}
+    \newpage
+    \setcounter{page}{1}
+
+    {\noindent\Huge Introduction\\\\}
+        \noindent In Lab 3 I got a chance to create my own IP block and integrate it with the PS7 (Processing System 7). The PS7 from Xiling is a System on a Chip (SoC) IP block that contains a dual core processor, meomory controller, several interfacing options such as SPI, $I^{2}C$, 1000BaseT Ethernet and more. It allows for connectivity to programmable logic via ARM AXI busses.\\
+
+    \newpage
+    
+    {\noindent\Huge Procedure\\\\}
+        \noindent The first step is to create an IP block with the appropriate amount of registers. In this case we only need 3. Then we write a simple definition in Verilog that multiplies two registers and places them into an output register as follows:\\
+        
+        \begin{center}
+            \begin{verbatim}
+                tmp reg <= slv reg0 * slv reg1 ;
+                slv reg2 <= tmp reg;
+            \end{verbatim}
+        \end{center}
+        
+        \noindent After this we connect it to PS7, synthesize, and export out bitstream to the SDK where we can write a C program to reference it at a particular offset in the memory map.
+      
+    \newpage
+    
+    {\noindent\Huge Results\\\\}
+        \noindent There were no issues to report and overall this was the easiest lab yet. The program ran fine and displayed the expected values. The following is my serial console output:
+    \newpage
+    
+    {\noindent\Huge Conclusions\\\\}
+        \noindent This was an interesting lab that raised some questions for me. In the SDK the memory map for my multiply IP block seems to take up 64 kilobytes of address space. This, I feel, is far in excess of what it actually needs. There are only 4 registers involved in the synthesis of this IP block, each at 32 bits wide, meaning I would expect the IP block to take 16 Bytes of address space. The SDK does not specify what is taking up the rest of the block's allocated memory. 
+    \newpage
+    
+    {\noindent\Huge Questions\\\\}
+        \begin{enumerate}
+            \item{The tmp\_reg serves as an intermediate register to impart a ``synthesizeable'' delay into the circuit. It should be noted that, as specified in the Lab 3 instructional video, this is no longer necessary and therefore its removal would have no consequences. }
+            \item{Due to the size of the output register, which is 32 bits wide, there exists conditions in which when multiplying two 32 bit values we get a result in excess of $2^{32}$, which would cause and \textit{overflow} and subsequently an incorrect result from the IP block. To correct this in the most direct way I would convert the output register to 64 bits wide. Although it would be possible to do this in verilog by changing the value of C\_S\_AXI\_DATA\_WIDTH, I would feel more comfortable allowing Vivado to handle this automatically.}
+        \end{enumerate}
+    \newpage
+    \begin{landscape}
+    {\noindent\Huge Appendix A - helloworld.c\\\\}
+        \noindent The following is the code for helloworld.c:
+        \VerbatimInput{./lab03.sdk/multiply_test/src/helloworld.c}
+    \end{landscape}
+    \newpage
+    
+    \begin{landscape}
+    {\noindent\Huge Appendix B - Console Out\\\\}
+        \noindent The following is the console output for the IP block:\\
+        \includegraphics{console.PNG}
+    \end{landscape}
+    \newpage
+    
+
+\end{document}
