@@ -1,0 +1,14 @@
+lowlevel_init.o: lowlevel_init.S \
+ /home/ugrads/p/philipsmith/ecen449/lab04/u-boot/include/asm-offsets.h \
+ /home/ugrads/p/philipsmith/ecen449/lab04/u-boot/include/generated/generic-asm-offsets.h \
+ /home/ugrads/p/philipsmith/ecen449/lab04/u-boot/include/config.h \
+ /home/ugrads/p/philipsmith/ecen449/lab04/u-boot/include/config_cmd_defaults.h \
+ /home/ugrads/p/philipsmith/ecen449/lab04/u-boot/include/config_defaults.h \
+ /home/ugrads/p/philipsmith/ecen449/lab04/u-boot/include/configs/zynq_zybo.h \
+ /home/ugrads/p/philipsmith/ecen449/lab04/u-boot/include/configs/zynq-common.h \
+ /home/ugrads/p/philipsmith/ecen449/lab04/u-boot/include/config_cmd_default.h \
+ /home/ugrads/p/philipsmith/ecen449/lab04/u-boot/arch/arm/include/asm/config.h \
+ /home/ugrads/p/philipsmith/ecen449/lab04/u-boot/include/config_fallbacks.h \
+ /home/ugrads/p/philipsmith/ecen449/lab04/u-boot/include/config_uncmd_spl.h \
+ /home/ugrads/p/philipsmith/ecen449/lab04/u-boot/include/linux/linkage.h \
+ /home/ugrads/p/philipsmith/ecen449/lab04/u-boot/arch/arm/include/asm/linkage.h

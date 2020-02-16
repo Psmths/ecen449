@@ -1,0 +1,2 @@
+crc8.o: crc8.c \
+ /home/ugrads/p/philipsmith/ecen449/lab04/u-boot/include/linux/crc8.h

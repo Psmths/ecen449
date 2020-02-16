@@ -1,0 +1,3 @@
+relocate.o: relocate.S \
+ /home/ugrads/p/philipsmith/ecen449/lab04/u-boot/include/linux/linkage.h \
+ /home/ugrads/p/philipsmith/ecen449/lab04/u-boot/arch/arm/include/asm/linkage.h
