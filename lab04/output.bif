@@ -1,0 +1,6 @@
+the_ROM_image:
+{
+	[bootloader]/home/clvrpny/ecen449/lab04/lab04.sdk/FSBL/Debug/FSBL.elf
+	/home/clvrpny/ecen449/lab04/lab04.sdk/zynq_wrapper_hw_platform_0/zynq_wrapper.bit
+	/home/clvrpny/ecen449/lab04/u-boot/u-boot.elf
+}

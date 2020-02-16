@@ -150,3 +150,6 @@ arm-xilinx-eabi-size FSBL.elf  |tee "FSBL.elf.size"
   64988	   9412	  69204	 143604	  230f4	FSBL.elf
 Finished building: FSBL.elf.size
  
+12:20:24 **** Incremental Build of configuration Debug for project FSBL ****
+make all 
+make: Nothing to be done for 'all'.
