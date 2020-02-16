@@ -12,6 +12,7 @@
     <Option Name="BoardPart" Val="digilentinc.com:zybo-z7-10:part0:1.0"/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo"/>
     <Option Name="EnableCoreContainer" Val="FALSE"/>
     <Option Name="EnableCoreContainerForIPI" Val="FALSE"/>
   </Configuration>
@@ -24,9 +25,27 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
+        <CompFileExtendedInfo CompFileName="lab4bd.bd" FileRelPathName="ip/lab4bd_processing_system7_0_0/lab4bd_processing_system7_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="lab4bd.bd" FileRelPathName="ip/lab4bd_auto_pc_0/lab4bd_auto_pc_0.xci"/>
+        <CompFileExtendedInfo CompFileName="lab4bd.bd" FileRelPathName="ip/lab4bd_processing_system7_0_axi_periph_0/lab4bd_processing_system7_0_axi_periph_0.xci"/>
+        <CompFileExtendedInfo CompFileName="lab4bd.bd" FileRelPathName="ip/lab4bd_rst_processing_system7_0_100M_0/lab4bd_rst_processing_system7_0_100M_0.xci"/>
+        <CompFileExtendedInfo CompFileName="lab4bd.bd" FileRelPathName="ip/lab4bd_multiply_0_0/lab4bd_multiply_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="lab4bd.bd" FileRelPathName="hdl/lab4bd.hwdef"/>
+        <CompFileExtendedInfo CompFileName="lab4bd.bd" FileRelPathName="hw_handoff/lab4bd_bd.tcl"/>
+        <CompFileExtendedInfo CompFileName="lab4bd.bd" FileRelPathName="lab4bd_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="lab4bd.bd" FileRelPathName="hdl/lab4bd.v"/>
+        <CompFileExtendedInfo CompFileName="lab4bd.bd" FileRelPathName="hw_handoff/lab4bd.hwh"/>
+      </File>
+      <File Path="$PSRCDIR/sources_1/bd/lab4bd/hdl/lab4bd_wrapper.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
+        <Option Name="TopModule" Val="lab4bd_wrapper"/>
         <Option Name="TopAutoSet" Val="TRUE"/>
       </Config>
     </FileSet>
@@ -39,6 +58,8 @@
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
+        <Option Name="TopModule" Val="lab4bd_wrapper"/>
+        <Option Name="TopLib" Val="xil_defaultlib"/>
         <Option Name="TopAutoSet" Val="TRUE"/>
         <Option Name="SrcSet" Val="sources_1"/>
       </Config>
@@ -66,15 +87,16 @@
     </Simulator>
   </Simulators>
   <Runs Version="1" Minor="9">
-    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7z010clg400-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" State="current">
+    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7z010clg400-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" State="current" Dir="$PRUNDIR/synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
           <Desc>Vivado Synthesis Defaults</Desc>
         </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
-    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="constrs_1" Description="Vivado Implementation Defaults" State="current" SynthRun="synth_1">
+    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="constrs_1" Description="Vivado Implementation Defaults" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
           <Desc>Vivado Implementation Defaults</Desc>
@@ -89,6 +111,7 @@
         <Step Id="post_route_phys_opt_design"/>
         <Step Id="write_bitstream"/>
       </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
   </Runs>
 </Project>
