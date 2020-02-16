@@ -6,4 +6,4 @@
 # Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 #
 
-vivado -log lab4bd_wrapper.vdi -applog -m64 -messageDb vivado.pb -mode batch -source lab4bd_wrapper.tcl -notrace
+vivado -log zynq_wrapper.vdi -applog -m64 -messageDb vivado.pb -mode batch -source zynq_wrapper.tcl -notrace

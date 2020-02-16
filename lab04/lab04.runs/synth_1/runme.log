@@ -1,6 +1,6 @@
 
 *** Running vivado
-    with args -log lab4bd_wrapper.vds -m64 -mode batch -messageDb vivado.pb -notrace -source lab4bd_wrapper.tcl
+    with args -log zynq_wrapper.vds -m64 -mode batch -messageDb vivado.pb -notrace -source zynq_wrapper.tcl
 
 WARNING: Default location for XILINX_VIVADO_HLS not found: 
 
@@ -9,31 +9,35 @@ WARNING: Default location for XILINX_VIVADO_HLS not found:
   **** IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
     ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 
-source lab4bd_wrapper.tcl -notrace
-CRITICAL WARNING: [Board 49-4] Problem parsing board_part file - /home/clvrpny/xilinx/Vivado/2015.2/data/boards/board_files/genesys-zu-3eg/B.0/board.xml, failed to parse board part file. Board Fpga file does not have valid entry for family/vendor/board_name/board_revision.
+source zynq_wrapper.tcl -notrace
 WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at /home/clvrpny/xilinx/Vivado/2015.2/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-50:part0:1.0 available at /home/clvrpny/xilinx/Vivado/2015.2/data/boards/board_files/arty-s7-50/B.0/board.xml as part xc7s50csga324-1 specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part digilentinc.com:cmod-s7-25:part0:1.0 available at /home/clvrpny/xilinx/Vivado/2015.2/data/boards/board_files/cmod-s7-25/B.0/board.xml as part xc7s25csga225-1 specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part digilentinc.com:cora-z7-07s:part0:1.0 available at /home/clvrpny/xilinx/Vivado/2015.2/data/boards/board_files/cora-z7-07s/B.0/board.xml as part xc7z007sclg400-1 specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at /home/clvrpny/xilinx/Vivado/2015.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at /home/clvrpny/xilinx/Vivado/2015.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.2 available at /home/clvrpny/xilinx/Vivado/2015.2/data/boards/board_files/kc705/1.2/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.0 available at /home/clvrpny/xilinx/Vivado/2015.2/data/boards/board_files/kcu105/1.0/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.2 available at /home/clvrpny/xilinx/Vivado/2015.2/data/boards/board_files/vc707/1.2/board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.6 available at /home/clvrpny/xilinx/Vivado/2015.2/data/boards/board_files/vc709/1.6/board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.2 available at /home/clvrpny/xilinx/Vivado/2015.2/data/boards/board_files/zc706/1.2/board.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/clvrpny/ecen449/ip_repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/clvrpny/ecen449/lab04/ip_repo'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/clvrpny/xilinx/Vivado/2015.2/data/ip'.
-Command: synth_design -top lab4bd_wrapper -part xc7z010clg400-1
+Command: synth_design -top zynq_wrapper -part xc7z010clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1030.840 ; gain = 197.199 ; free physical = 2654 ; free virtual = 6228
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1029.844 ; gain = 196.199 ; free physical = 2201 ; free virtual = 6180
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'lab4bd_wrapper' [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/bd/lab4bd/hdl/lab4bd_wrapper.v:12]
-INFO: [Synth 8-638] synthesizing module 'lab4bd' [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/bd/lab4bd/hdl/lab4bd.v:13]
+INFO: [Synth 8-638] synthesizing module 'zynq_wrapper' [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/bd/zynq/hdl/zynq_wrapper.v:12]
+INFO: [Synth 8-638] synthesizing module 'zynq' [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/bd/zynq/hdl/zynq.v:318]
 INFO: [Synth 8-638] synthesizing module 'GND' [/home/clvrpny/xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:3854]
 INFO: [Synth 8-256] done synthesizing module 'GND' (1#1) [/home/clvrpny/xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:3854]
 INFO: [Synth 8-638] synthesizing module 'VCC' [/home/clvrpny/xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:35496]
 INFO: [Synth 8-256] done synthesizing module 'VCC' (2#1) [/home/clvrpny/xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:35496]
-INFO: [Synth 8-638] synthesizing module 'lab4bd_multiply_0_0' [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/bd/lab4bd/ip/lab4bd_multiply_0_0/synth/lab4bd_multiply_0_0.v:56]
+INFO: [Synth 8-638] synthesizing module 'zynq_multiply_0_0' [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/bd/zynq/ip/zynq_multiply_0_0/synth/zynq_multiply_0_0.v:56]
 INFO: [Synth 8-638] synthesizing module 'multiply_v1_0' [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/ipshared/user.org/multiply_v1_0/8b9284c4/hdl/multiply_v1_0.v:4]
 	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
@@ -46,9 +50,9 @@ INFO: [Synth 8-226] default block is never used [/home/clvrpny/ecen449/lab04/lab
 INFO: [Synth 8-226] default block is never used [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/ipshared/user.org/multiply_v1_0/8b9284c4/hdl/multiply_v1_0_S00_AXI.v:364]
 INFO: [Synth 8-256] done synthesizing module 'multiply_v1_0_S00_AXI' (3#1) [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/ipshared/user.org/multiply_v1_0/8b9284c4/hdl/multiply_v1_0_S00_AXI.v:4]
 INFO: [Synth 8-256] done synthesizing module 'multiply_v1_0' (4#1) [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/ipshared/user.org/multiply_v1_0/8b9284c4/hdl/multiply_v1_0.v:4]
-INFO: [Synth 8-256] done synthesizing module 'lab4bd_multiply_0_0' (5#1) [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/bd/lab4bd/ip/lab4bd_multiply_0_0/synth/lab4bd_multiply_0_0.v:56]
-INFO: [Synth 8-638] synthesizing module 'lab4bd_processing_system7_0_0' [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/bd/lab4bd/ip/lab4bd_processing_system7_0_0/synth/lab4bd_processing_system7_0_0.v:57]
-INFO: [Synth 8-638] synthesizing module 'processing_system7_v5_5_processing_system7' [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/bd/lab4bd/ip/lab4bd_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:156]
+INFO: [Synth 8-256] done synthesizing module 'zynq_multiply_0_0' (5#1) [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/bd/zynq/ip/zynq_multiply_0_0/synth/zynq_multiply_0_0.v:56]
+INFO: [Synth 8-638] synthesizing module 'zynq_processing_system7_0_0' [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/bd/zynq/ip/zynq_processing_system7_0_0/synth/zynq_processing_system7_0_0.v:57]
+INFO: [Synth 8-638] synthesizing module 'processing_system7_v5_5_processing_system7' [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/bd/zynq/ip/zynq_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:156]
 	Parameter C_USE_DEFAULT_ACP_USER_VAL bound to: 0 - type: integer 
 	Parameter C_S_AXI_ACP_ARUSER_VAL bound to: 31 - type: integer 
 	Parameter C_S_AXI_ACP_AWUSER_VAL bound to: 31 - type: integer 
@@ -103,21 +107,21 @@ INFO: [Synth 8-638] synthesizing module 'processing_system7_v5_5_processing_syst
 	Parameter C_USE_S_AXI_GP0 bound to: 0 - type: integer 
 	Parameter C_USE_S_AXI_GP1 bound to: 0 - type: integer 
 	Parameter C_USE_S_AXI_ACP bound to: 0 - type: integer 
-INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/bd/lab4bd/ip/lab4bd_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:1350]
-INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/bd/lab4bd/ip/lab4bd_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:1351]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/bd/zynq/ip/zynq_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:1350]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/bd/zynq/ip/zynq_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:1351]
 INFO: [Synth 8-638] synthesizing module 'BUFG' [/home/clvrpny/xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:607]
 INFO: [Synth 8-256] done synthesizing module 'BUFG' (6#1) [/home/clvrpny/xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:607]
 INFO: [Synth 8-638] synthesizing module 'BIBUF' [/home/clvrpny/xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:268]
 INFO: [Synth 8-256] done synthesizing module 'BIBUF' (7#1) [/home/clvrpny/xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:268]
 INFO: [Synth 8-638] synthesizing module 'PS7' [/home/clvrpny/xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:26467]
 INFO: [Synth 8-256] done synthesizing module 'PS7' (8#1) [/home/clvrpny/xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:26467]
-INFO: [Synth 8-256] done synthesizing module 'processing_system7_v5_5_processing_system7' (9#1) [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/bd/lab4bd/ip/lab4bd_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:156]
-WARNING: [Synth 8-350] instance 'inst' of module 'processing_system7_v5_5_processing_system7' requires 685 connections, but only 672 given [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/bd/lab4bd/ip/lab4bd_processing_system7_0_0/synth/lab4bd_processing_system7_0_0.v:310]
-INFO: [Synth 8-256] done synthesizing module 'lab4bd_processing_system7_0_0' (10#1) [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/bd/lab4bd/ip/lab4bd_processing_system7_0_0/synth/lab4bd_processing_system7_0_0.v:57]
-WARNING: [Synth 8-350] instance 'processing_system7_0' of module 'lab4bd_processing_system7_0_0' requires 66 connections, but only 63 given [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/bd/lab4bd/hdl/lab4bd.v:168]
-INFO: [Synth 8-638] synthesizing module 'lab4bd_processing_system7_0_axi_periph_0' [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/bd/lab4bd/hdl/lab4bd.v:306]
-INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_LQ9BAS' [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/bd/lab4bd/hdl/lab4bd.v:621]
-INFO: [Synth 8-638] synthesizing module 'lab4bd_auto_pc_0' [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/bd/lab4bd/ip/lab4bd_auto_pc_0/synth/lab4bd_auto_pc_0.v:57]
+INFO: [Synth 8-256] done synthesizing module 'processing_system7_v5_5_processing_system7' (9#1) [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/bd/zynq/ip/zynq_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:156]
+WARNING: [Synth 8-350] instance 'inst' of module 'processing_system7_v5_5_processing_system7' requires 685 connections, but only 672 given [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/bd/zynq/ip/zynq_processing_system7_0_0/synth/zynq_processing_system7_0_0.v:310]
+INFO: [Synth 8-256] done synthesizing module 'zynq_processing_system7_0_0' (10#1) [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/bd/zynq/ip/zynq_processing_system7_0_0/synth/zynq_processing_system7_0_0.v:57]
+WARNING: [Synth 8-350] instance 'processing_system7_0' of module 'zynq_processing_system7_0_0' requires 66 connections, but only 63 given [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/bd/zynq/hdl/zynq.v:473]
+INFO: [Synth 8-638] synthesizing module 'zynq_processing_system7_0_axi_periph_0' [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/bd/zynq/hdl/zynq.v:611]
+INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_16YERMR' [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/bd/zynq/hdl/zynq.v:12]
+INFO: [Synth 8-638] synthesizing module 'zynq_auto_pc_0' [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/bd/zynq/ip/zynq_auto_pc_0/synth/zynq_auto_pc_0.v:57]
 INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_axi_protocol_converter' [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/ipshared/xilinx.com/axi_protocol_converter_v2_1/017861a2/hdl/verilog/axi_protocol_converter_v2_1_axi_protocol_converter.v:62]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_M_AXI_PROTOCOL bound to: 2 - type: integer 
@@ -853,10 +857,10 @@ INFO: [Synth 8-256] done synthesizing module 'axi_infrastructure_v1_1_vector2axi
 INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_axi_register_slice__parameterized0' (24#1) [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/ipshared/xilinx.com/axi_register_slice_v2_1/03a8e0ba/hdl/verilog/axi_register_slice_v2_1_axi_register_slice.v:64]
 INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_b2s' (25#1) [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/ipshared/xilinx.com/axi_protocol_converter_v2_1/017861a2/hdl/verilog/axi_protocol_converter_v2_1_b2s.v:39]
 INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_axi_protocol_converter' (26#1) [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/ipshared/xilinx.com/axi_protocol_converter_v2_1/017861a2/hdl/verilog/axi_protocol_converter_v2_1_axi_protocol_converter.v:62]
-INFO: [Synth 8-256] done synthesizing module 'lab4bd_auto_pc_0' (27#1) [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/bd/lab4bd/ip/lab4bd_auto_pc_0/synth/lab4bd_auto_pc_0.v:57]
-INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_LQ9BAS' (28#1) [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/bd/lab4bd/hdl/lab4bd.v:621]
-INFO: [Synth 8-256] done synthesizing module 'lab4bd_processing_system7_0_axi_periph_0' (29#1) [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/bd/lab4bd/hdl/lab4bd.v:306]
-INFO: [Synth 8-638] synthesizing module 'lab4bd_rst_processing_system7_0_100M_0' [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/bd/lab4bd/ip/lab4bd_rst_processing_system7_0_100M_0/synth/lab4bd_rst_processing_system7_0_100M_0.vhd:74]
+INFO: [Synth 8-256] done synthesizing module 'zynq_auto_pc_0' (27#1) [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/bd/zynq/ip/zynq_auto_pc_0/synth/zynq_auto_pc_0.v:57]
+INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_16YERMR' (28#1) [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/bd/zynq/hdl/zynq.v:12]
+INFO: [Synth 8-256] done synthesizing module 'zynq_processing_system7_0_axi_periph_0' (29#1) [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/bd/zynq/hdl/zynq.v:611]
+INFO: [Synth 8-638] synthesizing module 'zynq_rst_processing_system7_0_100M_0' [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/bd/zynq/ip/zynq_rst_processing_system7_0_100M_0/synth/zynq_rst_processing_system7_0_100M_0.vhd:74]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
 	Parameter C_AUX_RST_WIDTH bound to: 4 - type: integer 
@@ -866,7 +870,7 @@ INFO: [Synth 8-638] synthesizing module 'lab4bd_rst_processing_system7_0_100M_0'
 	Parameter C_NUM_PERP_RST bound to: 1 - type: integer 
 	Parameter C_NUM_INTERCONNECT_ARESETN bound to: 1 - type: integer 
 	Parameter C_NUM_PERP_ARESETN bound to: 1 - type: integer 
-INFO: [Synth 8-3491] module 'proc_sys_reset' declared at '/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/ipshared/xilinx.com/proc_sys_reset_v5_0/066de7cd/hdl/src/vhdl/proc_sys_reset.vhd:140' bound to instance 'U0' of component 'proc_sys_reset' [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/bd/lab4bd/ip/lab4bd_rst_processing_system7_0_100M_0/synth/lab4bd_rst_processing_system7_0_100M_0.vhd:120]
+INFO: [Synth 8-3491] module 'proc_sys_reset' declared at '/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/ipshared/xilinx.com/proc_sys_reset_v5_0/066de7cd/hdl/src/vhdl/proc_sys_reset.vhd:140' bound to instance 'U0' of component 'proc_sys_reset' [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/bd/zynq/ip/zynq_rst_processing_system7_0_100M_0/synth/zynq_rst_processing_system7_0_100M_0.vhd:120]
 INFO: [Synth 8-638] synthesizing module 'proc_sys_reset' [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/ipshared/xilinx.com/proc_sys_reset_v5_0/066de7cd/hdl/src/vhdl/proc_sys_reset.vhd:199]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
@@ -913,12 +917,12 @@ INFO: [Synth 8-638] synthesizing module 'upcnt_n' [/home/clvrpny/ecen449/lab04/l
 INFO: [Synth 8-256] done synthesizing module 'upcnt_n' (33#1) [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/ipshared/xilinx.com/proc_sys_reset_v5_0/066de7cd/hdl/src/vhdl/upcnt_n.vhd:125]
 INFO: [Synth 8-256] done synthesizing module 'sequence' (34#1) [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/ipshared/xilinx.com/proc_sys_reset_v5_0/066de7cd/hdl/src/vhdl/sequence.vhd:146]
 INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset' (35#1) [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/ipshared/xilinx.com/proc_sys_reset_v5_0/066de7cd/hdl/src/vhdl/proc_sys_reset.vhd:199]
-INFO: [Synth 8-256] done synthesizing module 'lab4bd_rst_processing_system7_0_100M_0' (36#1) [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/bd/lab4bd/ip/lab4bd_rst_processing_system7_0_100M_0/synth/lab4bd_rst_processing_system7_0_100M_0.vhd:74]
-WARNING: [Synth 8-350] instance 'rst_processing_system7_0_100M' of module 'lab4bd_rst_processing_system7_0_100M_0' requires 10 connections, but only 7 given [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/bd/lab4bd/hdl/lab4bd.v:296]
-INFO: [Synth 8-256] done synthesizing module 'lab4bd' (37#1) [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/bd/lab4bd/hdl/lab4bd.v:13]
-INFO: [Synth 8-256] done synthesizing module 'lab4bd_wrapper' (38#1) [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/bd/lab4bd/hdl/lab4bd_wrapper.v:12]
+INFO: [Synth 8-256] done synthesizing module 'zynq_rst_processing_system7_0_100M_0' (36#1) [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/bd/zynq/ip/zynq_rst_processing_system7_0_100M_0/synth/zynq_rst_processing_system7_0_100M_0.vhd:74]
+WARNING: [Synth 8-350] instance 'rst_processing_system7_0_100M' of module 'zynq_rst_processing_system7_0_100M_0' requires 10 connections, but only 7 given [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/bd/zynq/hdl/zynq.v:601]
+INFO: [Synth 8-256] done synthesizing module 'zynq' (37#1) [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/bd/zynq/hdl/zynq.v:318]
+INFO: [Synth 8-256] done synthesizing module 'zynq_wrapper' (38#1) [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/bd/zynq/hdl/zynq_wrapper.v:12]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 1153.121 ; gain = 319.480 ; free physical = 2522 ; free virtual = 6099
+Finished RTL Elaboration : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1151.125 ; gain = 317.480 ; free physical = 2076 ; free virtual = 6056
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -928,7 +932,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1153.121 ; gain = 319.480 ; free physical = 2522 ; free virtual = 6098
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 1151.125 ; gain = 317.480 ; free physical = 2076 ; free virtual = 6056
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -937,18 +941,18 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/bd/lab4bd/ip/lab4bd_processing_system7_0_0/lab4bd_processing_system7_0_0.xdc] for cell 'lab4bd_i/processing_system7_0/inst'
-Finished Parsing XDC File [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/bd/lab4bd/ip/lab4bd_processing_system7_0_0/lab4bd_processing_system7_0_0.xdc] for cell 'lab4bd_i/processing_system7_0/inst'
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/bd/lab4bd/ip/lab4bd_processing_system7_0_0/lab4bd_processing_system7_0_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/lab4bd_wrapper_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/lab4bd_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/bd/lab4bd/ip/lab4bd_rst_processing_system7_0_100M_0/lab4bd_rst_processing_system7_0_100M_0_board.xdc] for cell 'lab4bd_i/rst_processing_system7_0_100M'
-Finished Parsing XDC File [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/bd/lab4bd/ip/lab4bd_rst_processing_system7_0_100M_0/lab4bd_rst_processing_system7_0_100M_0_board.xdc] for cell 'lab4bd_i/rst_processing_system7_0_100M'
-Parsing XDC File [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/bd/lab4bd/ip/lab4bd_rst_processing_system7_0_100M_0/lab4bd_rst_processing_system7_0_100M_0.xdc] for cell 'lab4bd_i/rst_processing_system7_0_100M'
-Finished Parsing XDC File [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/bd/lab4bd/ip/lab4bd_rst_processing_system7_0_100M_0/lab4bd_rst_processing_system7_0_100M_0.xdc] for cell 'lab4bd_i/rst_processing_system7_0_100M'
+Parsing XDC File [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/bd/zynq/ip/zynq_processing_system7_0_0/zynq_processing_system7_0_0.xdc] for cell 'zynq_i/processing_system7_0/inst'
+Finished Parsing XDC File [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/bd/zynq/ip/zynq_processing_system7_0_0/zynq_processing_system7_0_0.xdc] for cell 'zynq_i/processing_system7_0/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/bd/zynq/ip/zynq_processing_system7_0_0/zynq_processing_system7_0_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/zynq_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/zynq_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/bd/zynq/ip/zynq_rst_processing_system7_0_100M_0/zynq_rst_processing_system7_0_100M_0_board.xdc] for cell 'zynq_i/rst_processing_system7_0_100M'
+Finished Parsing XDC File [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/bd/zynq/ip/zynq_rst_processing_system7_0_100M_0/zynq_rst_processing_system7_0_100M_0_board.xdc] for cell 'zynq_i/rst_processing_system7_0_100M'
+Parsing XDC File [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/bd/zynq/ip/zynq_rst_processing_system7_0_100M_0/zynq_rst_processing_system7_0_100M_0.xdc] for cell 'zynq_i/rst_processing_system7_0_100M'
+Finished Parsing XDC File [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/bd/zynq/ip/zynq_rst_processing_system7_0_100M_0/zynq_rst_processing_system7_0_100M_0.xdc] for cell 'zynq_i/rst_processing_system7_0_100M'
 Parsing XDC File [/home/clvrpny/ecen449/lab04/lab04.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [/home/clvrpny/ecen449/lab04/lab04.runs/synth_1/dont_touch.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/clvrpny/ecen449/lab04/lab04.runs/synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/lab4bd_wrapper_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/lab4bd_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/clvrpny/ecen449/lab04/lab04.runs/synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/zynq_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/zynq_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
@@ -956,33 +960,33 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   FDR => FDRE: 12 instances
   SRL16 => SRL16E: 1 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1369.137 ; gain = 0.000 ; free physical = 2367 ; free virtual = 5995
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1368.141 ; gain = 0.000 ; free physical = 1973 ; free virtual = 5953
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1369.137 ; gain = 535.496 ; free physical = 2365 ; free virtual = 5993
+Finished Constraint Validation : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1368.141 ; gain = 534.496 ; free physical = 1971 ; free virtual = 5951
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1369.137 ; gain = 535.496 ; free physical = 2365 ; free virtual = 5993
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1368.141 ; gain = 534.496 ; free physical = 1971 ; free virtual = 5951
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for lab4bd_i/processing_system7_0/inst. (constraint file  /home/clvrpny/ecen449/lab04/lab04.runs/synth_1/dont_touch.xdc, line 23).
-Applied set_property DONT_TOUCH = true for lab4bd_i. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for lab4bd_i/multiply_0. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for lab4bd_i/processing_system7_0. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for lab4bd_i/processing_system7_0_axi_periph. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for lab4bd_i/processing_system7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for lab4bd_i/rst_processing_system7_0_100M. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for zynq_i/processing_system7_0/inst. (constraint file  /home/clvrpny/ecen449/lab04/lab04.runs/synth_1/dont_touch.xdc, line 23).
+Applied set_property DONT_TOUCH = true for zynq_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for zynq_i/multiply_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for zynq_i/processing_system7_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for zynq_i/processing_system7_0_axi_periph. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for zynq_i/processing_system7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for zynq_i/rst_processing_system7_0_100M. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1369.137 ; gain = 535.496 ; free physical = 2365 ; free virtual = 5993
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:00:37 . Memory (MB): peak = 1368.141 ; gain = 534.496 ; free physical = 1971 ; free virtual = 5951
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-4471] merging register 'seq_cnt_en_reg' into 'from_sys_reg' [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/ipshared/xilinx.com/proc_sys_reset_v5_0/066de7cd/hdl/src/vhdl/sequence.vhd:222]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 1369.137 ; gain = 535.496 ; free physical = 2359 ; free virtual = 5987
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:38 ; elapsed = 00:00:38 . Memory (MB): peak = 1368.141 ; gain = 534.496 ; free physical = 1965 ; free virtual = 5944
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1223,7 +1227,7 @@ BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 1369.137 ; gain = 535.496 ; free physical = 2359 ; free virtual = 5987
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:38 ; elapsed = 00:00:38 . Memory (MB): peak = 1368.141 ; gain = 534.496 ; free physical = 1965 ; free virtual = 5944
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
@@ -1244,9 +1248,9 @@ DSP Report: operator inst/multiply_v1_0_S00_AXI_inst/tmp_reg0 is absorbed into D
 INFO: [Synth 8-3936] Found unconnected internal register 'inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw_pipe/m_payload_i_reg' and it is trimmed from '66' to '62' bits. [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/ipshared/xilinx.com/axi_register_slice_v2_1/03a8e0ba/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:121]
 INFO: [Synth 8-3936] Found unconnected internal register 'inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar_pipe/m_payload_i_reg' and it is trimmed from '66' to '62' bits. [/home/clvrpny/ecen449/lab04/lab04.srcs/sources_1/ipshared/xilinx.com/axi_register_slice_v2_1/03a8e0ba/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:121]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1369.137 ; gain = 535.496 ; free physical = 2351 ; free virtual = 5979
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:00:39 . Memory (MB): peak = 1368.141 ; gain = 534.496 ; free physical = 1957 ; free virtual = 5937
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1369.137 ; gain = 535.496 ; free physical = 2351 ; free virtual = 5979
+Finished Parallel Reinference  : Time (s): cpu = 00:00:39 ; elapsed = 00:00:39 . Memory (MB): peak = 1368.141 ; gain = 534.496 ; free physical = 1957 ; free virtual = 5937
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -1258,14 +1262,14 @@ Start ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 
 DSP:
-+--------------------+-------------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|Module Name         | DSP Mapping       | Neg Edge Clk | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
-+--------------------+-------------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|lab4bd_multiply_0_0 | A*B               | No           | 18     | 16     | 48     | 25     | 48     | 0    | 0    | 1    | 1    | 1     | 0    | 0    | 
-|lab4bd_multiply_0_0 | ((PCIN>>17)+A*B)' | No           | 16     | 16     | 48     | 25     | 48     | 0    | 0    | 1    | 1    | 1     | 0    | 1    | 
-|lab4bd_multiply_0_0 | A*B               | No           | 18     | 18     | 48     | 25     | 48     | 0    | 0    | 1    | 1    | 1     | 0    | 0    | 
-|lab4bd_multiply_0_0 | ((PCIN>>17)+A*B)' | No           | 18     | 16     | 48     | 25     | 48     | 0    | 0    | 1    | 1    | 1     | 0    | 1    | 
-+--------------------+-------------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
++------------------+-------------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name       | DSP Mapping       | Neg Edge Clk | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------------+-------------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|zynq_multiply_0_0 | A*B               | No           | 18     | 16     | 48     | 25     | 48     | 0    | 0    | 1    | 1    | 1     | 0    | 0    | 
+|zynq_multiply_0_0 | ((PCIN>>17)+A*B)' | No           | 16     | 16     | 48     | 25     | 48     | 0    | 0    | 1    | 1    | 1     | 0    | 1    | 
+|zynq_multiply_0_0 | A*B               | No           | 18     | 18     | 48     | 25     | 48     | 0    | 0    | 1    | 1    | 1     | 0    | 0    | 
+|zynq_multiply_0_0 | ((PCIN>>17)+A*B)' | No           | 18     | 16     | 48     | 25     | 48     | 0    | 0    | 1    | 1    | 1     | 0    | 1    | 
++------------------+-------------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
 Note: The table shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
 ---------------------------------------------------------------------------------
@@ -1275,16 +1279,16 @@ Finished ROM, RAM, DSP and Shift Register Reporting
 Start Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 1369.137 ; gain = 535.496 ; free physical = 2333 ; free virtual = 5963
+Finished Area Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:41 . Memory (MB): peak = 1368.141 ; gain = 534.496 ; free physical = 1941 ; free virtual = 5921
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 1369.137 ; gain = 535.496 ; free physical = 2333 ; free virtual = 5963
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:40 ; elapsed = 00:00:41 . Memory (MB): peak = 1368.141 ; gain = 534.496 ; free physical = 1941 ; free virtual = 5921
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 1369.137 ; gain = 535.496 ; free physical = 2333 ; free virtual = 5963
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:40 ; elapsed = 00:00:41 . Memory (MB): peak = 1368.141 ; gain = 534.496 ; free physical = 1941 ; free virtual = 5921
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
@@ -1292,10 +1296,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 1558.137 ; gain = 724.496 ; free physical = 2099 ; free virtual = 5736
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:51 ; elapsed = 00:00:52 . Memory (MB): peak = 1557.141 ; gain = 723.496 ; free physical = 1727 ; free virtual = 5707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 1576.145 ; gain = 742.504 ; free physical = 2080 ; free virtual = 5718
+Finished Timing Optimization : Time (s): cpu = 00:00:52 ; elapsed = 00:00:52 . Memory (MB): peak = 1575.148 ; gain = 741.504 ; free physical = 1730 ; free virtual = 5710
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1306,42 +1310,42 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-3332] Sequential element (\inst/multiply_v1_0_S00_AXI_inst/axi_bresp_reg[1] ) is unused and will be removed from module lab4bd_multiply_0_0.
-INFO: [Synth 8-3332] Sequential element (\inst/multiply_v1_0_S00_AXI_inst/axi_bresp_reg[0] ) is unused and will be removed from module lab4bd_multiply_0_0.
-INFO: [Synth 8-3332] Sequential element (\inst/multiply_v1_0_S00_AXI_inst/axi_rresp_reg[1] ) is unused and will be removed from module lab4bd_multiply_0_0.
-INFO: [Synth 8-3332] Sequential element (\inst/multiply_v1_0_S00_AXI_inst/axi_rresp_reg[0] ) is unused and will be removed from module lab4bd_multiply_0_0.
-INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw_pipe/skid_buffer_reg[37] ) is unused and will be removed from module lab4bd_auto_pc_0.
-INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw_pipe/skid_buffer_reg[65] ) is unused and will be removed from module lab4bd_auto_pc_0.
-INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw_pipe/skid_buffer_reg[64] ) is unused and will be removed from module lab4bd_auto_pc_0.
-INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw_pipe/skid_buffer_reg[63] ) is unused and will be removed from module lab4bd_auto_pc_0.
-INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw_pipe/skid_buffer_reg[62] ) is unused and will be removed from module lab4bd_auto_pc_0.
-INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw_pipe/skid_buffer_reg[49] ) is unused and will be removed from module lab4bd_auto_pc_0.
-INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw_pipe/skid_buffer_reg[48] ) is unused and will be removed from module lab4bd_auto_pc_0.
-INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw_pipe/skid_buffer_reg[43] ) is unused and will be removed from module lab4bd_auto_pc_0.
-INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw_pipe/skid_buffer_reg[42] ) is unused and will be removed from module lab4bd_auto_pc_0.
-INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw_pipe/skid_buffer_reg[41] ) is unused and will be removed from module lab4bd_auto_pc_0.
-INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw_pipe/skid_buffer_reg[40] ) is unused and will be removed from module lab4bd_auto_pc_0.
-INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar_pipe/skid_buffer_reg[37] ) is unused and will be removed from module lab4bd_auto_pc_0.
-INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar_pipe/skid_buffer_reg[65] ) is unused and will be removed from module lab4bd_auto_pc_0.
-INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar_pipe/skid_buffer_reg[64] ) is unused and will be removed from module lab4bd_auto_pc_0.
-INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar_pipe/skid_buffer_reg[63] ) is unused and will be removed from module lab4bd_auto_pc_0.
-INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar_pipe/skid_buffer_reg[62] ) is unused and will be removed from module lab4bd_auto_pc_0.
-INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar_pipe/skid_buffer_reg[49] ) is unused and will be removed from module lab4bd_auto_pc_0.
-INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar_pipe/skid_buffer_reg[48] ) is unused and will be removed from module lab4bd_auto_pc_0.
-INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar_pipe/skid_buffer_reg[43] ) is unused and will be removed from module lab4bd_auto_pc_0.
-INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar_pipe/skid_buffer_reg[42] ) is unused and will be removed from module lab4bd_auto_pc_0.
-INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar_pipe/skid_buffer_reg[41] ) is unused and will be removed from module lab4bd_auto_pc_0.
-INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar_pipe/skid_buffer_reg[40] ) is unused and will be removed from module lab4bd_auto_pc_0.
-INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.aw_channel_0/cmd_translator_0/incr_cmd_0/axlen_cnt_reg[8] ) is unused and will be removed from module lab4bd_auto_pc_0.
-INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.aw_channel_0/cmd_translator_0/wrap_cmd_0/axlen_cnt_reg[4] ) is unused and will be removed from module lab4bd_auto_pc_0.
-INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/axlen_cnt_reg[8] ) is unused and will be removed from module lab4bd_auto_pc_0.
-INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/wrap_cmd_0/axlen_cnt_reg[4] ) is unused and will be removed from module lab4bd_auto_pc_0.
-INFO: [Synth 8-3332] Sequential element (\U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5 ) is unused and will be removed from module lab4bd_rst_processing_system7_0_100M_0.
-INFO: [Synth 8-3332] Sequential element (\U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6 ) is unused and will be removed from module lab4bd_rst_processing_system7_0_100M_0.
-INFO: [Synth 8-3332] Sequential element (\U0/EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5 ) is unused and will be removed from module lab4bd_rst_processing_system7_0_100M_0.
-INFO: [Synth 8-3332] Sequential element (\U0/EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6 ) is unused and will be removed from module lab4bd_rst_processing_system7_0_100M_0.
+INFO: [Synth 8-3332] Sequential element (\inst/multiply_v1_0_S00_AXI_inst/axi_bresp_reg[1] ) is unused and will be removed from module zynq_multiply_0_0.
+INFO: [Synth 8-3332] Sequential element (\inst/multiply_v1_0_S00_AXI_inst/axi_bresp_reg[0] ) is unused and will be removed from module zynq_multiply_0_0.
+INFO: [Synth 8-3332] Sequential element (\inst/multiply_v1_0_S00_AXI_inst/axi_rresp_reg[1] ) is unused and will be removed from module zynq_multiply_0_0.
+INFO: [Synth 8-3332] Sequential element (\inst/multiply_v1_0_S00_AXI_inst/axi_rresp_reg[0] ) is unused and will be removed from module zynq_multiply_0_0.
+INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw_pipe/skid_buffer_reg[37] ) is unused and will be removed from module zynq_auto_pc_0.
+INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw_pipe/skid_buffer_reg[65] ) is unused and will be removed from module zynq_auto_pc_0.
+INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw_pipe/skid_buffer_reg[64] ) is unused and will be removed from module zynq_auto_pc_0.
+INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw_pipe/skid_buffer_reg[63] ) is unused and will be removed from module zynq_auto_pc_0.
+INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw_pipe/skid_buffer_reg[62] ) is unused and will be removed from module zynq_auto_pc_0.
+INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw_pipe/skid_buffer_reg[49] ) is unused and will be removed from module zynq_auto_pc_0.
+INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw_pipe/skid_buffer_reg[48] ) is unused and will be removed from module zynq_auto_pc_0.
+INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw_pipe/skid_buffer_reg[43] ) is unused and will be removed from module zynq_auto_pc_0.
+INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw_pipe/skid_buffer_reg[42] ) is unused and will be removed from module zynq_auto_pc_0.
+INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw_pipe/skid_buffer_reg[41] ) is unused and will be removed from module zynq_auto_pc_0.
+INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw_pipe/skid_buffer_reg[40] ) is unused and will be removed from module zynq_auto_pc_0.
+INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar_pipe/skid_buffer_reg[37] ) is unused and will be removed from module zynq_auto_pc_0.
+INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar_pipe/skid_buffer_reg[65] ) is unused and will be removed from module zynq_auto_pc_0.
+INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar_pipe/skid_buffer_reg[64] ) is unused and will be removed from module zynq_auto_pc_0.
+INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar_pipe/skid_buffer_reg[63] ) is unused and will be removed from module zynq_auto_pc_0.
+INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar_pipe/skid_buffer_reg[62] ) is unused and will be removed from module zynq_auto_pc_0.
+INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar_pipe/skid_buffer_reg[49] ) is unused and will be removed from module zynq_auto_pc_0.
+INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar_pipe/skid_buffer_reg[48] ) is unused and will be removed from module zynq_auto_pc_0.
+INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar_pipe/skid_buffer_reg[43] ) is unused and will be removed from module zynq_auto_pc_0.
+INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar_pipe/skid_buffer_reg[42] ) is unused and will be removed from module zynq_auto_pc_0.
+INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar_pipe/skid_buffer_reg[41] ) is unused and will be removed from module zynq_auto_pc_0.
+INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar_pipe/skid_buffer_reg[40] ) is unused and will be removed from module zynq_auto_pc_0.
+INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.aw_channel_0/cmd_translator_0/incr_cmd_0/axlen_cnt_reg[8] ) is unused and will be removed from module zynq_auto_pc_0.
+INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.aw_channel_0/cmd_translator_0/wrap_cmd_0/axlen_cnt_reg[4] ) is unused and will be removed from module zynq_auto_pc_0.
+INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/axlen_cnt_reg[8] ) is unused and will be removed from module zynq_auto_pc_0.
+INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/wrap_cmd_0/axlen_cnt_reg[4] ) is unused and will be removed from module zynq_auto_pc_0.
+INFO: [Synth 8-3332] Sequential element (\U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5 ) is unused and will be removed from module zynq_rst_processing_system7_0_100M_0.
+INFO: [Synth 8-3332] Sequential element (\U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6 ) is unused and will be removed from module zynq_rst_processing_system7_0_100M_0.
+INFO: [Synth 8-3332] Sequential element (\U0/EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5 ) is unused and will be removed from module zynq_rst_processing_system7_0_100M_0.
+INFO: [Synth 8-3332] Sequential element (\U0/EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6 ) is unused and will be removed from module zynq_rst_processing_system7_0_100M_0.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:52 ; elapsed = 00:00:55 . Memory (MB): peak = 1593.160 ; gain = 759.520 ; free physical = 2063 ; free virtual = 5701
+Finished Technology Mapping : Time (s): cpu = 00:00:53 ; elapsed = 00:00:54 . Memory (MB): peak = 1591.164 ; gain = 757.520 ; free physical = 1714 ; free virtual = 5694
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1381,7 +1385,7 @@ INFO: [Synth 8-4618] Found max_fanout attribute set to 10 on net \inst/gen_axili
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:54 ; elapsed = 00:00:56 . Memory (MB): peak = 1593.160 ; gain = 759.520 ; free physical = 2063 ; free virtual = 5701
+Finished IO Insertion : Time (s): cpu = 00:00:55 ; elapsed = 00:00:55 . Memory (MB): peak = 1591.164 ; gain = 757.520 ; free physical = 1714 ; free virtual = 5694
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1394,7 +1398,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:54 ; elapsed = 00:00:56 . Memory (MB): peak = 1593.160 ; gain = 759.520 ; free physical = 2063 ; free virtual = 5701
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:55 ; elapsed = 00:00:55 . Memory (MB): peak = 1591.164 ; gain = 757.520 ; free physical = 1714 ; free virtual = 5694
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1406,13 +1410,13 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:54 ; elapsed = 00:00:56 . Memory (MB): peak = 1593.160 ; gain = 759.520 ; free physical = 2063 ; free virtual = 5701
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:55 ; elapsed = 00:00:55 . Memory (MB): peak = 1591.164 ; gain = 757.520 ; free physical = 1714 ; free virtual = 5694
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start Renaming Generated Ports : Time (s): cpu = 00:00:54 ; elapsed = 00:00:56 . Memory (MB): peak = 1593.160 ; gain = 759.520 ; free physical = 2063 ; free virtual = 5701
+Start Renaming Generated Ports : Time (s): cpu = 00:00:55 ; elapsed = 00:00:55 . Memory (MB): peak = 1591.164 ; gain = 757.520 ; free physical = 1714 ; free virtual = 5694
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:54 ; elapsed = 00:00:56 . Memory (MB): peak = 1593.160 ; gain = 759.520 ; free physical = 2063 ; free virtual = 5701
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:55 ; elapsed = 00:00:55 . Memory (MB): peak = 1591.164 ; gain = 757.520 ; free physical = 1714 ; free virtual = 5694
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -1474,15 +1478,15 @@ Report Instance Areas:
 |      |Instance                                           |Module                                                      |Cells |
 +------+---------------------------------------------------+------------------------------------------------------------+------+
 |1     |top                                                |                                                            |  1988|
-|2     |  lab4bd_i                                         |lab4bd                                                      |  1988|
-|3     |    multiply_0                                     |lab4bd_multiply_0_0                                         |   364|
+|2     |  zynq_i                                           |zynq                                                        |  1988|
+|3     |    multiply_0                                     |zynq_multiply_0_0                                           |   364|
 |4     |      inst                                         |multiply_v1_0                                               |   364|
 |5     |        multiply_v1_0_S00_AXI_inst                 |multiply_v1_0_S00_AXI                                       |   364|
-|6     |    processing_system7_0                           |lab4bd_processing_system7_0_0                               |   244|
+|6     |    processing_system7_0                           |zynq_processing_system7_0_0                                 |   244|
 |7     |      inst                                         |processing_system7_v5_5_processing_system7                  |   244|
-|8     |    processing_system7_0_axi_periph                |lab4bd_processing_system7_0_axi_periph_0                    |  1310|
-|9     |      s00_couplers                                 |s00_couplers_imp_LQ9BAS                                     |  1310|
-|10    |        auto_pc                                    |lab4bd_auto_pc_0                                            |  1310|
+|8     |    processing_system7_0_axi_periph                |zynq_processing_system7_0_axi_periph_0                      |  1310|
+|9     |      s00_couplers                                 |s00_couplers_imp_16YERMR                                    |  1310|
+|10    |        auto_pc                                    |zynq_auto_pc_0                                              |  1310|
 |11    |          inst                                     |axi_protocol_converter_v2_1_axi_protocol_converter          |  1310|
 |12    |            \gen_axilite.gen_b2s_conv.axilite_b2s  |axi_protocol_converter_v2_1_b2s                             |  1310|
 |13    |              \RD.ar_channel_0                     |axi_protocol_converter_v2_1_b2s_ar_channel                  |   214|
@@ -1506,7 +1510,7 @@ Report Instance Areas:
 |31    |              \WR.b_channel_0                      |axi_protocol_converter_v2_1_b2s_b_channel                   |    79|
 |32    |                bid_fifo_0                         |axi_protocol_converter_v2_1_b2s_simple_fifo                 |    46|
 |33    |                bresp_fifo_0                       |axi_protocol_converter_v2_1_b2s_simple_fifo__parameterized0 |     8|
-|34    |    rst_processing_system7_0_100M                  |lab4bd_rst_processing_system7_0_100M_0                      |    68|
+|34    |    rst_processing_system7_0_100M                  |zynq_rst_processing_system7_0_100M_0                        |    68|
 |35    |      U0                                           |proc_sys_reset                                              |    68|
 |36    |        EXT_LPF                                    |lpf                                                         |    23|
 |37    |          \ACTIVE_LOW_AUX.ACT_LO_AUX               |cdc_sync                                                    |     5|
@@ -1515,11 +1519,11 @@ Report Instance Areas:
 |40    |          SEQ_COUNTER                              |upcnt_n                                                     |    14|
 +------+---------------------------------------------------+------------------------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:54 ; elapsed = 00:00:56 . Memory (MB): peak = 1593.160 ; gain = 759.520 ; free physical = 2063 ; free virtual = 5701
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:55 ; elapsed = 00:00:55 . Memory (MB): peak = 1591.164 ; gain = 757.520 ; free physical = 1714 ; free virtual = 5694
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:46 ; elapsed = 00:00:46 . Memory (MB): peak = 1593.160 ; gain = 402.305 ; free physical = 2063 ; free virtual = 5701
-Synthesis Optimization Complete : Time (s): cpu = 00:00:54 ; elapsed = 00:00:56 . Memory (MB): peak = 1593.160 ; gain = 759.520 ; free physical = 2063 ; free virtual = 5701
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:47 ; elapsed = 00:00:47 . Memory (MB): peak = 1591.164 ; gain = 400.305 ; free physical = 1714 ; free virtual = 5694
+Synthesis Optimization Complete : Time (s): cpu = 00:00:55 ; elapsed = 00:00:55 . Memory (MB): peak = 1591.164 ; gain = 757.520 ; free physical = 1714 ; free virtual = 5694
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 74 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -1532,8 +1536,8 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   SRL16 => SRL16E: 1 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-195 Infos, 9 Warnings, 1 Critical Warnings and 0 Errors encountered.
+195 Infos, 14 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:53 ; elapsed = 00:00:55 . Memory (MB): peak = 1593.160 ; gain = 627.324 ; free physical = 2061 ; free virtual = 5700
-report_utilization: Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.12 . Memory (MB): peak = 1625.176 ; gain = 0.000 ; free physical = 2057 ; free virtual = 5697
-INFO: [Common 17-206] Exiting Vivado at Sun Feb 16 11:41:57 2020...
+synth_design: Time (s): cpu = 00:00:54 ; elapsed = 00:00:54 . Memory (MB): peak = 1591.164 ; gain = 626.324 ; free physical = 1717 ; free virtual = 5698
+report_utilization: Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.12 . Memory (MB): peak = 1623.180 ; gain = 0.000 ; free physical = 1714 ; free virtual = 5695
+INFO: [Common 17-206] Exiting Vivado at Sun Feb 16 12:02:53 2020...

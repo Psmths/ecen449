@@ -6,37 +6,37 @@
 <Project Version="7" Minor="5" Path="/home/clvrpny/ecen449/lab04/lab04.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="cd3fb6ee102647fc8584cd46298b1255"/>
+    <Option Name="Id" Val="384c148613e4414a925df3084c3b19e0"/>
     <Option Name="Part" Val="xc7z010clg400-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="BoardPart" Val="digilentinc.com:zybo-z7-10:part0:1.0"/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
-    <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/ip_repo"/>
     <Option Name="EnableCoreContainer" Val="FALSE"/>
     <Option Name="EnableCoreContainerForIPI" Val="FALSE"/>
   </Configuration>
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PSRCDIR/sources_1/bd/lab4bd/lab4bd.bd">
+      <File Path="$PSRCDIR/sources_1/bd/zynq/zynq.bd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="lab4bd.bd" FileRelPathName="ip/lab4bd_processing_system7_0_0/lab4bd_processing_system7_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="lab4bd.bd" FileRelPathName="ip/lab4bd_auto_pc_0/lab4bd_auto_pc_0.xci"/>
-        <CompFileExtendedInfo CompFileName="lab4bd.bd" FileRelPathName="ip/lab4bd_processing_system7_0_axi_periph_0/lab4bd_processing_system7_0_axi_periph_0.xci"/>
-        <CompFileExtendedInfo CompFileName="lab4bd.bd" FileRelPathName="ip/lab4bd_rst_processing_system7_0_100M_0/lab4bd_rst_processing_system7_0_100M_0.xci"/>
-        <CompFileExtendedInfo CompFileName="lab4bd.bd" FileRelPathName="ip/lab4bd_multiply_0_0/lab4bd_multiply_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="lab4bd.bd" FileRelPathName="hdl/lab4bd.hwdef"/>
-        <CompFileExtendedInfo CompFileName="lab4bd.bd" FileRelPathName="hw_handoff/lab4bd_bd.tcl"/>
-        <CompFileExtendedInfo CompFileName="lab4bd.bd" FileRelPathName="lab4bd_ooc.xdc"/>
-        <CompFileExtendedInfo CompFileName="lab4bd.bd" FileRelPathName="hdl/lab4bd.v"/>
-        <CompFileExtendedInfo CompFileName="lab4bd.bd" FileRelPathName="hw_handoff/lab4bd.hwh"/>
+        <CompFileExtendedInfo CompFileName="zynq.bd" FileRelPathName="ip/zynq_processing_system7_0_0/zynq_processing_system7_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="zynq.bd" FileRelPathName="ip/zynq_multiply_0_0/zynq_multiply_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="zynq.bd" FileRelPathName="ip/zynq_auto_pc_0/zynq_auto_pc_0.xci"/>
+        <CompFileExtendedInfo CompFileName="zynq.bd" FileRelPathName="ip/zynq_processing_system7_0_axi_periph_0/zynq_processing_system7_0_axi_periph_0.xci"/>
+        <CompFileExtendedInfo CompFileName="zynq.bd" FileRelPathName="hdl/zynq.hwdef"/>
+        <CompFileExtendedInfo CompFileName="zynq.bd" FileRelPathName="hw_handoff/zynq_bd.tcl"/>
+        <CompFileExtendedInfo CompFileName="zynq.bd" FileRelPathName="zynq_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="zynq.bd" FileRelPathName="ip/zynq_rst_processing_system7_0_100M_0/zynq_rst_processing_system7_0_100M_0.xci"/>
+        <CompFileExtendedInfo CompFileName="zynq.bd" FileRelPathName="hdl/zynq.v"/>
+        <CompFileExtendedInfo CompFileName="zynq.bd" FileRelPathName="hw_handoff/zynq.hwh"/>
       </File>
-      <File Path="$PSRCDIR/sources_1/bd/lab4bd/hdl/lab4bd_wrapper.v">
+      <File Path="$PSRCDIR/sources_1/bd/zynq/hdl/zynq_wrapper.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -45,7 +45,7 @@
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="lab4bd_wrapper"/>
+        <Option Name="TopModule" Val="zynq_wrapper"/>
         <Option Name="TopAutoSet" Val="TRUE"/>
       </Config>
     </FileSet>
@@ -58,7 +58,7 @@
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="lab4bd_wrapper"/>
+        <Option Name="TopModule" Val="zynq_wrapper"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
         <Option Name="TopAutoSet" Val="TRUE"/>
         <Option Name="SrcSet" Val="sources_1"/>
