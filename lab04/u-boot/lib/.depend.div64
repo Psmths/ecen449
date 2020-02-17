@@ -1,7 +1,0 @@
-div64.o: div64.c \
- /home/ugrads/p/philipsmith/ecen449/lab04/u-boot/include/linux/types.h \
- /home/ugrads/p/philipsmith/ecen449/lab04/u-boot/include/linux/posix_types.h \
- /home/ugrads/p/philipsmith/ecen449/lab04/u-boot/include/linux/stddef.h \
- /home/ugrads/p/philipsmith/ecen449/lab04/u-boot/arch/arm/include/asm/posix_types.h \
- /home/ugrads/p/philipsmith/ecen449/lab04/u-boot/arch/arm/include/asm/types.h \
- /opt/coe/Xilinx/SDK/2015.2/gnu/arm/lin/lib/gcc/arm-xilinx-linux-gnueabi/4.9.1/include/stdbool.h

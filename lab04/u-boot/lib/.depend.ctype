@@ -1,2 +1,0 @@
-ctype.o: ctype.c \
- /home/ugrads/p/philipsmith/ecen449/lab04/u-boot/include/linux/ctype.h

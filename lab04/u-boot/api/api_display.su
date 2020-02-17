@@ -1,3 +1,0 @@
-api_display.c:18:5:display_get_info	0	static
-api_display.c:42:5:display_draw_bitmap	0	static
-api_display.c:53:6:display_clear	0	static
