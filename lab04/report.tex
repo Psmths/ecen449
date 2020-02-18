@@ -30,7 +30,9 @@
     \newpage
     
     {\noindent\Huge Results\\\\}
-        \noindent 
+        \noindent During this lab I encountered several issues mainly because of how I was organizing my work. I use a git system to distribute my work wherever I need it. When pushing the compiled linux kernel to my laptop there were issues with files not getting transferred which I later found was due to the .gitignore inside that particular directory structure. To mitigate this I simply archived it first. \\
+        
+        \noindent Other than that there were no issues and the lab went smoothly. 
     \newpage
     
     {\noindent\Huge Conclusions\\\\}
@@ -39,9 +41,19 @@
     
     {\noindent\Huge Questions\\\\}
         \begin{enumerate}
-            \item{}
-            \item{}
-            \item{}
+            \item{Because this memory is located internally (inside the CPU) I am led to believe that this local storage serves as a CPU cache. Such memory would reside in all modern processors within the CPU as it considerably reduces the amount of time to access repeated data.}
+            \item{This is a standard GNU/Linux system and therefore we can determine this by running the following command:\\
+            
+            \begin{verbatim}
+# ls -l / | grep "^dr-"
+dr-xr-xr-x  95 root root     0 Feb  5 03:56 proc
+dr-xr-xr-x  13 root root     0 Feb 17 16:56 sys
+            \end{verbatim}
+            
+            \noindent All other root directories are writeable by root or an appropriate account. Changes made are not persistent and will not survive a reboot.
+            
+            }
+            \item{Adding a new peripheral would constitute recompiling the kernel with the new address space information added/updated. }
         \end{enumerate}
     \newpage
     
