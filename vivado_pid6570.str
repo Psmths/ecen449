@@ -1,0 +1,43 @@
+/*
+
+Vivado v2015.2 (64-bit)
+SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+Process ID: 6570
+
+Current time: 	2/20/20 2:42:26 PM CST
+Time zone: 	Central Standard Time (America/Chicago)
+
+OS: CentOS Linux release 7.7.1908 (Core)
+Version: 3.10.0-1062.9.1.el7.x86_64
+Architecture: amd64
+Available processors (cores): 8
+
+DISPLAY: :0
+Screen size: 2560x1440
+Screen resolution (DPI): 96
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_25 64-bit
+Java home: 	/opt/coe/Xilinx/Vivado/2015.2/tps/lnx64/jre
+
+User name: 	philipsmith
+User directory: /home/ugrads/p/philipsmith/ecen449
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+Vivado preferences path: /home/ugrads/p/philipsmith/.Xilinx/Vivado/2015.2/vivado.ini
+Vivado layouts directory: /home/ugrads/p/philipsmith/.Xilinx/Vivado/2015.2/layouts/application
+
+GUI allocated memory:	136 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 4,840 MB
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// [GUI Memory]: 41 MB (+40575kb) [00:00:05]
+// [Engine Memory]: 4,840 MB (+4924017kb) [00:00:05]
+// HMemoryUtils.trashcanNow. Engine heap size: 4,845 MB. GUI used memory: 20 MB. Current time: 2/20/20 2:42:28 PM CST
