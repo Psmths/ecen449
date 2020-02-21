@@ -1,0 +1,56 @@
+\documentclass[border=5pt, 10pt]{article}
+\usepackage{amsmath,amssymb,listings,fancyvrb,rotating,graphicx,hyperref}
+\usepackage[a4paper,margin=0.5in,footskip=0.25in]{geometry}
+\setcounter{secnumdepth}{0}
+\lstset{numbersep=5pt,xleftmargin=0.10in, xrightmargin=.15in} 
+\usepackage[activate={true,nocompatibility},final,tracking=true,kerning=true,spacing=true,factor=1200,stretch=10,shrink=10]{microtype}
+\usepackage{lscape}
+\graphicspath{ {.} }
+\title{ECEN 449 Lab Report 4}
+\date{\today}
+\author{Philip Smith - 624002014 (Sec. 511)}
+
+\begin{document}
+
+    \clearpage\maketitle
+    \thispagestyle{empty}
+    \newpage
+    \setcounter{page}{1}
+
+    {\noindent\Huge Introduction\\\\}
+        \noindent This lab focuses around the use of Linux kernel modules, which are modules that can be loaded into the running kernel to add functionality to it without needing to restart the system. The lab also covers basic file system operations such as mounting and unmounting block devices, in this case, a micro SD card. There is also the creation of a Makefile to assist us in the compilation process for the kernel modules.\\
+
+    \newpage
+    
+    {\noindent\Huge Procedure\\\\}
+        \noindent The first step in this lab is to mount, traverse, and unmount a block device for persistent storage. This will be used later on when compiling and inserting kernel modules.\\
+        
+        \noindent After this we will compile two kernel modules. The first is a simple Hello World! program whereas the second will make use of the multiplication peripheral we created in lab 3.\\
+
+    \newpage
+    
+    {\noindent\Huge Results\\\\}
+        \noindent  \\
+        
+    \newpage
+    
+    {\noindent\Huge Conclusions\\\\}
+        \noindent  Overall this lab was a success with no major incidents to report. The Linux kernel modules compiled successfully and were easy to copy over to the processor we created for this lab and future labs. 
+    \newpage
+    
+    {\noindent\Huge Questions\\\\}
+        \begin{enumerate}
+            \item{}
+            \item{}
+            \item{}
+        \end{enumerate}
+    \newpage
+    
+    \begin{landscape}
+    {\noindent\Huge Appendix A - \\\\}
+        \noindent The following is the console output immediately after boot :\\
+        \includegraphics{console}
+    \end{landscape}
+    \newpage
+    
+\end{document}
