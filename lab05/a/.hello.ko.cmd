@@ -1,0 +1,1 @@
+cmd_/home/ugrads/p/philipsmith/new/ecen449/lab05/a/hello.ko := arm-xilinx-linux-gnueabi-ld -EL -r  -T ./scripts/module-common.lds --build-id  -o /home/ugrads/p/philipsmith/new/ecen449/lab05/a/hello.ko /home/ugrads/p/philipsmith/new/ecen449/lab05/a/hello.o /home/ugrads/p/philipsmith/new/ecen449/lab05/a/hello.mod.o

@@ -1,7 +1,7 @@
-obj-m += hello.o
+obj-m += multiply.o
 
 all:
-	make -C kernelsourcedir/linux-3.14 M=$(PWD)	modules
+	make -C /home/ugrads/p/philipsmith/new/ecen449/lab05/local_kern/linux-3.14 M=$(PWD)	modules
 
 clean:
-	make -C kernelsourcedir/linux-3.14 M=$(PWD)	clean
+	make -C /home/ugrads/p/philipsmith/new/ecen449/lab05/local_kern/linux-3.14 M=$(PWD)	clean
