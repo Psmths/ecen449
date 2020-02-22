@@ -30,7 +30,7 @@
     \newpage
     
     {\noindent\Huge Results\\\\}
-        \noindent  \\
+        \noindent When compiled and loaded on the Zybo board both kernel modules print out the correct statements. The multiply peripheral seems to be working as expected based on this output.\\
         
     \newpage
     
@@ -40,9 +40,13 @@
     
     {\noindent\Huge Questions\\\\}
         \begin{enumerate}
-            \item{}
-            \item{}
-            \item{}
+            \item{I do not see any reason the board shouldn't be power cycled. The mnt directory is the only directory touched and it will still exist after a reboot.}
+            \item{On the CentOS System the mount point should be under the root directory /media/.}
+            \item{The name of the file changes the structure of the Makefile. If we for instance renamed it to test, the first line would need to go from hello.c to test.c. \\
+            
+            There would not be consequences as both Lab 4 and 5 used the same Linux kernel sources (3.14). 
+            
+            }
         \end{enumerate}
     \newpage
     
