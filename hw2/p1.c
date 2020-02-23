@@ -1,24 +1,32 @@
 #include <stdio.h>
 #include <string.h>
 
-//alloc_mat
-//Function to allocate memory for an entire matrix. Inputs
-//are the rows and columns of the matrix in int type. Function
-//returns pointer to the start of the matrix in memory. 
-double** alloc_mat(int r, int c){
-    int total_size = r*c; //Get the total number of doubles needed
-    double** mat = malloc(total_size * sizeof(double)); //Allocate it
-    printf("Matrix of size %d x %d allocated!\n",r,c);
+void populate_matrix(int r, int c, FILE *data, float mat[r][c]){
+    float readval;
+    for (int i = 0; i < r; ++i){
+        for (int j = 0; j < c; ++j){
+            fscanf(data,"%f",&readval);
+            mat[i][j] = readval;
+	}
+    }
 }
 
-double** populate_matrix(FILE** data, double** mat, int r, int c){
-    double readval;
-    printf("Scanning in matrix...\n");
-    for (int i = 0; i < r; i++){
-        for (int j = 0; j < c; j++){
-            fscanf(*data,"%f",readval);
-	    printf("%f",readval);
-	    mat[i][j] = readval;
+void write_matrix(int r, int c, float mat[r][c], FILE *o){
+    for (int i = 0; i < r; ++i){
+	for (int j = 0; j < c; ++j){
+            fprintf(o,"%f\t",mat[i][j]);
+	}
+	fprintf(o,"\n");
+    }
+}
+
+void multiply_matrices(int ah, int aw, int bh, int bw, int ch, int cw, float a[ah][aw], float b[bh][bw], float c[ch][cw]){
+    for (int i = 0; i < ah; i++){
+        for (int j = 0; j < bw; j++){
+	    c[i][j] = 0;
+            for (int k = 0; k < bh; k++){
+                c[i][j] += a[i][k]*b[k][j];
+            }
 	}
     }
 }
@@ -29,7 +37,7 @@ main() {
 
     //Open all associated files
     m1 = fopen("./inA.txt", "r");
-    m2 = fopen("./inA.txt", "r");
+    m2 = fopen("./inB.txt", "r");
     out = fopen("./outC.txt","w");
     
     //Get the dimensions of the supplied matrices
@@ -49,12 +57,17 @@ main() {
     }
 
     //Pre-allocate memory for all matrices
-    double** matA = alloc_mat(ah,aw);
-    double** matB = alloc_mat(bh,bw);
-    double** matC = alloc_mat(ch,cw);
+    float matA[ah][aw];
+    float matB[bh][bw];
+    float matC[ch][cw];
 
-    matA = populate_matrix(&m1,matA,ah,aw);
+    populate_matrix(ah,aw,m1,matA);
+    populate_matrix(bh,bw,m2,matB);
 
+    multiply_matrices(ah,aw,bh,bw,ch,cw,matA,matB,matC);
+
+    write_matrix(ch,cw,matC,out);
+    
     fclose(m1);
     fclose(m2);
 }
