@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2018.12.11)  27 FEB 2020 14:39
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2018.12.11)  27 FEB 2020 15:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -557,17 +557,17 @@ Package rerunfilecheck Info: File `report.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 60.
  ) 
 Here is how much of TeX's memory you used:
- 9513 strings out of 495063
- 142439 string characters out of 3182200
- 266386 words of memory out of 3000000
+ 9511 strings out of 495063
+ 142425 string characters out of 3182200
+ 267386 words of memory out of 3000000
  12570 multiletter control sequences out of 15000+200000
- 9285 words of font info for 42 fonts, out of 3000000 for 9000
+ 9234 words of font info for 41 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  34i,6n,35p,448b,332s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on report.pdf (7 pages, 57047 bytes).
+Output written on report.pdf (7 pages, 57734 bytes).
 PDF statistics:
  58 PDF objects out of 1000 (max. 8388607)
  43 compressed objects within 1 object stream

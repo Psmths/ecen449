@@ -40,7 +40,7 @@
     
     {\noindent\Huge Questions\\\\}
         \begin{enumerate}
-            \item{I do not see any reason the board shouldn't be power cycled. The mnt directory is the only directory touched and it will still exist after a reboot.}
+            \item{I do not see any reason the board shouldn't be power cycled. The mnt directory is the only directory touched and it will still exist after a reboot. Because the system was rebooted without the SD card in place, it would not have any media to boot off of. Therefore, we would need to insert the SD card and then reset the board again afterwards.}
             \item{On the CentOS System the mount point should be under the root directory /media/.}
             \item{The name of the file changes the structure of the Makefile. If we for instance renamed it to test, the first line would need to go from hello.c to test.c. \\
             
