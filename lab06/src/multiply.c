@@ -1,9 +1,16 @@
-#include <linux/module.h>   // Needed by all modules
-#include <linux/kernel.h>   // Needed for KERN_* and printk
-#include <linux/init.h>     // Needed for __init and __exit macros
-#include <asm/io.h>         // Needed for IO reads and writes
-#include "xparameters.h"    // Needed for IO reads and writes
-#include <linux/ioport.h>   // Used for io memory allocation
+#include <linux/module.h>  /* Needed by all modules */
+#include <linux/moduleparam.h>  /* Needed for module parameters */
+#include <linux/kernel.h>  /* Needed for printk and KERN_* */
+#include <linux/init.h>	   /* Need for __init macros  */
+#include <linux/fs.h>	   /* Provides file ops structure */
+#include <linux/sched.h>   /* Provides access to the "current" process
+task structure */
+#include <linux/slab.h> //needed for kmalloc() and kfree()
+#include <asm/io.h> //needed for IO reads and writes
+#include <asm/uaccess.h>   /* Provides utilities to bring user space
+data into kernel space.  Note, it is
+processor arch specific. */
+#include "xparameters.h" //needed for physical address of the multiplier
 //Kernel sources: /home/ugrads/p/philipsmith/new/ecen449/lab05/local_kern/linux-3.14
 // From xparameters.h, physical address of multiplier
 #define PHY_ADDR XPAR_MULTIPLY_0_S00_AXI_BASEADDR 
@@ -23,7 +30,12 @@ static int major;
 void* virt_addr;
 
 //Functions
-
+int init_module(void);
+void cleanup_module(void);
+static int device_open(struct inode *, struct file *);
+static int device_release(struct inode *, struct file *);
+static ssize_t device_read(struct file *, char *, size_t, loff_t *);
+static ssize_t device_write(struct file *, const char *, size_t, loff_t *);
 
 static struct file_operations fops = {
     .read = device_read,
@@ -74,7 +86,7 @@ static ssize_t device_read(struct file *filp,
         bytes_read++;
     }
     
-    kfree(kbuff);
+    kfree(kernelBuffer);
     return bytes_read;
 }
 
@@ -88,12 +100,12 @@ static ssize_t device_write(struct file *filp,
     int i;
     
     for (i = 0; i < len; i++){
-        get_user(kbuff[i], buff++);
+        get_user(kbuf[i], buff++);
     }
     
-    kernelBuffer[len] = '\0';
+    kbuf[len] = '\0';
     
-    int* intBuffer = (int*)kernelBuffer; 
+    int* intBuffer = (int*)kbuf; 
     
     iowrite32(intBuffer[0], virt_addr + REG_A_OFFSET);
     iowrite32(intBuffer[0], virt_addr + REG_B_OFFSET);

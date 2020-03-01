@@ -1,0 +1,1 @@
+cmd_/home/ugrads/p/philipsmith/new/ecen449/lab06/src/multiply.ko := arm-xilinx-linux-gnueabi-ld -EL -r  -T ./scripts/module-common.lds --build-id  -o /home/ugrads/p/philipsmith/new/ecen449/lab06/src/multiply.ko /home/ugrads/p/philipsmith/new/ecen449/lab06/src/multiply.o /home/ugrads/p/philipsmith/new/ecen449/lab06/src/multiply.mod.o
