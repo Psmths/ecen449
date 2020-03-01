@@ -1,0 +1,57 @@
+\documentclass[border=5pt, 10pt]{article}
+\usepackage{amsmath,amssymb,listings,fancyvrb,rotating,graphicx,hyperref}
+\usepackage[a4paper,margin=0.5in,footskip=0.25in]{geometry}
+\setcounter{secnumdepth}{0}
+\lstset{numbersep=5pt,xleftmargin=0.10in, xrightmargin=.15in} 
+\usepackage[activate={true,nocompatibility},final,tracking=true,kerning=true,spacing=true,factor=1200,stretch=10,shrink=10]{microtype}
+\usepackage{lscape}
+\graphicspath{ {.} }
+\title{ECEN 449 Lab Report 6}
+\date{\today}
+\author{Philip Smith - 624002014 (Sec. 511)}
+
+\begin{document}
+
+    \clearpage\maketitle
+    \thispagestyle{empty}
+    \newpage
+    \setcounter{page}{1}
+
+    {\noindent\Huge Introduction\\\\}
+        \noindent In Lab 6 the primary focus is creating a ``character device driver'' by using Linux kernel modules. The basic premise is that we need a way for processes in userland to be able to communicate with devices that need to be accessed directly in kerneland. This is accomplished through a character device ``file'' to be located in the \texttt{/dev/} directory. The kernel module will facilitate communication through this file to and from the multiply module.\\
+
+    \newpage
+    
+    {\noindent\Huge Procedure\\\\}
+        \noindent The procedure is similar to that of Lab 5. We must first create a kernel module that has the capabilities described in the introduction. After this, we simply compile it and load it into a running kernel. In this case, the kernel will run on the ZYBO board.\\
+
+    \newpage
+    
+    {\noindent\Huge Results\\\\}
+        \noindent The kernel module loaded fine and with some bug fixes was able to work correctly, allowing us to interact with the peripheral as a user through a character device file.\\
+        
+    \newpage
+    
+    {\noindent\Huge Conclusions\\\\}
+        \noindent 
+    \newpage
+    
+    {\noindent\Huge Questions\\\\}
+        \begin{enumerate}
+            \item{The \texttt{ioremap()} function allows us to map the physical address of the peripheral to a virtual address space. This is needed because the kernel communicates to peripherals using page tables which are set up (and thereafter destroyed) when loading and unloading our module.}
+            \item{I believe that the wall time to complete a single operation would be much larger in this case compared to a program isolated within kernel land. Context switches between userland and kernel land are some of the most expensive OS ``operations'' and they are required every time we read to and write from a module like this.}
+            \item{The approach used in Lab 5 is faster however it is not accessible to any userland programs and is therefore not very interoperable. This approach is slower but it allows us to open our peripheral to the user. It is also important to not that if our code isn't impeccable, we have just opened the kernel to user space programs which can pose massive security risks.}
+            \item{We need to register the device first so that we have the correct virtual address space information to proceed with setting up the device. Similarly we need to ensure that the address space is unmapped on exit so no other future use of the device through the \texttt{/dev} file will interfere with kernel land memory.}
+        \end{enumerate}
+    \newpage
+    
+    {\noindent\Huge Appendix A - \\\\}
+        %\noindent \\
+        %\begin{center}
+	    %    \includegraphics{console}
+        %\end{center}
+    \newpage
+    \textit{Pronunciation: ``Place}
+    $\sum_{i=0}^{3}{\frac{1000}{10^i}}$''
+    
+\end{document}
