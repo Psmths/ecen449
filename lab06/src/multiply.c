@@ -1,20 +1,14 @@
-#include <linux/module.h>  /* Needed by all modules */
-#include <linux/moduleparam.h>  /* Needed for module parameters */
-#include <linux/kernel.h>  /* Needed for printk and KERN_* */
-#include <linux/init.h>	   /* Need for __init macros  */
-#include <linux/fs.h>	   /* Provides file ops structure */
-#include <linux/sched.h>   /* Provides access to the "current" process
-task structure */
-#include <linux/slab.h> //needed for kmalloc() and kfree()
-#include <asm/io.h> //needed for IO reads and writes
-#include <asm/uaccess.h>   /* Provides utilities to bring user space
-data into kernel space.  Note, it is
-processor arch specific. */
-#include "xparameters.h" //needed for physical address of the multiplier
-//Kernel sources: /home/ugrads/p/philipsmith/new/ecen449/lab05/local_kern/linux-3.14
-// From xparameters.h, physical address of multiplier
+#include <linux/module.h>
+#include <linux/moduleparam.h>
+#include <linux/kernel.h>
+#include <linux/init.h>	
+#include <linux/fs.h>
+#include <linux/sched.h>
+#include <linux/slab.h>
+#include <asm/io.h>
+#include <asm/uaccess.h>
+#include "xparameters.h"
 #define PHY_ADDR XPAR_MULTIPLY_0_S00_AXI_BASEADDR 
-// Size of physical address range for multiply
 #define MEMSIZE XPAR_MULTIPLY_0_S00_AXI_HIGHADDR - XPAR_MULTIPLY_0_S00_AXI_BASEADDR + 1
 
 //Program defines
@@ -71,21 +65,25 @@ static ssize_t device_read(struct file *filp,
                            loff_t * offset)
 {
     
-    int bytes_read = 0;
-    int* kernelBuffer = (int*)kmalloc(length * sizeof(int), GFP_KERNEL);
+    int bytes_read = 0; //Count how many bytes were read
+    //Allocate space for 3 integers to operate on.
+    int* kernelBuffer = (int*)kmalloc(3 * sizeof(int), GFP_KERNEL);
     
+    //Directly copy all three integers to our buffer.
     kernelBuffer[0] = ioread32(virt_addr + REG_A_OFFSET);
     kernelBuffer[1] = ioread32(virt_addr + REG_B_OFFSET);
     kernelBuffer[2] = ioread32(virt_addr + REG_O_OFFSET);
     
+    //Cast to characters
     char* kbuff = (char*)kernelBuffer;
     
+    //Put characters onto the kernel segment buffer
     int i;
     for (i = 0; i < length; i++) {
         put_user(*(kbuff++), buffer++);
         bytes_read++;
     }
-    
+    //Free allocated space.
     kfree(kernelBuffer);
     return bytes_read;
 }
@@ -95,21 +93,25 @@ static ssize_t device_write(struct file *filp,
                             size_t len, 
                             loff_t * off)
 {
-    char* kbuf = (char*)kmalloc((len + 1) * sizeof(char), GFP_KERNEL);
+    //Allocate space for user input, whatever it may be
+    //This will be in the kernel so we can directly move
+    //it to the device. 
+    char* kbuf = (char*)kmalloc((len) * sizeof(char), GFP_KERNEL);
     
+    //Copy that data to the kernel segment
     int i;
-    
     for (i = 0; i < len; i++){
         get_user(kbuf[i], buff++);
     }
     
-    kbuf[len] = '\0';
-    
+    //Cast to ints
     int* intBuffer = (int*)kbuf; 
     
+    //Write ints directly to the device
     iowrite32(intBuffer[0], virt_addr + REG_A_OFFSET);
-    iowrite32(intBuffer[0], virt_addr + REG_B_OFFSET);
+    iowrite32(intBuffer[1], virt_addr + REG_B_OFFSET);
     
+    //Free up allocation!
     kfree(intBuffer);
     return i;
 }
